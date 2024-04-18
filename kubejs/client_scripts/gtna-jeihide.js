@@ -12,5 +12,8 @@ JEIEvents.hideItems(event => {
   event.hide(/ends_delight:.*_knife/)
   event.hide(/twilightdelight:.*_knife/)
   event.hide(/farmersdelight:.*_knife/)
+  
+  event.hide(/productivebees:milk_bottle/)
+
 })
   

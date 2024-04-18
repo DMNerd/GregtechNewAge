@@ -3,6 +3,7 @@ ServerEvents.recipes(e => {
     e.replaceInput({ input: 'minecraft:flint' }, 'minecraft:flint', 'notreepunching:flint_shard')
     e.replaceInput({ input: 'minecraft:leather' }, 'minecraft:leather', 'leatherprocessing:dried_leather')
     e.replaceInput({ input: 'minecraft:stick', output: '#forge:tools' }, 'minecraft:stick', 'kubejs:bound_stick')
+    e.replaceInput({ input: 'minecraft:milk_bucket' }, 'minecraft:milk_bucket', '#forge:milk')
 
     e.remove({ id: '/notreepunching:flint_/' })
     e.remove({ id: '/notreepunching:.*_knife/' })

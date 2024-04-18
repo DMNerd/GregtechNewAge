@@ -82,7 +82,12 @@
     "uranium",
     "zinc",
     "redstone_alloy",
-    "sky_steel"
+    "sky_steel",
+    "ostrum",
+    "desh",
+    "calorite",
+    "knightmetal",
+    "ironwood"
   ],
   "priorityOverrides": {},
   "customTags": {},
