@@ -15,5 +15,8 @@ JEIEvents.hideItems(event => {
   
   event.hide(/productivebees:milk_bottle/)
 
+  event.hide(/twilightforest:uncrafting.*/)
+
+
 })
   
