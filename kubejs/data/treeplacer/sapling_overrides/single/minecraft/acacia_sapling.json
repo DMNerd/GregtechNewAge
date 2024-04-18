@@ -1,0 +1,14 @@
+{
+   "replace": false,
+   "values": {
+      "terralith:amethyst_rainforest": "terralith:jungle/violet/bending_acacia",
+	   "terralith:amethyst_canyon": "terralith:jungle/violet/bending_acacia",
+	   "terralith:fractured_savanna": "treeplacer_saplings:acacia/fractured_savanna",
+	   "terralith:lavender_forest": "terralith:flower/lavender/flower",
+	   "terralith:lavender_valley": "terralith:flower/lavender/flower",
+	   "terralith:moonlight_grove": "treeplacer_saplings:acacia/moonlight",
+	   "terralith:moonlight_valley": "treeplacer_saplings:acacia/moonlight",
+	   "terralith:skylands_summer": "treeplacer_saplings:acacia/skylands_summer",
+	   "terralith:tropical_jungle": "treeplacer_saplings:acacia/tropical_jungle"
+   }
+}

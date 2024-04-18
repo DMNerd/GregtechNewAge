@@ -1,0 +1,9 @@
+{
+   "replace": false,
+   "values": {
+	   "treeplacer:all_biomes": "terralith:dark/dark_oak",
+	   "terralith:mirage_isles": "terralith:enchanted/big_tree",
+	   "terralith:skylands_autumn": "terralith:skylands/mega_tree",
+	   "terralith:skylands_winter": "terralith:skylands/winter/big_oak"
+   }
+}

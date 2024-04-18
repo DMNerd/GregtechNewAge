@@ -1,0 +1,23 @@
+{
+   "replace": false,
+   "values": {
+	   "minecraft:birch_forest": "terralith:birch/trees_forest",
+	   "minecraft:dark_forest": "terralith:dark/birch",
+	   "minecraft:old_growth_birch_forest": "terralith:birch/birch_tall",
+	   "terralith:birch_taiga": "terralith:taiga/birch/trees_small",
+	   "terralith:cloud_forest": "terralith:flower/white/birch_bending",
+	   "terralith:haze_mountain": "terralith:mountains/misty/trees_birch",
+	   "terralith:lush_valley": "terralith:shield/trees_birch",
+	   "terralith:orchid_swamp": "terralith:swamp/orchid/small/trees_small",
+	   "terralith:sakura_grove": "terralith:birch/cloud_tree_tall",
+	   "terralith:sakura_valley": "terralith:birch/cloud_tree_tall",
+	   "terralith:shield": "terralith:shield/trees_birch",
+	   "terralith:shield_clearing": "terralith:shield/trees_birch",
+	   "terralith:skylands_autumn": "terralith:skylands/cloud_tree_birch",
+	   "terralith:skylands_spring": "terralith:birch/cloud_tree_tall",
+	   "terralith:snowy_shield": "terralith:shield/trees_birch",
+	   "terralith:temperate_highlands": "terralith:highlands/temperate/cloud_trees",
+	   "terralith:yellowstone": "terralith:yellowstone/birch_trees",
+	   "terralith:yosemite_lowlands": "terralith:yellowstone/birch_trees"
+   }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+	{
+        "chance": 0.5,
+        "feature": "terralith:savanna/shattered/acacia"
+      },
+	  {
+        "chance": 0.2,
+        "feature": "terralith:savanna/shattered/small/acacia_small"
+      }
+    ],
+    "default": "terralith:savanna/shattered/med/acacia_med"
+  }
+}

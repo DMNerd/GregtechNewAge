@@ -1,0 +1,7 @@
+{
+   "replace": false,
+   "values": {
+	   "terralith:sakura_grove": "treeplacer_saplings:cherry/sakura",
+	   "terralith:sakura_valley": "treeplacer_saplings:cherry/sakura"
+   }
+}

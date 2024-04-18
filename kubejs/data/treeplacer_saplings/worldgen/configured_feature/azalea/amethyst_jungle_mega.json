@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+	  {
+        "chance": 0.3,
+        "feature": "terralith:jungle/violet/tree_2x2_azalea_flowering"
+      }
+    ],
+    "default": "terralith:jungle/violet/tree_2x2_azalea"
+  }
+}

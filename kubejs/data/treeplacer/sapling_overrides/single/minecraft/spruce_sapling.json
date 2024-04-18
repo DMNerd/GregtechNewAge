@@ -1,0 +1,22 @@
+{
+   "replace": false,
+   "values": {
+	   "minecraft:snowy_taiga": "treeplacer_saplings:spruce/taiga",
+	   "minecraft:taiga": "treeplacer_saplings:spruce/taiga",
+	   "terralith:cloud_forest": "treeplacer_saplings:spruce/cloud_forest",
+	   "terralith:forested_highlands": "treeplacer_saplings:spruce/forested_highlands",
+	   "terralith:lush_valley": "terralith:shield/spruce_big",
+	   "terralith:moonlight_grove": "terralith:flower/blue/birch_tree",
+	   "terralith:moonlight_valley": "terralith:flower/blue/birch_tree",
+	   "terralith:shield": "terralith:shield/spruce_big",
+	   "terralith:shield_clearing": "terralith:shield/spruce_big",
+	   "terralith:siberian_grove": "terralith:taiga/siberian/trees",
+	   "terralith:siberian_taiga": "terralith:taiga/siberian/trees",
+	   "terralith:snowy_maple_forest": "treeplacer_saplings:spruce/forested_highlands",
+	   "terralith:snowy_shield": "terralith:shield/spruce_big",
+	   "terralith:wintry_forest": "terralith:snowy/spruce",
+	   "terralith:wintry_lowlands": "terralith:snowy/spruce",
+	   "terralith:yellowstone": "terralith:yellowstone/spruce_trees_big",
+	   "terralith:yosemite_lowlands": "treeplacer_saplings:spruce/yosemite_lowlands"
+    }
+}

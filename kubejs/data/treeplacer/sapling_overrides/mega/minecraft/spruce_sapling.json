@@ -1,0 +1,8 @@
+{
+   "replace": false,
+   "values": {
+	   "terralith:skylands_winter": "terralith:skylands/winter/mega_spruce",
+	   "terralith:wintry_forest": "treeplacer_saplings:spruce/wintry",
+	   "terralith:wintry_lowlands": "treeplacer_saplings:spruce/wintry"
+   }
+}

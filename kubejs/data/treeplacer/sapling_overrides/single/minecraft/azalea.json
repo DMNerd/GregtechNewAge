@@ -1,0 +1,15 @@
+{
+   "replace": false,
+   "values": {
+	   "terralith:blooming_plateau": "treeplacer_saplings:azalea/blooming_valley",
+	   "terralith:blooming_valley": "treeplacer_saplings:azalea/blooming_valley",
+	   "terralith:amethyst_rainforest": "treeplacer_saplings:azalea/amethyst_jungle_single",
+	   "terralith:amethyst_canyon": "treeplacer_saplings:azalea/amethyst_jungle_single",
+	   "terralith:desert_oasis": "terralith:canyon/sandstone/scattered_palms",
+	   "terralith:desert_spires": "terralith:canyon/sandstone/scattered_palms",
+	   "terralith:red_oasis": "terralith:canyon/sandstone/scattered_palms",
+	   "terralith:sandstone_valley": "terralith:canyon/sandstone/scattered_palms",
+	   "terralith:skylands_autumn": "terralith:skylands/big_cone_tree",
+	   "terralith:skylands_summer": "treeplacer_saplings:azalea/skylands_summer"
+   }
+}

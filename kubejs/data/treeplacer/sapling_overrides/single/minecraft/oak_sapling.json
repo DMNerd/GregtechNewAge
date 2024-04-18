@@ -1,0 +1,18 @@
+{
+   "replace": false,
+   "values": {
+	   "minecraft:dark_forest": "terralith:dark/oak",
+	   "minecraft:jungle": "treeplacer_saplings:oak/jungle",
+	   "minecraft:swamp": "treeplacer_saplings:oak/swamp",
+	   "terralith:fractured_savanna": "treeplacer_saplings:oak/fractured_savanna",
+	   "terralith:haze_mountain": "terralith:mountains/misty/trees_base",
+	   "terralith:ice_marsh": "terralith:swamp/ice/small/swamp_small",
+	   "terralith:lush_valley": "terralith:shield/trees_lark",
+	   "terralith:shield": "terralith:shield/trees_lark",
+	   "terralith:shield_clearing": "terralith:shield/trees_lark",
+	   "terralith:skylands_autumn": "terralith:skylands/mid_tree",
+	   "terralith:snowy_shield": "terralith:shield/trees_lark",
+	   "terralith:temperate_highlands": "terralith:highlands/temperate/trees_orange",
+	   "terralith:yosemite_lowlands": "treeplacer_saplings:oak/yosemite_lowlands"
+    }
+}

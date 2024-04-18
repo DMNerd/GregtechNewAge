@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+	  {
+        "chance": 0.3,
+        "feature": "terralith:jungle/violet/small_azalea"
+      }
+    ],
+    "default": "terralith:jungle/violet/acacia_azalea"
+  }
+}

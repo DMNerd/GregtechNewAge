@@ -1,0 +1,7 @@
+{
+   "replace": false,
+   "values": {
+	   "treeplacer:all_biomes": "treeplacer_saplings:brown_mushroom/mega",
+	   "minecraft:mushroom_fields": "treeplacer_saplings:brown_mushroom/mushroom_fields"
+   }
+}

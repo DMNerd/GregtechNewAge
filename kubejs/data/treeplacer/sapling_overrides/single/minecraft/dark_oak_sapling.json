@@ -1,0 +1,18 @@
+{
+   "replace": false,
+   "values": {
+      "treeplacer:all_biomes": "terralith:dark/twilight_tree",
+	   "terralith:forested_highlands": "terralith:highlands/forest/trees_maple",
+	   "terralith:lavender_forest": "terralith:flower/lavender/main_tree",
+	   "terralith:lavender_valley": "terralith:flower/lavender/main_tree",
+	   "terralith:mirage_isles": "terralith:enchanted/jungle_tree",
+	   "terralith:sakura_grove": "treeplacer_saplings:dark_oak/sakura",
+	   "terralith:sakura_valley": "treeplacer_saplings:dark_oak/sakura",
+	   "terralith:siberian_grove": "terralith:taiga/siberian/trees_orange",
+	   "terralith:siberian_taiga": "terralith:taiga/siberian/trees_orange",
+	   "terralith:skylands_spring": "terralith:cherry/tree_roof",
+	   "terralith:skylands_winter": "terralith:skylands/winter/oak",
+	   "terralith:snowy_maple_forest": "terralith:highlands/forest/trees_maple",
+	   "terralith:temperate_highlands": "terralith:highlands/temperate/dark_oak"
+   }
+}

@@ -1,0 +1,7 @@
+{
+   "replace": false,
+   "values": {
+	   "terralith:amethyst_rainforest": "treeplacer_saplings:azalea/amethyst_jungle_mega",
+	   "terralith:amethyst_canyon": "treeplacer_saplings:azalea/amethyst_jungle_mega"
+   }
+}

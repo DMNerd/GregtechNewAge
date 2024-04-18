@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+	{
+        "chance": 0.3,
+        "feature": "terralith:coastal/fancy_oak"
+      }
+    ],
+    "default": "minecraft:jungle_tree"
+  }
+}

@@ -1,0 +1,7 @@
+{
+   "replace": false,
+   "values": {
+	   "minecraft:jungle": "treeplacer_saplings:jungle/jungle_single",
+	   "terralith:tropical_jungle": "treeplacer_saplings:jungle/tropical_jungle"
+   }
+}
