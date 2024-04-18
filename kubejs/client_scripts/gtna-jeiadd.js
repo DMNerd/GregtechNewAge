@@ -1,0 +1,4 @@
+JEIAddedEvents.registerCategories((e) => {
+
+
+});
