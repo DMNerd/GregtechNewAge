@@ -1,4 +1,8 @@
 ServerEvents.recipes(e => {
+
+    e.remove({ output: '/gtceu:.*mana_steel.*/' })
+    e.remove({ output: '/gtceu:.*terra_steel.*/' })
+
     
     e.recipes.gtceu.forge_hammer('gtna:gtceu/advanced-knapping')
         .itemInputs('minecraft:flint')
@@ -10,6 +14,12 @@ ServerEvents.recipes(e => {
         .itemOutputs('2x gtceu:liveroot_dust')
         .duration(60)
         .EUt(30)
+    e.recipes.gtceu.macerator('gtna:gtceu/soul_sand_dust')
+        .itemInputs('#chipped:soul_sand')
+        .itemOutputs('4x gtceu:soul_sand_dust')
+        .chancedOutput('gtceu:soul_sand_dust', 4000, 200)
+        .duration(120)
+        .EUt(7)
     e.recipes.gtceu.centrifuge('gtna:gtceu/skystone_centrifuge')
         .itemInputs('ae2:sky_dust')
         .itemOutputs('gtceu:basalt_dust')

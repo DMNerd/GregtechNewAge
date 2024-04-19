@@ -17,6 +17,10 @@ JEIEvents.hideItems(event => {
 
   event.hide(/twilightforest:uncrafting.*/)
 
+  event.hide(/gtceu:.*mana_steel.*/)
+  event.hide(/gtceu:.*terra_steel.*/)
+
+
 
 })
   

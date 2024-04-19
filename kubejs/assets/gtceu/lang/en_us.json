@@ -1,4 +1,14 @@
 {
+    "material.gtceu.soul_sand": "Soul Sand",
+    "material.gtceu.copper_alloy": "Copper Silicate",
+    "material.gtceu.redstone_alloy": "Redstone Alloy",
+    "material.gtceu.conductive_alloy": "Conductive Iron",
+    "material.gtceu.energetic_alloy": "Energetic Alloy",
+    "material.gtceu.vibrant_alloy": "Vibrant Alloy",
+    "material.gtceu.pulsating_alloy": "Pulsating Alloy",
+    "material.gtceu.soularium": "Soularium",
+    "material.gtceu.dark_steel": "Dark Steel",
+    "material.gtceu.end_steel": "End Steel",
     "material.gtceu.sky_steel": "Sky Steel",
     "material.gtceu.pure_skystone": "Pure Sky Stone",
     "material.gtceu.knightmetal": "Knightmetal",
@@ -6,5 +16,12 @@
     "material.gtceu.liveroot": "Liveroot",
     "material.gtceu.hellforged": "Hellforged",
     "material.gtceu.iesnium": "Iesnium",
-    "material.gtceu.elementium": "Elementiums"
+    "material.gtceu.elementium": "Elementium",
+    "material.gtceu.manasteel": "Manasteel",
+    "material.gtceu.terrasteel": "Terrasteel",
+    "material.gtceu.alfsteel": "Alfsteel",
+    "material.gtceu.yggdralium": "Yggdralium",
+    "material.gtceu.yggdralium_shard": "Yggdralium Shard"
+
+
 }
