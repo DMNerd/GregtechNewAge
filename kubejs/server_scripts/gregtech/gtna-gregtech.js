@@ -8,7 +8,7 @@ ServerEvents.recipes(e => {
         .itemInputs('minecraft:flint')
         .itemOutputs('6x notreepunching:flint_shard')
         .duration(60)
-        .EUt(30)
+        .EUt(10)
     e.recipes.gtceu.macerator('gtna:gtceu/liveroot_dust')
         .itemInputs('twilightforest:liveroot')
         .itemOutputs('2x gtceu:liveroot_dust')
@@ -41,5 +41,4 @@ ServerEvents.recipes(e => {
         .circuit(2)
         .duration(240)
         .EUt(80)
-
 })

@@ -1,8 +1,7 @@
 
 JEIEvents.hideItems(event => {
   event.hide(/ae2:facade/)
-
-  event.hide(/notreepunching:flint_/)
+  
   event.hide(/notreepunching:.*_knife/)
   event.hide(/notreepunching:.*_mattock/)
   event.hide(/notreepunching:.*_saw/)

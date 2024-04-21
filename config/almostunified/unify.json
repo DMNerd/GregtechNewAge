@@ -32,6 +32,7 @@
     "forge:storage_blocks/raw_{material}"
   ],
   "materials": [
+    "netherite_scrap",
     "wheat",
     "aeternium",
     "aluminum",
@@ -102,7 +103,10 @@
     "energetic_alloy",
     "vibrant_alloy",
     "pulsating_alloy",
-    "soularium"
+    "soularium",
+    "andesite_alloy",
+    "shadow_steel",
+    "refined_radiance"
   ],
   "priorityOverrides": {},
   "customTags": {},

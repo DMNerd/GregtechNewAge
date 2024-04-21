@@ -1,6 +1,18 @@
 ServerEvents.recipes(e => {
 
-    e.remove({ id: '/ad_astra:steel.*/' })
+    let woodtypes = ['glacian', 'aeronos', 'strophar']
+    woodtypes.forEach(wood => {
+        hardenWoodenRecipes(e, 'ad_astra', wood)
+    });
+    let redstone = ['glacian', 'calorite', 'ostrum', 'iron_plating', 'steel_plating']
+    redstone.forEach(material => {
+        hardenPPRecipes(e, 'ad_astra', material)
+        hardenButtonRecipes(e, 'ad_astra', material)
+    });
+    hardenLadderRecipes(e, 'ad_astra', 'aeronos')
+    hardenLadderRecipes(e, 'ad_astra', 'strophar')
+
+    e.remove({ id: '/ad_astra:steel_ingot.*/' })
     e.remove({ id: '/ad_astra_rocketed:nasa_workbench.*/' })
 
     e.remove({ id: 'ad_astra:nasa_workbench' })
