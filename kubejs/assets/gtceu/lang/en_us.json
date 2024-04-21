@@ -1,11 +1,17 @@
 {
+    "block.gtceu.greenhouse": "Greenhouse",
+    "gtceu.greenhouse": "Greenhouse",
     "material.gtceu.soul_sand": "Soul Sand",
+    "material.gtceu.netherite_scrap": "Netherite Scrap",
+    "material.gtceu.netherite": "Netherite",
+    "material.gtceu.enderium": "Enderium",
     "material.gtceu.copper_alloy": "Copper Silicate",
     "material.gtceu.redstone_alloy": "Redstone Alloy",
     "material.gtceu.conductive_alloy": "Conductive Iron",
     "material.gtceu.energetic_alloy": "Energetic Alloy",
     "material.gtceu.vibrant_alloy": "Vibrant Alloy",
     "material.gtceu.pulsating_alloy": "Pulsating Alloy",
+    "material.gtceu.stellar_alloy": "Stellar Alloy",
     "material.gtceu.soularium": "Soularium",
     "material.gtceu.dark_steel": "Dark Steel",
     "material.gtceu.end_steel": "End Steel",
@@ -20,8 +26,7 @@
     "material.gtceu.manasteel": "Manasteel",
     "material.gtceu.terrasteel": "Terrasteel",
     "material.gtceu.alfsteel": "Alfsteel",
-    "material.gtceu.yggdralium": "Yggdralium",
-    "material.gtceu.yggdralium_shard": "Yggdralium Shard"
-
+    "material.gtceu.yggdralium": "Yggdralium Alloy",
+    "material.gtceu.yggdralium_shard": "Pure Yggdralium"
 
 }
