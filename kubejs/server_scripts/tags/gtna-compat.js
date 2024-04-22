@@ -17,7 +17,7 @@ ServerEvents.tags('item', e => {
     e.add('forge:ingots/shadow_steel', 'create:shadow_steel')
 
     //Stargate Journey
-    let sgmats = ['naquadah', 'naquadah_alloy']
+    const sgmats = ['naquadah', 'naquadah_alloy']
     sgmats.forEach(material => {
         addMetalTags(e, 'sgjourney', material)
     });
@@ -29,7 +29,7 @@ ServerEvents.tags('item', e => {
     e.add('forge:gems', 'botanicpledge:yggdralium_shard')
     e.add('forge:gems/yggdralium_shard', 'botanicpledge:yggdralium_shard')
 
-    let netherstar_inputs = ['minecraft:netherstar', '#forge:dusts/nether_star']
+    const netherstar_inputs = ['minecraft:netherstar', '#forge:dusts/nether_star']
     netherstar_inputs.forEach(input => {
         e.add('gtna:netherstar_inputs', input)
     });
@@ -39,7 +39,6 @@ ServerEvents.tags('item', e => {
     e.add('twilightforest:transformation_logs', '#twilightforest:transwood_logs')
     e.add('twilightforest:time_logs', '#twilightforest:timewoodwood_logs')
     e.add('twilightforest:dark_logs', '#twilightforest:darkwoodwood_logs')
-
 
 })
 

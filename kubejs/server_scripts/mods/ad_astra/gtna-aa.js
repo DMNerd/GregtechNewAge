@@ -1,10 +1,10 @@
 ServerEvents.recipes(e => {
 
-    let woodtypes = ['glacian', 'aeronos', 'strophar']
+    const woodtypes = ['glacian', 'aeronos', 'strophar']
     woodtypes.forEach(wood => {
         hardenWoodenRecipes(e, 'ad_astra', wood)
     });
-    let redstone = ['glacian', 'calorite', 'ostrum', 'iron_plating', 'steel_plating']
+    const redstone = ['glacian', 'calorite', 'ostrum', 'iron_plating', 'steel_plating']
     redstone.forEach(material => {
         hardenPPRecipes(e, 'ad_astra', material)
         hardenButtonRecipes(e, 'ad_astra', material)

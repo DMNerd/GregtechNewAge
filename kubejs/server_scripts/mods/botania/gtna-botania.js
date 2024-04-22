@@ -1,6 +1,6 @@
 ServerEvents.recipes(e => {
 
-    let botaniaMats = ['manasteel', 'terrasteel', 'elementium']
+    const botaniaMats = ['manasteel', 'terrasteel', 'elementium']
     botaniaMats.forEach(material => {
         replaceMetalInCrafting(e,'botania', material)
         removeBlockNuggetRecipes(e, 'botania', material)
@@ -10,6 +10,7 @@ ServerEvents.recipes(e => {
     hardenToolRecipes(e, 'botania', 'manasteel', 'botania:livingwood_twig')
     hardenArmorRecipes(e, 'botania', 'manasteel')
     hardenArmorRecipes(e, 'botania', 'terrasteel')
+    e.replaceInput({ id: 'botania:terra_pick' }, 'botania:terrasteel_ingot', '#forge:plates/terrasteel')
 
     replaceMetalInCrafting(e,'mythicbotany', 'alfsteel')
     replaceMetalInCrafting(e,'botanicpledge', 'yggdralium')

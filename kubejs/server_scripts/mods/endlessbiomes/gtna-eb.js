@@ -1,5 +1,5 @@
 ServerEvents.recipes(e => {
-    let woodtypes = ['penumbra', 'twisted']
+    const woodtypes = ['penumbra', 'twisted']
     woodtypes.forEach(wood => {
         hardenWoodenRecipes(e, 'endlessbiomes', wood)
         hardenPPRecipes(e, 'endlessbiomes', wood)

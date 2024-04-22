@@ -7,6 +7,7 @@ ServerEvents.recipes(e => {
         A: '#chipped:andesite', 
         B: '#forge:tools/mortars'
     }).id('gtna:shaped/andesite_dust_mortar')
+    e.remove({ output: 'create:fluid_tank' })
     e.shaped('create:fluid_tank', ['BCB', 'DAE', 'BCB'], {
         A: 'gtceu:tempered_glass', 
         B: '#forge:screws/copper',

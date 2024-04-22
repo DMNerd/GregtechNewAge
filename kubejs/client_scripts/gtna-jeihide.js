@@ -23,6 +23,10 @@ JEIEvents.hideItems(event => {
 
   event.hide(/gtceu:.*mana_steel.*/)
   event.hide(/gtceu:.*terra_steel.*/)
+  event.hide(/engineersdecor:metal_bar/)
+  
+  event.hide(/megacells:printed.*/)
+  event.hide(/megacells:.*_press/)
 
 
 

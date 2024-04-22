@@ -39,6 +39,8 @@ ServerEvents.recipes((e) => {
       ["fruitsdelight:mango_sapling", "minecraft:jungle_log", "fruitsdelight:mango"],
       ["fruitsdelight:peach_sapling", "minecraft:jungle_log", "fruitsdelight:peach"],
       ["fruitsdelight:kiwi_sapling", "minecraft:jungle_log", "fruitsdelight:kiwi"],
+      ["fruitsdelight:durian_sapling", "minecraft:jungle_log", "fruitsdelight:durian"],
+
     ];
     const plants = [
       ["minecraft:pumpkin_seeds", "minecraft:pumpkin", 6],
@@ -61,6 +63,10 @@ ServerEvents.recipes((e) => {
       ["berries_and_cherries:green_grapes", "berries_and_cherries:green_grapes", 16],
       ["berries_and_cherries:strawberry", "berries_and_cherries:strawberry", 16],
       ["fruitsdelight:pineapple", "fruitsdelight:pineapple", 16],
+      ["fruitsdelight:lemon", "fruitsdelight:lemon", 16],
+      ["fruitsdelight:cranberry", "fruitsdelight:cranberry", 16],
+      ["fruitsdelight:hamimelon_seeds", "fruitsdelight:hamimelon", 6],
+
     ];
     const oreberries = [['iron'], ['gold'], ['copper'], ['tin'], ['aluminum'], ['lead'], ['nickel'], ['uranium'], ['osmium'], ['zinc'], ['silver'], ['essence']];
     

@@ -9,18 +9,18 @@ ServerEvents.recipes(e => {
     e.remove({ id: '/notreepunching:.*_knife/' })
     e.remove({ id: '/notreepunching:.*_mattock/' })
     e.remove({ id: '/notreepunching:.*_saw/' })
-    let tools = ['shovel', 'pickaxe', 'axe', 'hoe', 'sword']
+    const tools = ['shovel', 'pickaxe', 'axe', 'hoe', 'sword']
     tools.forEach(tool => {
         e.replaceInput({ input: 'minecraft:wooden_' + tool }, 'minecraft:wooden_' + tool, 'gtceu:flint_' + tool)
         e.replaceInput({ input: 'minecraft:stone_' + tool }, 'minecraft:wooden_' + tool, 'gtceu:flint_' + tool)
         e.replaceInput({ input: 'minecraft:iron_' + tool }, 'minecraft:iron_' + tool, 'gtceu:iron_' + tool)
         e.remove({ output: 'minecraft:iron_' + tool })
     });
-    let knife_mods = ['delightful', 'ends_delight', 'farmersdelight', 'twilightdelight', 'occultism', 'moredelight']
+    const knife_mods = ['delightful', 'ends_delight', 'farmersdelight', 'twilightdelight', 'occultism', 'moredelight']
     knife_mods.forEach(mod => {
         e.remove({id:  '/' + mod +':.*_knife/'})
     });
-    let pptounify = ['bamboo', 'cherry']
+    const pptounify = ['bamboo', 'cherry']
     pptounify.forEach(wood => {
         hardenPPRecipes(e, 'minecraft', wood)   
     }); 
