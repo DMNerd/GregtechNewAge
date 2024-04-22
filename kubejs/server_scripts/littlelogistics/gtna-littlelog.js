@@ -87,7 +87,7 @@ ServerEvents.recipes(e => {
         E: 'littlelogistics:vessel_charger'
     }).id('gtna/littlelogistics/energy_locomotive')
     e.remove({id: 'littlelogistics:steam_tug'})
-    e.shaped('littlelogistics:steam_tug', ['DDE', 'DDC', 'AAA'], {
+    e.shaped('littlelogistics:tug', ['DE ', 'DAC', 'AAA'], {
         A: '#forge:plates/black_steel',
         C: 'gtceu:hp_steam_solid_boiler',
         D: 'create:fluid_tank',
