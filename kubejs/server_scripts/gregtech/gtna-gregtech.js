@@ -3,8 +3,14 @@ ServerEvents.recipes(e => {
     e.remove({ output: '/gtceu:.*mana_steel.*/' })
     e.remove({ output: '/gtceu:.*terra_steel.*/' })
 
+    e.shaped("gtceu:greenhouse", ["GGG", "CHC", "PUP"], {
+        G: "gtceu:tempered_glass",
+        C: "#gtceu:circuits/mv",
+        H: "gtceu:mv_machine_hull",
+        P: "gtceu:mv_electric_piston",
+        U: "gtceu:mv_electric_pump",
+    });
 
-    
     e.recipes.gtceu.compressor('gtna:gtceu/compressing/netherstar_block')
         .itemInputs('9x #gtna:netherstar_inputs')
         .itemOutputs('#forge:storage_blocks/nether_star')

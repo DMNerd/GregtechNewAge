@@ -4,9 +4,11 @@ const $DustProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.ma
 GTCEuStartupEvents.registry('gtceu:material', e => {
     GTMaterials.Obsidian.setProperty(PropertyKey.INGOT, new $IngotProperty());  
     GTMaterials.Andesite.setProperty(PropertyKey.DUST, new $DustProperty());  
+    GTMaterials.Diamond.addFlags(GTMaterialFlags.GENERATE_DENSE)
     GTMaterials.Andesite.addFlags(GTMaterialFlags.MORTAR_GRINDABLE)
     GTMaterials.Copper.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_RING)
-
+    GTMaterials.Amethyst.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_DENSE)
+    
     e.create('soul_sand')
         .dust()
         .components('1x silicon', '1x saltpeter', '1x coal')
@@ -23,7 +25,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .components('4x netherite_scrap', '4x gold')
         .color(0x4B4243)
         .iconSet(GTMaterialIconSet.METALLIC)
-        .flags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_PLATE)
+        .flags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE)
     e.create('enderium')
         .ingot()
         .color(0x2CA9AE).secondaryColor(0x0B3056)

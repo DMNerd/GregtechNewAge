@@ -18,6 +18,14 @@ ServerEvents.recipes(e => {
         E: '#forge:tools/hammers'
         
     }).id('gtna/littlelogistics/barge')
+    e.remove({id: 'littlecontraptions:contraption_barge'})
+    e.shaped('littlecontraptions:contraption_barge', [' E ', 'DCD', 'AAA'], {
+        A: '#forge:plates/black_steel',
+        C: '#forge:storage_blocks/andesite_alloy',
+        D: '#forge:rods/steel',
+        E: '#forge:tools/hammers'
+        
+    }).id('gtna/littlecontraptions/contraption__barge')
     e.remove({id: 'littlelogistics:barrel_barge'})
     e.shaped('littlelogistics:barrel_barge', [' E ', 'DCD', 'AAA'], {
         A: '#forge:plates/black_steel',

@@ -1,4 +1,5 @@
 function addMetalTags(event, modid, metal){
+    event.add('forge:raw_materials/' + metal, modid + ':raw_' + metal )
     event.add('forge:nuggets', modid + ':' + metal + '_nugget')
     event.add('forge:nuggets/' + metal, modid + ':' + metal + '_nugget')
     event.add('forge:ingots', modid + ':' + metal + '_ingot')

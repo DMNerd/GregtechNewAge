@@ -106,7 +106,9 @@
     "soularium",
     "andesite_alloy",
     "shadow_steel",
-    "refined_radiance"
+    "refined_radiance",
+    "naquadah",
+    "naquadah_alloy"
   ],
   "priorityOverrides": {},
   "customTags": {},

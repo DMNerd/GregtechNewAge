@@ -16,6 +16,11 @@ ServerEvents.tags('item', e => {
     e.add('forge:ingots/refined_radiance', 'create:refined_radiance')
     e.add('forge:ingots/shadow_steel', 'create:shadow_steel')
 
+    //Stargate Journey
+    let sgmats = ['naquadah', 'naquadah_alloy']
+    sgmats.forEach(material => {
+        addMetalTags(e, 'sgjourney', material)
+    });
     //Mythic Botany
     addMetalTags(e, 'mythicbotany', 'alfsteel')
 

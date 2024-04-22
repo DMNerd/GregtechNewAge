@@ -165,7 +165,7 @@ function greenhousetreerecipe(event, woodType){
         .EUt(60)
         .circuit(2);
   }
-  function greenhousefruittreerecipe(event, woodType){
+function greenhousefruittreerecipe(event, woodType){
     event.recipes.gtceu.greenhouse(woodType[0])
         .notConsumable(woodType[0])
         .inputFluids("water 1000")
@@ -191,7 +191,7 @@ function greenhousetreerecipe(event, woodType){
         .EUt(60)
         .circuit(2);
   }
-  function greenhouseplantrecipe(event, seedType){
+function greenhouseplantrecipe(event, seedType){
     event.recipes.gtceu.greenhouse(seedType[0])
         .notConsumable(seedType[0])
         .inputFluids("water 1000")
@@ -208,7 +208,7 @@ function greenhousetreerecipe(event, woodType){
         .EUt(60)
         .circuit(2);
   }
-  function greenhouseoreberryrecipe(event, ore){
+function greenhouseoreberryrecipe(event, ore){
     event.recipes.gtceu.greenhouse('oreberriesreplanted:' + ore[0] + '_oreberry_bush')
         .notConsumable('oreberriesreplanted:' + ore[0] + '_oreberry_bush')
         .inputFluids("distilled_water 1000")
@@ -230,12 +230,21 @@ function greenhousetreerecipe(event, woodType){
         .EUt(60)
         .circuit(4);
   }
-  function oreberry_crossbreed(event, parent, parent2, result, fluid){
+function crossbreed(event, breedRecipe){
+    event.recipes.gtceu.greenhouse('crosbreeding/' + breedRecipe[2])
+        .itemInputs([breedRecipe[0], breedRecipe[1], "12x gtceu:fertilizer"])
+        .inputFluids("water 2000")
+        .itemOutputs(breedRecipe[2])
+        .duration(20000)
+        .EUt(40)
+        .circuit(5);
+}
+function oreberry_crossbreed(event, parent, parent2, result, fluid){
     event.recipes.gtceu.greenhouse('oreberry_crosbreeding/' + result)
         .itemInputs(['oreberriesreplanted:' + parent, 'oreberriesreplanted:' + parent2, "6x gtceu:fertilizer"])
         .inputFluids(fluid)
         .itemOutputs('oreberriesreplanted:' + result)
-        .duration(4000)
+        .duration(20000)
         .EUt(40)
-        .circuit(5);
+        .circuit(6);
 }
