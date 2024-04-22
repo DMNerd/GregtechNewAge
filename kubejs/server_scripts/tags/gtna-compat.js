@@ -28,7 +28,13 @@ ServerEvents.tags('item', e => {
     netherstar_inputs.forEach(input => {
         e.add('gtna:netherstar_inputs', input)
     });
-    e.add('forge:double_plates/ptanks_substitute_neterite', 'gtceu:dense_netherite_plate')
+
+    //Twilight
+    e.add('twilightforest:sorting_logs', '#twilightforest:sortwood_logs')
+    e.add('twilightforest:transformation_logs', '#twilightforest:transwood_logs')
+    e.add('twilightforest:time_logs', '#twilightforest:timewoodwood_logs')
+    e.add('twilightforest:dark_logs', '#twilightforest:darkwoodwood_logs')
+
 
 })
 

@@ -9,6 +9,7 @@ WorldgenEvents.remove(e => {
             "occultism:silver_ore_deepslate",
             "sgjourney:naquadah_ore",
             "sgjourney:deepslate_naquadah_ore",
-            "sgjourney:nether_naquadah_ore"]
+            "sgjourney:nether_naquadah_ore",
+            "oreberriesreplanted:osmium_oreberry_bush"]
     })
   })

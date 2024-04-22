@@ -5,7 +5,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
     GTMaterials.Obsidian.setProperty(PropertyKey.INGOT, new $IngotProperty());  
     GTMaterials.Andesite.setProperty(PropertyKey.DUST, new $DustProperty());  
     GTMaterials.Andesite.addFlags(GTMaterialFlags.MORTAR_GRINDABLE)
-    GTMaterials.Copper.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW)
+    GTMaterials.Copper.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_RING)
 
     e.create('soul_sand')
         .dust()
@@ -105,13 +105,19 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .color(0x82764A)
         .components('9x iron', '1x gold', '9x liveroot')
         .iconSet(GTMaterialIconSet.DULL)
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING)
+        .flags(GTMaterialFlags.GENERATE_PLATE)
     e.create('knightmetal')
         .ingot()
         .color(0xC3D5AD)
         .components('2x steel', '1x manganese')
         .iconSet(GTMaterialIconSet.METALLIC)
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING)
+        .flags(GTMaterialFlags.GENERATE_PLATE)
+    e.create('fiery')
+        .dust()
+        .color(0x191313).secondaryColor(0xFAAC24)
+        .element('fierium')
+        .iconSet(GTMaterialIconSet.SHINY)
+        .flags(GTMaterialFlags.GENERATE_PLATE)
     //Enderio
     e.create('copper_alloy')
         .ingot()

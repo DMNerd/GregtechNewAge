@@ -62,3 +62,81 @@ function hardenButtonRecipes(event, modid, material){
     event.remove({ output: '/' + modid + ':.*' + material + '.*_button/' })
     event.shapeless('/' + modid + ':' + material + '.*_button/',[modid + ':' + material + '_pressure_plate', '#forge:tools/saws']).id('gtna:shapeless/' + modid + '/'+ material +'_button')
 }
+function hardenPickaxeRecipes(event, modid, material, stick){
+    event.remove({output: '/' + modid + ':'+ material + '_pick.*/'})
+    event.shaped('/' + modid + ':' + material + '_pick.*/', ['BAA', 'CED', ' E '], {
+        A: '#forge:ingots/' + material, 
+        B: '#forge:plates/' + material,
+        C: '#forge:tools/hammers',
+        D: '#forge:tools/files',
+        E: stick
+    }).id('gtna:'+ modid + '/'+ material + '_pick')
+}
+function hardenAxeRecipes(event, modid, material, stick){
+    event.remove({output: modid + ':'+ material + '_axe'})
+    event.shaped(modid + ':' + material + '_axe', ['BAA', 'BED', 'CE '], {
+        A: '#forge:ingots/' + material, 
+        B: '#forge:plates/' + material,
+        C: '#forge:tools/hammers',
+        D: '#forge:tools/files',
+        E: stick
+    }).id('gtna:'+ modid + '/'+ material + '_axe')
+}
+function hardenShovelRecipes(event, modid, material, stick){
+    event.remove({output: modid + ':'+ material + '_shovel'})
+    event.shaped(modid + ':' + material + '_shovel', ['CAD', ' E ', ' E '], {
+        A: '#forge:ingots/' + material, 
+        B: '#forge:plates/' + material,
+        C: '#forge:tools/hammers',
+        D: '#forge:tools/files',
+        E: stick
+    }).id('gtna:'+ modid + '/'+ material + '_shovel')
+}
+function hardenHoeRecipes(event, modid, material, stick){
+    event.remove({output: modid + ':'+ material + '_hoe'})
+    event.shaped(modid + ':' + material + '_hoe', ['BAD', 'CE ', ' E '], {
+        A: '#forge:ingots/' + material, 
+        B: '#forge:plates/' + material,
+        C: '#forge:tools/hammers',
+        D: '#forge:tools/files',
+        E: stick
+    }).id('gtna:'+ modid + '/'+ material + '_hoe')
+}
+function hardenSwordRecipes(event, modid, material, stick){
+    event.remove({output: modid + ':'+ material + '_sword'})
+    event.shaped(modid + ':' + material + '_sword', [' B ', 'DBC', ' E '], {
+        B: '#forge:plates/' + material,
+        C: '#forge:tools/hammers',
+        D: '#forge:tools/files',
+        E: stick
+    }).id('gtna:'+ modid + '/'+ material + '_sword')
+}
+function hardenToolRecipes(event, modid, material, stick){
+    hardenPickaxeRecipes(event, modid, material, stick)    
+    hardenAxeRecipes(event, modid, material, stick)  
+    hardenShovelRecipes(event, modid, material, stick)  
+    hardenHoeRecipes(event, modid, material, stick)  
+    hardenSwordRecipes(event, modid, material, stick)    
+}
+function hardenArmorRecipes(event, modid, material){
+    event.remove({output: modid + ':'+ material + '_helmet'})
+    event.shaped(modid + ':' + material + '_helmet', ['AAA', 'ABA'], {
+        A: '#forge:plates/' + material,
+        B: '#forge:tools/hammers',
+    }).id('gtna:'+ modid + '/'+ material + '_helmet')
+    event.remove({output: modid + ':'+ material + '_chestplate'})
+    event.shaped(modid + ':' + material + '_chestplate', ['ABA', 'AAA', 'AAA'], {
+        A: '#forge:plates/' + material,
+        B: '#forge:tools/hammers',
+    }).id('gtna:'+ modid + '/'+ material + '_chestplate')
+    event.remove({output: modid + ':'+ material + '_leggings'})
+    event.shaped(modid + ':' + material + '_leggings', ['AAA', 'ABA', 'A A'], {
+        A: '#forge:plates/' + material,
+        B: '#forge:tools/hammers',
+    }).id('gtna:'+ modid + '/'+ material + '_leggings')
+    event.remove({output: modid + ':'+ material + '_boots'})
+    event.shaped(modid + ':' + material + '_boots', ['A A', 'ABA'], {
+        A: '#forge:plates/' + material,
+        B: '#forge:tools/hammers',
+    }).id('gtna:'+ modid + '/'+ material + '_boots')
+}
