@@ -8,7 +8,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
     GTMaterials.Andesite.addFlags(GTMaterialFlags.MORTAR_GRINDABLE)
     GTMaterials.Copper.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_RING)
     GTMaterials.Amethyst.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_DENSE)
-    
+
     e.create('soul_sand')
         .dust()
         .components('1x silicon', '1x saltpeter', '1x coal')
@@ -118,6 +118,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .dust()
         .color(0x191313).secondaryColor(0xFAAC24)
         .element('fierium')
+        .blastTemp(2200, 'low', GTValues.VA[GTValues.MV], 2000) 
         .iconSet(GTMaterialIconSet.SHINY)
         .flags(GTMaterialFlags.GENERATE_PLATE)
     //Enderio
