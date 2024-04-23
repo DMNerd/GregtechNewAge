@@ -4,6 +4,7 @@ ServerEvents.recipes(e => {
     e.replaceInput({ input: 'minecraft:leather' }, 'minecraft:leather', 'leatherprocessing:dried_leather')
     e.replaceInput({ input: 'minecraft:stick', output: '#forge:tools' }, 'minecraft:stick', 'kubejs:bound_stick')
     e.replaceInput({ input: 'minecraft:milk_bucket' }, 'minecraft:milk_bucket', '#forge:milk')
+    e.replaceInput({ input: 'minecraft:string' }, 'minecraft:string', '#forge:string')
 
     e.remove({ id: '/notreepunching:flint_/' })
     e.remove({ id: '/notreepunching:.*_knife/' })
@@ -24,6 +25,7 @@ ServerEvents.recipes(e => {
     pptounify.forEach(wood => {
         hardenPPRecipes(e, 'minecraft', wood)   
     }); 
+    
     e.shapeless('kubejs:bound_stick',['minecraft:stick', '2x #forge:string']).id('gtna:shapeless/bound_stick')
     e.shapeless('minecraft:flint',['3x minecraft:gravel']).id('gtna:shapeless/easy_flint')
     e.shapeless('notreepunching:flint_shard',['#notreepunching:loose_rocks', 'minecraft:flint']).id('gtna:shapeless/early_knapping')

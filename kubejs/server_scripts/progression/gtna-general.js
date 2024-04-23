@@ -22,7 +22,25 @@ ServerEvents.recipes(e => {
     e.replaceInput({input: 'createdeco:industrial_iron_ingot' }, 'createdeco:industrial_iron_ingot', '#forge:ingots/wrought_iron')
     e.replaceInput({input: 'createdeco:industrial_iron_nugget' }, 'createdeco:industrial_iron_nugget', '#forge:nuggets/wrought_iron')
     e.replaceInput({input: 'createdeco:industrial_iron_sheet' }, 'createdeco:industrial_iron_sheet', '#forge:plates/wrought_iron')
+    e.replaceInput({input: 'create:industrial_iron_block' }, 'create:industrial_iron_block', '#forge:storage_blocks/wrought_iron')
+    e.replaceInput({mod: 'createdeco' }, '#forge:sheets/brass', '#forge:plates/brass')
 
+    // Worst magnet
+    e.remove({ id: "simplemagnets:basicmagnet" });
+    e.shapeless("gtceu:lv_item_magnet", "simplemagnets:basicmagnet").id('gtna:basic_magnet')
+    // King magnet
+    e.remove({ output: "simplemagnets:advancedmagnet" });
+    e.shapeless("gtceu:hv_item_magnet", "simplemagnets:advancedmagnet").id('gtna:advanced_magnet')
+
+    e.remove({id: "simplemagnets:basic_demagnetization_coil"})
+    e.remove({id: "simplemagnets:advanced_demagnetization_coil"})
+    
+    e.remove({ mod: "elevatorid" });
+    e.shaped("elevatorid:elevator_gray", ["PPP", "GFG", "PPP"], {
+        P: "#forge:plates/steel",
+        G: "#forge:small_gears/steel",
+        F: "#forge:frames/steel",
+    }).id('gtna:steel_elevator')
     e.remove({id: 'toolbelt:pouch'})
     e.shaped('toolbelt:pouch', ['A A', 'B B', 'CBC'], {
         A: '#forge:bolts/gold', 

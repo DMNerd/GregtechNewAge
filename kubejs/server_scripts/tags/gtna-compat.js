@@ -17,9 +17,12 @@ ServerEvents.tags('item', e => {
     e.add('forge:ingots/shadow_steel', 'create:shadow_steel')
 
     e.add('forge:rods/andesite', '#forge:rods/andesite_alloy')
+    e.add('forge:rods/industrial_iron', '#forge:rods/wrought_iron')
 
+    addMetalTags(e, 'create', 'industrial_iron')
     addMetalTags(e, 'createdeco', 'industrial_iron')
     addMetalUnificationTags(e, 'createdeco', 'industrial_iron', 'wrought_iron')
+    addMetalUnificationTags(e, 'create', 'industrial_iron', 'wrought_iron')
 
     //Stargate Journey
     const sgmats = ['naquadah', 'naquadah_alloy']

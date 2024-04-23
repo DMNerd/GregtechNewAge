@@ -53,6 +53,12 @@ ServerEvents.recipes(e => {
         .circuit(1)
         .duration(800)
         .EUt(GTValues.V[GTValues.MV])
+    greg.chemical_bath("gtna:elevator_washing/gray_elevator")
+        .itemInputs("#elevatorid:elevators")
+        .inputFluids("gtceu:chlorine 50")
+        .itemOutputs("elevatorid:elevator_gray")
+        .duration(400)
+        .EUt(2);
     greg.forge_hammer('gtna:gtceu/advanced-knapping')
         .itemInputs('minecraft:flint')
         .itemOutputs('6x notreepunching:flint_shard')
@@ -100,5 +106,14 @@ ServerEvents.recipes(e => {
         .circuit(4)
         .duration(440)
         .EUt(GTValues.V[GTValues.LuV])
+
+    Color.DYE.forEach(color => {
+        greg.chemical_bath(`${color}_elevator`)
+            .itemInputs("#elevatorid:elevators")
+            .inputFluids(`gtceu:${color}_dye 18"`)
+            .itemOutputs(`elevatorid:elevator_${color}`)
+            .duration(20)
+            .EUt(7);
+    });
 
 })      

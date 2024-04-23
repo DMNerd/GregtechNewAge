@@ -28,6 +28,10 @@ JEIEvents.hideItems(event => {
   event.hide(/megacells:printed.*/)
   event.hide(/megacells:.*_press/)
 
+  event.hide(/simplemagnets:.*demag.*/)
+
+  
+
 
 
 })
