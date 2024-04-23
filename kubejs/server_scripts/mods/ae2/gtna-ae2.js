@@ -28,7 +28,16 @@ ServerEvents.recipes(e => {
             D: 'megacells:cell_component_' + size,
             E: '#forge:tools/screwdrivers',
             F: '#forge:tools/wrench'
-        }).id('gtna:megacells/cell/' + size)
+        }).id('gtna:megacells/cell/item_' + size)
+        e.remove({ id: 'megacells:cells/standard/fluid_storage_cell_' + size })
+        e.shaped('megacells:fluid_storage_cell_' + size, ['ECF', 'BDB', 'AAA'], {
+            A: '#forge:plates/sky_steel', 
+            B: '#forge:screws/titanium',
+            C: 'ae2:quartz_vibrant_glass',
+            D: 'megacells:cell_component_' + size,
+            E: '#forge:tools/screwdrivers',
+            F: '#forge:tools/wrench'
+        }).id('gtna:megacells/cell/fluid_' + size)
     });
 
     component_recipe.forEach(recipe => {
@@ -91,9 +100,11 @@ ServerEvents.recipes(e => {
     e.replaceInput({id: '/expatternprovider:ex_io.*/' }, 'ae2:engineering_processor', 'megacells:accumulation_processor')
     e.replaceInput({id: '/expatternprovider:ex_io.*/' }, 'ae2:logic_processor', 'megacells:accumulation_processor')
     e.replaceInput({id: '/expatternprovider:ex_io.*/' }, 'ae2:speed_card', '#forge:double_plates/pfstalloy')
+    e.replaceInput({id: 'expatternprovider:ex_drive' }, '#forge:dusts/fluix', '#forge:plates/pfstalloy')
     e.replaceInput({id: '/expatternprovider:ingredient.*/' }, 'minecraft:iron', '#forge:double_plates/iron')
     e.replaceInput({id: '/expatternprovider:crystal_fix.*/' }, 'minecraft:iron', '#forge:double_plates/iron')
     e.replaceInput({id: '/expatternprovider:crystal_fix.*/' }, '#forge:gems/fluix', 'gtceu:kanthal_coil_block')
+    e.replaceInput({id: '/expatternprovider:crystal_fix.*/' }, 'minecraft:iron', '#forge:plates/stainless_steel')
     e.replaceInput({id: '/expatternprovider:wireless_conn.*/' }, 'ae2:engineering_processor', '#forge:double_plates/titanium')
     e.replaceInput({id: '/expatternprovider:wireless_conn.*/' }, 'ae2:sky_dust', '#forge:plates/fluix')
     e.replaceInput({id: '/expatternprovider:wireless_conn.*/' }, '#ae2:smart_cable', 'ae2:engineering_processor')
@@ -102,6 +113,8 @@ ServerEvents.recipes(e => {
     e.replaceInput({id: '/expatternprovider:(?:water|cobblestone).*_cell/' }, 'ae2:quartz_glass', 'gtceu:laminated_glass')
     e.replaceInput({id: '/expatternprovider:(?:water|cobblestone).*_cell/' }, 'minecraft:water_bucket', 'gtceu:infinite_water_cover')
     e.replaceInput({id: '/expatternprovider:cobblestone.*_cell/' }, 'minecraft:lava_bucket', 'bloodmagic:lavasigil')
+    
+    e.replaceInput({id: '/megacells:.*_component/' }, 'ae2:sky_dust', '#forge:plates/fluix')
 
 
 
@@ -123,6 +136,14 @@ ServerEvents.recipes(e => {
         E: '#forge:tools/screwdrivers',
         F: '#forge:tools/wrench'
     }).id('gtna:megacells/mega_item_cell_housing')
+    e.remove({ id: 'megacells:cells/mega_fluid_cell_housing' })
+    e.shaped('megacells:mega_fluid_cell_housing', ['ECF', 'B B', 'AAA'], {
+        A: '#forge:plates/pulsating_alloy', 
+        B: '#forge:screws/titanium',
+        C: 'ae2:quartz_vibrant_glass',
+        E: '#forge:tools/screwdrivers',
+        F: '#forge:tools/wrench'
+    }).id('gtna:megacells/mega_fluid_cell_housing')
     e.remove({ output: 'megacells:bulk_item_cell'})
     e.shaped('megacells:bulk_item_cell', ['ECF', 'BDB', 'AAA'], {
         A: '#forge:plates/sky_steel', 

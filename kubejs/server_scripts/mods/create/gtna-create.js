@@ -1,6 +1,7 @@
 ServerEvents.recipes(e => {
 
-    
+    e.replaceInput({ mod: 'create' }, 'minecraft:dried_kelp_block', '#forge:storage_blocks/polytetrafluoroethylene')
+
     e.remove({ id: '/create:crafting/materials/andesite_alloy.*/' })
     e.shapeless('2x gtceu:andesite_alloy_dust',['2x #forge:dusts/iron', '2x #forge:dusts/andesite']).id('gtna:shapeless/create/andesite_alloy_dust')
     e.shaped('#forge:dusts/andesite', ['A', 'B'], {

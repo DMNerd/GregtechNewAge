@@ -45,8 +45,9 @@ ServerEvents.tags('item', e => {
     //Twilight
     e.add('twilightforest:sorting_logs', '#twilightforest:sortwood_logs')
     e.add('twilightforest:transformation_logs', '#twilightforest:transwood_logs')
-    e.add('twilightforest:time_logs', '#twilightforest:timewoodwood_logs')
-    e.add('twilightforest:dark_logs', '#twilightforest:darkwoodwood_logs')
+    e.add('twilightforest:time_logs', '#twilightforest:timewood_logs')
+    e.add('twilightforest:dark_logs', '#twilightforest:darkwood_logs')
+    
 
 })
 
