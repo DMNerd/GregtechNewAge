@@ -49,7 +49,7 @@ ServerEvents.recipes(e => {
             .itemOutputs('megacells:mega_' + device)
             .duration(3000)
             .EUt(GTValues.V[GTValues.IV])
-        e.remove({id: '/expatternprovider:ex_' + device + '.*/'})
+        e.remove({output: '/expatternprovider:ex_' + device + '.*/'})
         e.recipes.gtceu.assembler('gtna:ae2/expatternprovider/' + device)
             .itemInputs(['megacells:mega_' + device, '4x ae2:capacity_card', 'megacells:accumulation_processor', '2x #forge:double_plates/diamond'])
             .itemOutputs('expatternprovider:ex_' + device)
@@ -58,7 +58,7 @@ ServerEvents.recipes(e => {
     });
 
     buses.forEach(bus => {
-        e.remove({id: '/expatternprovider:ex_' + bus + '.*/' })
+        e.remove({output: '/expatternprovider:ex_' + bus + '.*/' })
         e.recipes.gtceu.assembler('gtna:ae2/expatternprovider/extended_' + bus)
             .itemInputs(['ae2:' + bus, '2x ae2:capacity_card', '2x ae2:speed_card', 'megacells:accumulation_processor'])
             .itemOutputs('/expatternprovider:ex_' + bus + '.*/')
@@ -66,13 +66,13 @@ ServerEvents.recipes(e => {
             .EUt(GTValues.V[GTValues.IV])
     });
     filter_buses.forEach(bus => {
-        e.remove({id: 'expatternprovider:tag_' + bus })
+        e.remove({output: 'expatternprovider:tag_' + bus })
         e.recipes.gtceu.assembler('gtna:ae2/expatternprovider/tag_' + bus)
             .itemInputs(['ae2:' + bus, 'gtceu:item_tag_filter'])
             .itemOutputs('expatternprovider:tag_' + bus )
             .duration(3000)
             .EUt(GTValues.V[GTValues.IV])
-        e.remove({id: 'expatternprovider:mod_' + bus })
+        e.remove({output: 'expatternprovider:mod_' + bus })
         e.recipes.gtceu.assembler('gtna:ae2/expatternprovider/mod_' + bus)
             .itemInputs(['ae2:' + bus, 'gtceu:item_filter'])
             .itemOutputs('expatternprovider:mod_' + bus )
