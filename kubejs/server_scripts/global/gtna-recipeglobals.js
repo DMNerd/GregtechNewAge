@@ -58,6 +58,13 @@ function hardenPPRecipes(event, modid, material){
         E: '#forge:tools/screwdrivers'
     }).id('gtna:shaped/' + modid + '/'+ material +'_pressure_plate')
 }
+function hardenBarsRecipes(event, modid, material){
+    event.remove({ id: modid + ':' + material + '_bars' })
+    event.shaped( modid + ':' + material + '_bars', [' B ', 'AAA', 'AAA'], {
+        A: '#forge:rods/' + material, 
+        B: '#forge:tools/hammers'
+    }).id('gtna:shaped/' + modid + '/'+ material +'_bars')
+}
 function hardenButtonRecipes(event, modid, material){
     event.remove({ output: '/' + modid + ':.*' + material + '.*_button/' })
     event.shapeless('/' + modid + ':' + material + '.*_button/',[modid + ':' + material + '_pressure_plate', '#forge:tools/saws']).id('gtna:shapeless/' + modid + '/'+ material +'_button')

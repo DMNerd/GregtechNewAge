@@ -1,13 +1,27 @@
 ServerEvents.recipes(e => {
     e.replaceOutput({ output: '#forge:nuggets/aluminum' }, '#forge:nuggets/aluminum', '#forge:nuggets/aluminium')
-    e.replaceInput({ input: 'engineersdecor:metal_bar' }, 'engineersdecor:metal_bar', '#forge:plates/steel')
 
     e.remove({id: 'gtceu:shaped/minecart_steel'})
-    e.remove({id: 'engineersdecor:metal_bar'})
 
     removeBlockNuggetRecipes(e, 'minecraft', 'netherite')
     e.remove({id: '/bloodmagic:.*/.*_netherite_.*/'})
 
+    const bars_tochange = [
+        ['createdeco', 'andesite'],
+        ['createdeco', 'brass'],
+        ['createdeco', 'copper'],
+        ['createdeco', 'zinc'],
+        ['createdeco', 'industrial_iron'],
+        ['enderio', 'dark_steel'],
+        ['enderio', 'end_steel'],
+    ]
+    bars_tochange.forEach(bar => {
+        hardenBarsRecipes(e, bar[0], bar[1])
+    });
+    removeBlockNuggetRecipes(e, 'createdeco', 'industrial_iron')
+    e.replaceInput({input: 'createdeco:industrial_iron_ingot' }, 'createdeco:industrial_iron_ingot', '#forge:ingots/wrought_iron')
+    e.replaceInput({input: 'createdeco:industrial_iron_nugget' }, 'createdeco:industrial_iron_nugget', '#forge:nuggets/wrought_iron')
+    e.replaceInput({input: 'createdeco:industrial_iron_sheet' }, 'createdeco:industrial_iron_sheet', '#forge:plates/wrought_iron')
 
     e.remove({id: 'toolbelt:pouch'})
     e.shaped('toolbelt:pouch', ['A A', 'B B', 'CBC'], {
@@ -31,23 +45,6 @@ ServerEvents.recipes(e => {
         E: '#travelersbackpack:sleeping_bags',
         F: 'toolbelt:pouch'
     }).id('gtna:travelersbackpack/standard')
-    e.remove({id: 'engineersdecor:fluid_barrel'})
-    e.shaped('engineersdecor:fluid_barrel', ['BAB', 'BCB', 'BDB'], {
-        A: '#forge:rings/steel', 
-        B: '#forge:plates/steel',
-        C: 'create:fluid_tank',
-        D: '#forge:tools/hammers'
-    }).id('gtna:edecor/fluid_barrel')
-    e.remove({id: 'engineersdecor:metal_rung_ladder'})
-    e.shaped('engineersdecor:metal_rung_ladder', ['ADA', 'ABA', 'A A'], {
-        A: '#forge:rods/steel', 
-        B: '#forge:plates/steel',
-        C: 'create:fluid_tank',
-        D: '#forge:tools/hammers'
-    }).id('gtna:edecor/metal_rung_ladder')
-    e.shaped('engineersdecor:metal_rung_steps', ['AB', 'BA', 'AB'], {
-        A: '#forge:rings/steel', 
-        B: '#forge:plates/steel',
-    }).id('gtna:edecor/metal_rung_steps')
+
 
 })

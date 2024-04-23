@@ -2,12 +2,15 @@ const $IngotProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.m
 const $DustProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty');
 
 GTCEuStartupEvents.registry('gtceu:material', e => {
+    
     GTMaterials.Obsidian.setProperty(PropertyKey.INGOT, new $IngotProperty());  
     GTMaterials.Andesite.setProperty(PropertyKey.DUST, new $DustProperty());  
     GTMaterials.Diamond.addFlags(GTMaterialFlags.GENERATE_DENSE)
     GTMaterials.Andesite.addFlags(GTMaterialFlags.MORTAR_GRINDABLE)
     GTMaterials.Copper.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_RING)
     GTMaterials.Amethyst.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_DENSE)
+    
+    GTMaterials.get("andesite_alloy").addFlags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD)
 
     e.create('soul_sand')
         .dust()
@@ -40,7 +43,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .element('manasteel')
         .color(0x3389FF).secondaryColor(0x003D90)
         .iconSet(GTMaterialIconSet.SHINY)
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_FRAME)
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_LENS)
     e.create('terrasteel')
         .ingot()
         .element('terrasteel')
@@ -132,10 +135,10 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .flags(GTMaterialFlags.GENERATE_PLATE)
     e.create('fiery')
         .ingot()
-        .color(0x191313).secondaryColor(0xFAAC24)
+        .color(0x191313).secondaryColor(0xFFA500)
         .element('fierium')
         .blastTemp(2200, 'low', GTValues.VA[GTValues.MV], 2000) 
-        .iconSet(GTMaterialIconSet.SHINY)
+        .iconSet(GTMaterialIconSet.METALLIC)
         .flags(GTMaterialFlags.GENERATE_PLATE)
     //Enderio
     e.create('copper_alloy')

@@ -5,6 +5,7 @@ WorldgenEvents.remove(e => {
             "create:zinc_ore",
             "create:deepslate_zinc_ore",
             "create_new_age:thorium_ore",
+            "create_new_age:magnetite_block",
             "occultism:silver_ore",
             "occultism:silver_ore_deepslate",
             "sgjourney:naquadah_ore",
