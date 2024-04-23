@@ -1,6 +1,9 @@
 ServerEvents.recipes(e => {
     const greg = e.recipes.gtceu;
 
+    e.replaceInput({output: '/gtceu:.*infinite_water_cover.*/' }, 'minecraft:cauldron', 'bloodmagic:watersigil')
+
+
     e.remove({ output: '/gtceu:.*mana_steel.*/' })
     e.remove({ output: '/gtceu:.*terra_steel.*/' })
 
