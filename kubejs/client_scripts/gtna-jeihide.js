@@ -30,9 +30,6 @@ JEIEvents.hideItems(event => {
 
   event.hide(/simplemagnets:.*demag.*/)
 
-  
-
-
-
+  event.hide(/create_new_age:.*circuit/)
 })
   
