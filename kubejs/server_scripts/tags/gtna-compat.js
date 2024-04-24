@@ -3,6 +3,7 @@ ServerEvents.tags('item', e => {
     e.add('forge:shards/flint', 'notreepunching:flint_shard')
     e.add('occultism:tools/knives', '#forge:tools/butchery_knives')
     e.add('travelersbackpack:sleeping_bags', '#comforts:sleeping_bags')
+    e.add('forge:dusts/ender', 'ae2:ender_dust')
 
     const flours = ['create:wheat_flour', 'enderio:flour']
     flours.forEach(flour => {
@@ -26,6 +27,12 @@ ServerEvents.tags('item', e => {
     e.add('forge:plates/magnetic_iron', 'create_new_age:overcharged_iron_sheet')
     e.add('forge:ingots/magnetic_gold', 'create_new_age:overcharged_gold')
     e.add('forge:plates/magnetic_gold', 'create_new_age:overcharged_golden_sheet')
+
+    //Botany
+    addMetalTags(e, 'mythicbotany', 'elementium')
+
+    //Ars
+    e.add('ars_nouveau:golem/shard', ['minecraft:amethyst_shard', 'ae2:certus_quartz_crystal'])
 
     //Stargate Journey
     const sgmats = ['naquadah', 'naquadah_alloy']
@@ -53,7 +60,23 @@ ServerEvents.tags('item', e => {
     e.add('twilightforest:transformation_logs', '#twilightforest:transwood_logs')
     e.add('twilightforest:time_logs', '#twilightforest:timewood_logs')
     e.add('twilightforest:dark_logs', '#twilightforest:darkwood_logs')
-    
-
 })
-
+ServerEvents.tags('block', e => {
+    e.add('forge:relocation_not_supported', [/productivebees:.+/, 'minecraft:beehive', 'minecraft:bee_nest'])
+    e.add('ae2:blacklisted/spatial', '#forge:relocation_not_supported')
+    e.add('ars_nouveau:golem/budding', ['minecraft:budding_amethyst', 'ae2:damaged_budding_quartz', 'ae2:chipped_budding_quartz', 'ae2:flawed_budding_quartz', 'ae2:flawless_budding_quartz'])
+    e.add('ars_nouveau:golem/cluster', ['minecraft:amethyst_cluster', 'ae2:quartz_cluster'])
+    e.add('entangled:invalid_targets', ['@megacells','@expatternprovider','@ae2'])
+})
+ServerEvents.tags('fluid', e => {
+    e.remove('minecraft:water',[
+      'ad_astra:oil','ad_astra:flowing_oil',
+      'ad_astra:cryo_fuel','ad_astra:flowing_cryo_fuel',
+      'ad_astra:fuel','ad_astra:flowing_fuel',
+      'createaddition:flowing_seed_oil','createaddition:seed_oil',
+      'createaddition:bioethanol','createaddition:flowing_bioethanol'])
+    e.add('forge:oil', '#forge:crude_oil')
+})
+ServerEvents.tags('entity_type', e => {
+    e.add('ars_nouveau:drygmy_blacklist', /productivebees:.+/)
+})

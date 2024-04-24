@@ -3,7 +3,11 @@ StartupEvents.registry('item', e => {
     e.create('bound_stick')
 
     e.create('reinforced_rocket_nose_cone')
-    e.create('reinforced_multisensor_rocket_nose_cone')
+    e.create('reinforced_rocket_nose_cone_t2')
+    e.create('advanced_rocket_nose_cone')
+    e.create('advanced_rocket_nose_cone_t2')
+    e.create('advanced_rocket_nose_cone_t3')
+    
     e.create('advanced_multisensor_rocket_nose_cone')
     e.create('fluix_crystal_cpu')
 })
