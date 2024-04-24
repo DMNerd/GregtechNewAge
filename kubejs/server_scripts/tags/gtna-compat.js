@@ -22,10 +22,10 @@ ServerEvents.tags('item', e => {
     addMetalUnificationTags(e, 'createdeco', 'industrial_iron', 'wrought_iron')
     addMetalUnificationTags(e, 'create', 'industrial_iron', 'wrought_iron')
 
-    addMetalUnificationTags(e, 'create_new_age', 'overcharged_iron', 'magnetic_iron')
-    addMetalUnificationTags(e, 'create_new_age', 'overcharged_gold', 'magnetic_gold')
-
-    addMetalTags(e, 'create_new_age', 'thorium')
+    e.add('forge:ingots/magnetic_iron', 'create_new_age:overcharged_iron')
+    e.add('forge:plates/magnetic_iron', 'create_new_age:overcharged_iron_sheet')
+    e.add('forge:ingots/magnetic_gold', 'create_new_age:overcharged_gold')
+    e.add('forge:plates/magnetic_gold', 'create_new_age:overcharged_golden_sheet')
 
     //Stargate Journey
     const sgmats = ['naquadah', 'naquadah_alloy']
@@ -44,6 +44,9 @@ ServerEvents.tags('item', e => {
     netherstar_inputs.forEach(input => {
         e.add('gtna:netherstar_inputs', input)
     });
+
+    //Blood magic
+    e.add('forge:storage_blocks/hellforged', 'bloodmagic:dungeon_metal')
 
     //Twilight
     e.add('twilightforest:sorting_logs', '#twilightforest:sortwood_logs')

@@ -1,7 +1,8 @@
 function replaceMetalInCrafting(event, modid, metal){
-    event.replaceInput({input: modid + ':' + metal + '_block' }, modid + ':' + metal + '_block', 'gtceu:'+ metal + '_block')
-    event.replaceInput({input: modid + ':' + metal + '_ingot' }, modid + ':' + metal + '_ingot', 'gtceu:'+ metal + '_ingot')
-    event.replaceInput({input: modid + ':' + metal + '_nugget' }, modid + ':' + metal + '_ingot', 'gtceu:'+ metal + '_ingot')
+    event.replaceInput({input: modid + ':' + metal + '_block' }, modid + ':' + metal + '_block', '#forge:storage_blocks/'+ metal)
+    event.replaceInput({input: modid + ':' + metal + '_ingot' }, modid + ':' + metal + '_ingot', '#forge:ingots/'+ metal)
+    event.replaceInput({input: modid + ':' + metal + '_nugget' }, modid + ':' + metal + '_nugget', '#forge:nuggets/'+ metal)
+    event.replaceInput({input: '/' + modid + ':' + metal + '_(?:plate|sheet)/' }, '/' + modid + ':' + metal + '_(?:plate|sheet)/', '#forge:plates/'+ metal)
 }
 function removeBlockNuggetRecipes(event, modid, material){
     event.remove({ id: '/' + modid + ':.*' + material + '.*_(?:block|nugget).*/' })

@@ -11,6 +11,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
     GTMaterials.Amethyst.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_DENSE)
     
     GTMaterials.get("andesite_alloy").addFlags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD)
+   
 
     e.create('soul_sand')
         .dust()
@@ -53,13 +54,13 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .ingot()
         .element('manasteel')
         .color(0x3389FF).secondaryColor(0x003D90)
-        .iconSet(GTMaterialIconSet.SHINY)
+        .iconSet(GTMaterialIconSet.getByName('manasteel'))
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_LENS)
     e.create('terrasteel')
         .ingot()
         .element('terrasteel')
         .color(0x5CFF12).secondaryColor(0x297C00)
-        .iconSet(GTMaterialIconSet.SHINY)
+        .iconSet(GTMaterialIconSet.getByName('terrasteel'))
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_FRAME)  
     e.create('gaia')
         .element('gaia')
@@ -125,6 +126,11 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .blastTemp(4000, 'high')
         .iconSet(GTMaterialIconSet.METALLIC)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION, GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_FRAME)
+    e.create('insulating_resin')
+        .ingot()
+        .color(0x73da6d).secondaryColor(0x4b8e47)
+        .iconSet(GTMaterialIconSet.DULL)
+        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION, GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_FRAME)
     //Twilight Forrest
     e.create('liveroot')
         .dust()

@@ -29,6 +29,10 @@ ServerEvents.recipes(e => {
     e.replaceInput({id: 'platforms:platform' }, 'minecraft:iron', '#forge:plates/steel')
     e.remove({id: 'platforms:wrench'})
 
+    e.remove({id: 'minecraft:bread'})
+    e.remove({id: 'vintagedelight:oat_bread'})
+
+
     //e.remove({ id: "simplemagnets:basicmagnet" });
     //e.shapeless("gtceu:lv_item_magnet", "simplemagnets:basicmagnet").id('gtna:basic_magnet')
     //e.remove({ output: "simplemagnets:advancedmagnet" });

@@ -9,7 +9,7 @@ ServerEvents.recipes(e => {
 
     const devices = ['interface', 'pattern_provider']
     const buses = ['import_bus', 'export_bus']
-    const filter_buses = ['storage_bus', 'export_bus']
+    const filtered_buses = ['storage_bus', 'export_bus']
 
     e.replaceInput({id: '/gregi.*:.*/' }, 'ae2:sky_dust', 'gtceu:pure_skystone_dust')
     e.replaceInput({id: '/megacells:mega_mana.*/' }, 'ae2:sky_dust', '#forge:screws/titanium')
@@ -17,6 +17,8 @@ ServerEvents.recipes(e => {
 
     e.remove({ mod: 'aeinfinitybooster' })
     e.remove({ id: '/megacells:inscriber/.*accum.*/' })
+
+    replaceMetalInCrafting(e, 'megacells', 'sky_steel')
 
     const sizes = ['1m', '4m', '16m', '64m', '256m']
     sizes.forEach(size => {
@@ -74,7 +76,7 @@ ServerEvents.recipes(e => {
             .duration(3000)
             .EUt(GTValues.V[GTValues.IV])
     });
-    filter_buses.forEach(bus => {
+    filtered_buses.forEach(bus => {
         e.remove({output: 'expatternprovider:tag_' + bus })
         e.recipes.gtceu.assembler('gtna:ae2/expatternprovider/tag_' + bus)
             .itemInputs(['ae2:' + bus, 'gtceu:item_tag_filter'])
@@ -95,6 +97,7 @@ ServerEvents.recipes(e => {
             .EUt(GTValues.V[GTValues.IV])
     });
     e.replaceInput({id: '/ae2insertexport_card:.*/' }, 'minecraft:redstone_block', 'gtceu:redstone_alloy_plate')
+    
     e.replaceInput({id: '/expatternprovider:ex_molecular.*/' }, 'ae2:engineering_processor', 'megacells:accumulation_processor')
     e.replaceInput({id: '/expatternprovider:ex_molecular.*/' }, '#forge:gems/fluix', '#forge:double_plates/pfstalloy')
     e.replaceInput({id: '/expatternprovider:ex_io.*/' }, 'ae2:engineering_processor', 'megacells:accumulation_processor')
@@ -115,8 +118,12 @@ ServerEvents.recipes(e => {
     e.replaceInput({id: '/expatternprovider:cobblestone.*_cell/' }, 'minecraft:lava_bucket', 'bloodmagic:lavasigil')
     
     e.replaceInput({id: '/megacells:.*_component/' }, 'ae2:sky_dust', '#forge:plates/fluix')
+    e.replaceInput({id: '/megacells:cells/mega_mana.*_housing/' }, 'ae2:sky_dust', '#forge:double_plates/terrasteel')
+    e.replaceInput({id: '/megacells:cells/mega_mana.*_housing/' }, 'ae2:quartz_vibrant_glass', '#forge:double_plates/terrasteel')
 
-
+    e.replaceInput({id: '/gtceu:.*_flux_cell_housing/' }, '#forge:ingots/insulating_resin', '#forge:double_plates/insulating_resin')
+    e.replaceInput({id: '/gtceu:.*mana_cell_housing/' }, '#forge:ingots/manasteel', '#forge:double_plates/manasteel')
+    e.replaceInput({id: '/arseng:mega.*_housing/' }, '#forge:ingots/sky_steel', '#forge:double_plates/sky_steel')
 
     e.remove({ id: 'expatternprovider:wireless_tool' })
     e.shaped('expatternprovider:wireless_tool', ['FBF', 'CGC', 'AEA'], {
@@ -128,9 +135,17 @@ ServerEvents.recipes(e => {
         G: 'ae2:fluix_pearl'
     }).id('gtna:expatternprovider/wireless_tool')
 
+    e.shaped('arseng:source_cell_housing', ['ECF', 'B B', 'AAA'], {
+        A: '#forge:double_plates/energetic_alloy', 
+        B: '#forge:screws/titanium',
+        C: 'ae2:quartz_vibrant_glass',
+        E: '#forge:tools/screwdrivers',
+        F: '#forge:tools/wrench'
+    }).id('gtna:arseng/source_cell_housing')
+
     e.remove({ id: 'megacells:cells/mega_item_cell_housing' })
     e.shaped('megacells:mega_item_cell_housing', ['ECF', 'B B', 'AAA'], {
-        A: '#forge:plates/sky_steel', 
+        A: '#forge:double_plates/sky_steel', 
         B: '#forge:screws/titanium',
         C: 'ae2:quartz_vibrant_glass',
         E: '#forge:tools/screwdrivers',
@@ -138,7 +153,7 @@ ServerEvents.recipes(e => {
     }).id('gtna:megacells/mega_item_cell_housing')
     e.remove({ id: 'megacells:cells/mega_fluid_cell_housing' })
     e.shaped('megacells:mega_fluid_cell_housing', ['ECF', 'B B', 'AAA'], {
-        A: '#forge:plates/pulsating_alloy', 
+        A: '#forge:double_plates/pulsating_alloy', 
         B: '#forge:screws/titanium',
         C: 'ae2:quartz_vibrant_glass',
         E: '#forge:tools/screwdrivers',
@@ -146,7 +161,7 @@ ServerEvents.recipes(e => {
     }).id('gtna:megacells/mega_fluid_cell_housing')
     e.remove({ output: 'megacells:bulk_item_cell'})
     e.shaped('megacells:bulk_item_cell', ['ECF', 'BDB', 'AAA'], {
-        A: '#forge:plates/sky_steel', 
+        A: '#forge:double_plates/sky_steel', 
         B: '#forge:screws/titanium',
         C: 'ae2:quartz_vibrant_glass',
         D: 'megacells:bulk_cell_component',
