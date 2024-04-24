@@ -15,7 +15,7 @@ ServerEvents.recipes(e => {
         U: "gtceu:mv_electric_pump",
     });
 
-    e.recipes.gtceu.assembler('gtna:gtceu/assembler/accumulation_processor')
+    greg.assembler('gtna:gtceu/assembler/accumulation_processor')
         .itemInputs(['kubejs:fluix_crystal_cpu', 'ae2:printed_silicon'])
         .inputFluids(Fluid.of('gtceu:fluix', 144))
         .itemOutputs('megacells:accumulation_processor')
@@ -106,6 +106,11 @@ ServerEvents.recipes(e => {
         .circuit(4)
         .duration(440)
         .EUt(GTValues.V[GTValues.LuV])
+    greg.polarizer('gtna:polarizer/magnetic_gold_ingot')
+        .itemInputs('#forge:ingots/unmagnetised_gold')
+        .itemOutputs('#forge:ingots/magnetic_gold')
+        .duration(120)
+        .EUt(GTValues.V[GTValues.LV])
 
     Color.DYE.forEach(color => {
         greg.chemical_bath(`${color}_elevator`)

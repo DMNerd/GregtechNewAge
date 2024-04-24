@@ -25,6 +25,8 @@ ServerEvents.tags('item', e => {
     addMetalUnificationTags(e, 'create_new_age', 'overcharged_iron', 'magnetic_iron')
     addMetalUnificationTags(e, 'create_new_age', 'overcharged_gold', 'magnetic_gold')
 
+    addMetalTags(e, 'create_new_age', 'thorium')
+
     //Stargate Journey
     const sgmats = ['naquadah', 'naquadah_alloy']
     sgmats.forEach(material => {
