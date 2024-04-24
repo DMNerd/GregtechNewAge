@@ -6,16 +6,15 @@ ServerEvents.recipes(e => {
     e.replaceInput({ input: 'minecraft:milk_bucket' }, 'minecraft:milk_bucket', '#forge:milk')
     e.replaceInput({ input: 'minecraft:string' }, 'minecraft:string', '#forge:string')
 
-    e.remove({ id: '/notreepunching:flint_/' })
-    e.remove({ id: '/notreepunching:.*_knife/' })
-    e.remove({ id: '/notreepunching:.*_mattock/' })
-    e.remove({ id: '/notreepunching:.*_saw/' })
-    const tools = ['shovel', 'pickaxe', 'axe', 'hoe', 'sword']
+
+    const tools = ['knife', 'mattock', 'saw', 'pickaxe', 'shovel', 'hoe', 'axe', 'sword']
     tools.forEach(tool => {
+        e.remove({ id: '/notreepunching:.*_/' + tool })
+        e.remove({ output: 'minecraft:iron_' + tool })
         e.replaceInput({ input: 'minecraft:wooden_' + tool }, 'minecraft:wooden_' + tool, 'gtceu:flint_' + tool)
         e.replaceInput({ input: 'minecraft:stone_' + tool }, 'minecraft:wooden_' + tool, 'gtceu:flint_' + tool)
         e.replaceInput({ input: 'minecraft:iron_' + tool }, 'minecraft:iron_' + tool, 'gtceu:iron_' + tool)
-        e.remove({ output: 'minecraft:iron_' + tool })
+        e.replaceInput({ id: '/gtceu:shaped/' + tool + '_flint/' }, 'minecraft:stick', 'kubejs:bound_stick')
     });
     const knife_mods = ['delightful', 'ends_delight', 'farmersdelight', 'twilightdelight', 'occultism', 'moredelight']
     knife_mods.forEach(mod => {

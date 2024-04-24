@@ -103,7 +103,8 @@ ServerEvents.recipes(e => {
     e.replaceInput({id: '/expatternprovider:ex_io.*/' }, 'ae2:engineering_processor', 'megacells:accumulation_processor')
     e.replaceInput({id: '/expatternprovider:ex_io.*/' }, 'ae2:logic_processor', 'megacells:accumulation_processor')
     e.replaceInput({id: '/expatternprovider:ex_io.*/' }, 'ae2:speed_card', '#forge:double_plates/pfstalloy')
-    e.replaceInput({id: 'expatternprovider:ex_drive' }, '#forge:dusts/fluix', '#forge:plates/pfstalloy')
+    e.replaceInput({id: 'expatternprovider:ex_drive' }, '#forge:dusts/fluix', '#forge:double_plates/pfstalloy')
+    e.replaceInput({id: 'expatternprovider:ex_drive' }, '#ae2:glass_cable', 'megacells:accumulation_processor')
     e.replaceInput({id: '/expatternprovider:ingredient.*/' }, 'minecraft:iron', '#forge:double_plates/iron')
     e.replaceInput({id: '/expatternprovider:crystal_fix.*/' }, 'minecraft:iron', '#forge:double_plates/iron')
     e.replaceInput({id: '/expatternprovider:crystal_fix.*/' }, '#forge:gems/fluix', 'gtceu:kanthal_coil_block')
@@ -123,7 +124,7 @@ ServerEvents.recipes(e => {
 
     e.replaceInput({id: '/gtceu:.*_flux_cell_housing/' }, '#forge:ingots/insulating_resin', '#forge:double_plates/insulating_resin')
     e.replaceInput({id: '/gtceu:.*mana_cell_housing/' }, '#forge:ingots/manasteel', '#forge:double_plates/manasteel')
-    e.replaceInput({id: '/arseng:mega.*_housing/' }, '#forge:ingots/sky_steel', '#forge:double_plates/sky_steel')
+    e.replaceInput({id: '/arseng:mega.*_housing/' }, '#forge:ingots/sky_steel', '#forge:double_plates/titanium')
 
     e.remove({ id: 'expatternprovider:wireless_tool' })
     e.shaped('expatternprovider:wireless_tool', ['FBF', 'CGC', 'AEA'], {
@@ -134,14 +135,6 @@ ServerEvents.recipes(e => {
         F: 'ae2:wireless_reciever',
         G: 'ae2:fluix_pearl'
     }).id('gtna:expatternprovider/wireless_tool')
-
-    e.shaped('arseng:source_cell_housing', ['ECF', 'B B', 'AAA'], {
-        A: '#forge:double_plates/energetic_alloy', 
-        B: '#forge:screws/titanium',
-        C: 'ae2:quartz_vibrant_glass',
-        E: '#forge:tools/screwdrivers',
-        F: '#forge:tools/wrench'
-    }).id('gtna:arseng/source_cell_housing')
 
     e.remove({ id: 'megacells:cells/mega_item_cell_housing' })
     e.shaped('megacells:mega_item_cell_housing', ['ECF', 'B B', 'AAA'], {
@@ -168,4 +161,18 @@ ServerEvents.recipes(e => {
         E: '#forge:tools/screwdrivers',
         F: '#forge:tools/wrench'
     }).id('gtna:megacells/cell/bulk')
+
+    e.recipes.ars_nouveau.enchanting_apparatus(
+        [
+            "#forge:double_plates/gold",
+            "#forge:plates/titanium",
+            "#forge:double_plates/gold",
+            "ars_nouveau:manipulation_essence",
+            "ars_nouveau:manipulation_essence",
+            "ars_nouveau:source_jar",
+        ], 
+	    "ae2:fluid_cell_housing", 
+	    "arseng:source_cell_housing", 
+	    1000, 
+	).id('gtna:arseng/source_cell_housing')
 })

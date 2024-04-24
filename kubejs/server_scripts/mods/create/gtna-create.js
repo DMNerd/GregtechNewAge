@@ -18,6 +18,11 @@ ServerEvents.recipes(e => {
     
     e.remove({ id: '/create_new_age:energising/gold.*/' })
 
+    const materials = ['zinc', 'brass']
+    materials.forEach(material => {
+        removeBlockNuggetRecipes(e, 'create', material)
+    });
+    
 
     e.remove({ id: '/create:crafting/materials/andesite_alloy.*/' })
     e.shapeless('2x gtceu:andesite_alloy_dust',['2x #forge:dusts/iron', '2x #forge:dusts/andesite']).id('gtna:shapeless/create/andesite_alloy_dust')

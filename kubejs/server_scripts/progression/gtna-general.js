@@ -18,6 +18,9 @@ ServerEvents.recipes(e => {
     bars_tochange.forEach(bar => {
         hardenBarsRecipes(e, bar[0], bar[1])
     });
+    
+    removeBlockNuggetRecipes(e, 'minecraft', 'copper')
+
     removeBlockNuggetRecipes(e, 'createdeco', 'industrial_iron')
     e.replaceInput({input: 'createdeco:industrial_iron_ingot' }, 'createdeco:industrial_iron_ingot', '#forge:ingots/wrought_iron')
     e.replaceInput({input: 'createdeco:industrial_iron_nugget' }, 'createdeco:industrial_iron_nugget', '#forge:nuggets/wrought_iron')
@@ -32,6 +35,7 @@ ServerEvents.recipes(e => {
     e.remove({id: 'minecraft:bread'})
     e.remove({id: 'vintagedelight:oat_bread'})
 
+    e.replaceInput({mod: 'farmersdelight' }, 'minecraft:iron_ingot', '#forge:plates/iron')
 
     //e.remove({ id: "simplemagnets:basicmagnet" });
     //e.shapeless("gtceu:lv_item_magnet", "simplemagnets:basicmagnet").id('gtna:basic_magnet')
