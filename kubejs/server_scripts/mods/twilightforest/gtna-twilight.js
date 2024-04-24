@@ -9,12 +9,12 @@ ServerEvents.recipes(e => {
         removeBlockNuggetRecipes(e, 'twilightforest', material)
     });
 
-    hardenToolRecipes(e, 'twilightforest', 'ironwood', 'kubejs:bound_stick')
-    hardenPickaxeRecipes(e, 'twilightforest', 'knightmetal', 'kubejs:bound_stick')
-    hardenAxeRecipes(e, 'twilightforest', 'knightmetal', 'kubejs:bound_stick')
-    hardenSwordRecipes(e, 'twilightforest', 'knightmetal', 'kubejs:bound_stick')
-    hardenPickaxeRecipes(e, 'twilightforest', 'fiery', 'kubejs:bound_stick')
-    hardenSwordRecipes(e, 'twilightforest', 'fiery', 'kubejs:bound_stick')
+    hardenToolRecipes(e, 'twilightforest', 'ironwood', 'minecraft:stick')
+    hardenPickaxeRecipes(e, 'twilightforest', 'knightmetal', 'minecraft:stick')
+    hardenAxeRecipes(e, 'twilightforest', 'knightmetal', 'minecraft:stick')
+    hardenSwordRecipes(e, 'twilightforest', 'knightmetal', 'minecraft:stick')
+    hardenPickaxeRecipes(e, 'twilightforest', 'fiery', 'minecraft:stick')
+    hardenSwordRecipes(e, 'twilightforest', 'fiery', 'minecraft:stick')
 
 
 

@@ -1,5 +1,5 @@
 ServerEvents.recipes(e => {
    removeBlockNuggetRecipes(e, 'occultism', 'iesnium')
    removeBlockNuggetRecipes(e, 'occultism', 'silver')
-   hardenPickaxeRecipes(e, 'occultism', 'iesnium', 'kubejs:bound_stick')
+   hardenPickaxeRecipes(e, 'occultism', 'iesnium', 'botania:livingwood_twig')
 })

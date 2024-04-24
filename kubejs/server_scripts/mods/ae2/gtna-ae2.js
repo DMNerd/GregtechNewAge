@@ -46,7 +46,7 @@ ServerEvents.recipes(e => {
         e.remove({ output: recipe[0] })
         e.recipes.gtceu.assembler(recipe[0])
             .itemInputs(['4x ' + recipe[1], recipe[2] + 'megacells:accumulation_processor', recipe[3] + '#forge:fine_wires/pfstalloy'])
-            .inputFluids(Fluid.of('gtceu:redstone_alloy', 288))
+            .inputFluids(Fluid.of('gtceu:redstone_alloy', 1800))
             .itemOutputs(recipe[0])
             .cleanroom(CleanroomType.CLEANROOM)
             .duration(600)

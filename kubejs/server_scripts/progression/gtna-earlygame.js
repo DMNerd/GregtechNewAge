@@ -19,7 +19,9 @@ ServerEvents.recipes(e => {
     const knife_mods = ['delightful', 'ends_delight', 'farmersdelight', 'twilightdelight', 'occultism', 'moredelight']
     knife_mods.forEach(mod => {
         e.remove({id:  '/' + mod +':.*_knife/'})
+        e.remove({id:  '/' + mod +':.*_machete/'})
     });
+
     const pptounify = ['bamboo', 'cherry']
     pptounify.forEach(wood => {
         hardenPPRecipes(e, 'minecraft', wood)   
