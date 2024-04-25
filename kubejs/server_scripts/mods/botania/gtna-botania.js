@@ -1,5 +1,9 @@
 ServerEvents.recipes(e => {
 
+    e.replaceInput({ mod: 'mechanicalbotania' }, 'minecraft:lapis_block', '#forge:plates/manasteel')
+    e.replaceInput({ mod: 'mechanicalbotania' }, 'minecraft:redstone', '#morered:red_alloy_wires')
+    e.replaceInput({ mod: 'mechanicalbotania' }, '#forge:ingots/andesite_alloy', '#forge:double_plates/andesite_alloy')
+
     const botaniaMats = ['manasteel', 'terrasteel', 'elementium']
     botaniaMats.forEach(material => {
         replaceMetalTagsInCrafting(e,'botania', material)

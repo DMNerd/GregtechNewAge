@@ -59,12 +59,12 @@ ServerEvents.recipes(e => {
         .itemOutputs("elevatorid:elevator_gray")
         .duration(400)
         .EUt(2);
-    greg.forge_hammer('gtna:gtceu/advanced-knapping')
+    greg.forge_hammer('gtna:gtceu/advanced_knapping')
         .itemInputs('minecraft:flint')
         .itemOutputs('6x notreepunching:flint_shard')
         .duration(60)
         .EUt(10)
-    greg.forming_press('gtna:gtceu/advanced-knapping')
+    greg.forming_press('gtna:gtceu/advanced_knapping')
         .itemInputs('minecraft:flint')
         .itemOutputs('6x notreepunching:flint_shard')
         .duration(60)
@@ -116,6 +116,15 @@ ServerEvents.recipes(e => {
         .itemOutputs('#forge:ingots/magnetic_gold')
         .duration(120)
         .EUt(GTValues.V[GTValues.LV])
+
+    const goodOilSeeds = [['vintagedelight:peanut', 36], ['sunflowerdelight:sunflower_seed', 42]]
+    goodOilSeeds.forEach(seed => {
+        greg.extractor('gtna:extraction/seed_oil_from_' + seed[0].replace(':', '_'))
+            .itemInputs(seed[0])
+            .outputFluids('gtceu:seed_oil ' + seed[1])
+            .duration(68)
+            .EUt(GTValues.V[GTValues.ULV])
+    });
 
     Color.DYE.forEach(color => {
         greg.chemical_bath(`${color}_elevator`)
