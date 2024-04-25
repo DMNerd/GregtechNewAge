@@ -185,8 +185,8 @@ function greenhousefruittreerecipe(event, woodType){
         .notConsumable(woodType[0])
         .inputFluids("water 10000")
         .itemOutputs(
-            `64x ${woodType[1]}`, 
-            `6x ${woodType[0]}`, 
+            `16x ${woodType[1]}`, 
+            `2x ${woodType[0]}`, 
             `16x ${woodType[2]}`
         )
         .duration(1200)
@@ -197,9 +197,8 @@ function greenhousefruittreerecipe(event, woodType){
         .itemInputs("4x gtceu:fertilizer")
         .inputFluids("water 10000")
         .itemOutputs(
-            `64x ${woodType[1]}`,
-            `64x ${woodType[1]}`,
-            `12x ${woodType[0]}`,
+            `32x ${woodType[1]}`,
+            `6x ${woodType[0]}`,
             `32x ${woodType[2]}`
         )
         .duration(900)

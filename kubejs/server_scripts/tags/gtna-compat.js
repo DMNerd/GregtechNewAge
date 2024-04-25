@@ -29,6 +29,8 @@ ServerEvents.tags('item', e => {
     e.add('forge:plates/magnetic_gold', 'create_new_age:overcharged_golden_sheet')
     e.add('forge:raw_materials/thorium', 'create_new_age:thorium')
 
+    addMetalTags(e, 'vintagedelight', 'salt')
+
     //Botany
     addMetalTags(e, 'mythicbotany', 'elementium')
 

@@ -1,7 +1,7 @@
 function addMetalTags(event, modid, metal){
     event.add('forge:raw_materials' + metal, modid + ':raw_' + metal )
     event.add('forge:raw_materials/' + metal, modid + ':raw_' + metal )
-    event.add('forge:storage_blocks/raw_' + metal, modid + ':' + metal + '_block')
+    event.add('forge:storage_blocks/raw_' + metal, modid + ':raw_' + metal + '_block')
     event.add('forge:nuggets', modid + ':' + metal + '_nugget')
     event.add('forge:nuggets/' + metal, modid + ':' + metal + '_nugget')
     event.add('forge:ingots', modid + ':' + metal + '_ingot')
@@ -10,6 +10,8 @@ function addMetalTags(event, modid, metal){
     event.add('forge:storage_blocks/' + metal, modid + ':' + metal + '_block')
     event.add('forge:plates', '/' + modid + ':' + metal + '_(?:plate|sheet)/')
     event.add('forge:plates/' + metal, '/' + modid + ':' + metal + '_(?:plate|sheet)/')
+    event.add('forge:dusts', '/' + modid + ':' + metal + '_dust/')
+    event.add('forge:dusts/' + metal, '/' + modid + ':' + metal + '_dust/')
 }
 
 function addMetalUnificationTags(event, modid, metal, unifyTo){
@@ -20,6 +22,8 @@ function addMetalUnificationTags(event, modid, metal, unifyTo){
     event.add('forge:storage_blocks/' + unifyTo, modid + ':' + metal + '_block')
     event.add('forge:plates/' + unifyTo, '/' + modid + ':' + metal + '.*_(?:plate|sheet)/')
     event.add('forge:rods/' + unifyTo, modid + ':' + metal + '_rod')
+    event.add('forge:dusts/' + unifyTo, modid + ':' + metal + '_dust')
+
 }
 
 function addHeavyAlloyTags(event, modid, tier){
