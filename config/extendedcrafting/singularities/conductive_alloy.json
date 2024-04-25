@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.conductive_alloy",
+  "colors": [
+    "DDB2AC",
+    "CAA99F"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/conductive_alloy"
+  }
+}

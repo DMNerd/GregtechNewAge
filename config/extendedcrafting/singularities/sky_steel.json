@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.sky_steel",
+  "colors": [
+    "303031",
+    "3a4447"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/sky_steel"
+  }
+}

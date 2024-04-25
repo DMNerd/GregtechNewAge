@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.magnesium",
+  "colors": [
+    "ffd6d6",
+    "594d19"
+  ],
+  "ingredient": {
+    "tag": "forge:dusts/magnesium"
+  }
+}

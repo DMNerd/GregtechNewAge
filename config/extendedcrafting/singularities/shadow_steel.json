@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.shadow_steel",
+  "colors": [
+    "35333c",
+    "35333c"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/shadow_steel"
+  }
+}

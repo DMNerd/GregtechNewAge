@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.sapphire",
+  "colors": [
+    "08007A",
+    "1A3FD5"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/sapphire"
+  }
+}

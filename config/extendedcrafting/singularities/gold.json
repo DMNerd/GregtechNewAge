@@ -5,6 +5,6 @@
     "d98e04"
   ],
   "ingredient": {
-    "item": "minecraft:gold_ingot"
+    "tag": "forge:storage_blocks/gold"
   }
 }

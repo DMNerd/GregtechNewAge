@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.netherite",
+  "colors": [
+    "4B4243",
+    "4B4243"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/netherite"
+  }
+}

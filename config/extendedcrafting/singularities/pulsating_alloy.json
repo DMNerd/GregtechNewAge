@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.pulsating_alloy",
+  "colors": [
+    "9CEEAF",
+    "62B873"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/pulsating_alloy"
+  }
+}

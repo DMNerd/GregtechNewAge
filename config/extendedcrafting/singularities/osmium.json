@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.osmium",
+  "colors": [
+    "f9f9f9",
+    "307fc2"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/osmium"
+  }
+}

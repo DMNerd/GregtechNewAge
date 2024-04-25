@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.charcoal",
+  "colors": [
+    "0E0F0A",
+    "615443"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/charcoal"
+  }
+}

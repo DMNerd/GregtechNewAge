@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.soularium",
+  "colors": [
+    "6D5B35",
+    "5C4323"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/soularium"
+  }
+}

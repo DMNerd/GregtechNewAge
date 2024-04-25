@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.vibrant_alloy",
+  "colors": [
+    "E9FE77",
+    "D5EE68"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/vibrant_alloy"
+  }
+}

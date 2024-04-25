@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.copper_alloy",
+  "colors": [
+    "B87D07",
+    "7B5405"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/copper_alloy"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.enderium",
+  "colors": [
+    "2CA9AE",
+    "0B3056"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/enderium"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.europium",
+  "colors": [
+    "988b33",
+    "032a52"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/europium"
+  }
+}

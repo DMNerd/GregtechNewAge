@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.nether_star",
+  "colors": [
+    "feffc6",
+    "7fd7e2"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/nether_star"
+  }
+}

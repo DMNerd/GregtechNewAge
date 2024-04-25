@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.iridium",
+  "colors": [
+    "fdfce9",
+    "3d011b"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/iridium"
+  }
+}

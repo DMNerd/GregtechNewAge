@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.palladium",
+  "colors": [
+    "A0A0A0",
+    "4b4a3a"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/palladium"
+  }
+}

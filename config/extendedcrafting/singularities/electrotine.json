@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.electrotine",
+  "colors": [
+    "83cbf5",
+    "004585"
+  ],
+  "ingredient": {
+    "tag": "forge:dusts/electrotine"
+  }
+}

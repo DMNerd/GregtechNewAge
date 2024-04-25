@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.uranium",
+  "colors": [
+    "1d891d",
+    "33342c"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/uranium"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.energetic_alloy",
+  "colors": [
+    "FFDC8B",
+    "E9A300"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/energetic_alloy"
+  }
+}

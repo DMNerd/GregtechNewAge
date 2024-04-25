@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.tungsten",
+  "colors": [
+    "3b3a32",
+    "2a2800"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/tungsten"
+  }
+}

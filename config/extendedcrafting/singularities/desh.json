@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.desh",
+  "colors": [
+    "F2A057",
+    "2E2F04"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/desh"
+  }
+}

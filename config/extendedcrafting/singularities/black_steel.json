@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.damascus_steel",
+  "colors": [
+    "666666",
+    "1a120e"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/damascus_steel"
+  }
+}

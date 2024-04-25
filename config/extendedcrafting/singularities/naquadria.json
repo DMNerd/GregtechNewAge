@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.naquadria",
+  "colors": [
+    "1E1E1E",
+    "59b3ff"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/naquadria"
+  }
+}

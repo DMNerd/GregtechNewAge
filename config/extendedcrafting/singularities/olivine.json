@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.olivine",
+  "colors": [
+    "82b302",
+    "b9ff02"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/olivine"
+  }
+}

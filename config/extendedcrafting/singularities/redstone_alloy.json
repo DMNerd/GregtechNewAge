@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.redstone_alloy",
+  "colors": [
+    "E44949",
+    "8F2121"
+  ],
+  "ingredient": {
+    "tag": "forge:storage_blocks/redstone_alloy"
+  }
+}
