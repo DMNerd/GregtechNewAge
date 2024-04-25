@@ -1,8 +1,15 @@
-function replaceMetalInCrafting(event, modid, metal){
+
+function replaceMetalTagsInCrafting(event, modid, metal){
     event.replaceInput({input: modid + ':' + metal + '_block' }, modid + ':' + metal + '_block', '#forge:storage_blocks/'+ metal)
     event.replaceInput({input: modid + ':' + metal + '_ingot' }, modid + ':' + metal + '_ingot', '#forge:ingots/'+ metal)
     event.replaceInput({input: modid + ':' + metal + '_nugget' }, modid + ':' + metal + '_nugget', '#forge:nuggets/'+ metal)
     event.replaceInput({input: '/' + modid + ':' + metal + '_(?:plate|sheet)/' }, '/' + modid + ':' + metal + '_(?:plate|sheet)/', '#forge:plates/'+ metal)
+}
+function replaceMetalInCrafting(event, modid, metal, metalToReplace){
+    event.replaceInput({input: modid + ':' + metal + '_block' }, modid + ':' + metal + '_block', '#forge:storage_blocks/'+ metalToReplace)
+    event.replaceInput({input: modid + ':' + metal + '_ingot' }, modid + ':' + metal + '_ingot', '#forge:ingots/'+ metalToReplace)
+    event.replaceInput({input: modid + ':' + metal + '_nugget' }, modid + ':' + metal + '_nugget', '#forge:nuggets/'+ metalToReplace)
+    event.replaceInput({input: '/' + modid + ':' + metal + '_(?:plate|sheet)/' }, '/' + modid + ':' + metal + '_(?:plate|sheet)/', '#forge:plates/'+ metalToReplace)
 }
 function removeBlockNuggetRecipes(event, modid, material){
     event.remove({ id: '/' + modid + ':.*' + material + '.*_(?:block|nugget).*/' })
@@ -148,10 +155,64 @@ function hardenArmorRecipes(event, modid, material){
         B: '#forge:tools/hammers',
     }).id('gtna:'+ modid + '/'+ material + '_boots')
 }
+function rocketryRecipe(event, output, plates, engine, noseCone, fins, id){
+    event.remove({id: /.*:nasa_workbench.* + id /})
+    event.custom({
+        "type": "ad_astra:nasa_workbench",
+        "ingredients": [
+          {
+            "item": noseCone
+          },
+          {
+            "item": plates
+          },
+          {
+            "item": plates
+          },
+          {
+            "item": plates
+          },
+          {
+            "item": plates
+          },
+          {
+            "item": plates
+          },
+          {
+            "item": plates
+          },
+          {
+            "item": fins
+          },
+          {
+            "item": plates
+          },
+          {
+            "item": plates
+          },
+          {
+            "item": fins
+          },
+          {
+            "item": fins
+          },
+          {
+            "item": engine
+          },
+          {
+            "item": fins
+          }
+        ],
+        "result": {
+          "count": 1,
+          "id": output
+        }
+    }).id('gtnn:rocketry/' + id)
+}
 function greenhousetreerecipe(event, woodType){
-    event.recipes.gtceu.greenhouse(woodType[0])
+    event.greenhouse(woodType[0])
         .notConsumable(woodType[0])
-        .inputFluids("water 1000")
+        .inputFluids("water 10000")
         .itemOutputs(
             `64x ${woodType[1]}`, 
             `6x ${woodType[0]}`
@@ -160,10 +221,10 @@ function greenhousetreerecipe(event, woodType){
         .EUt(40)
         .circuit(1);
 
-    event.recipes.gtceu.greenhouse(`${woodType[0]}_fertiliser`)
+    event.greenhouse(`${woodType[0]}_fertiliser`)
         .notConsumable(woodType[0])
         .itemInputs("4x gtceu:fertilizer")
-        .inputFluids("water 1000")
+        .inputFluids("water 10000")
         .itemOutputs(
             `64x ${woodType[1]}`,
             `64x ${woodType[1]}`,
@@ -174,9 +235,9 @@ function greenhousetreerecipe(event, woodType){
         .circuit(2);
   }
 function greenhousefruittreerecipe(event, woodType){
-    event.recipes.gtceu.greenhouse(woodType[0])
+    event.greenhouse(woodType[0])
         .notConsumable(woodType[0])
-        .inputFluids("water 1000")
+        .inputFluids("water 10000")
         .itemOutputs(
             `64x ${woodType[1]}`, 
             `6x ${woodType[0]}`, 
@@ -185,10 +246,10 @@ function greenhousefruittreerecipe(event, woodType){
         .duration(1200)
         .EUt(40)
         .circuit(1);
-    event.recipes.gtceu.greenhouse(`${woodType[0]}_fertiliser`)
+    event.greenhouse(`${woodType[0]}_fertiliser`)
         .notConsumable(woodType[0])
         .itemInputs("4x gtceu:fertilizer")
-        .inputFluids("water 1000")
+        .inputFluids("water 10000")
         .itemOutputs(
             `64x ${woodType[1]}`,
             `64x ${woodType[1]}`,
@@ -200,14 +261,14 @@ function greenhousefruittreerecipe(event, woodType){
         .circuit(2);
   }
 function greenhouseplantrecipe(event, seedType){
-    event.recipes.gtceu.greenhouse(seedType[0])
+    event.greenhouse(seedType[0])
         .notConsumable(seedType[0])
         .inputFluids("water 1000")
         .itemOutputs(`${seedType[2]}x ${seedType[1]}`)
         .duration(1200)
         .EUt(40)
         .circuit(1);
-    event.recipes.gtceu.greenhouse(seedType[0] + "_fertilizer")
+    event.greenhouse(seedType[0] + "_fertilizer")
         .notConsumable(seedType[0])
         .itemInputs("4x gtceu:fertilizer")
         .inputFluids("water 1000")
@@ -217,7 +278,7 @@ function greenhouseplantrecipe(event, seedType){
         .circuit(2);
   }
 function greenhouseoreberryrecipe(event, ore){
-    event.recipes.gtceu.greenhouse('oreberriesreplanted:' + ore[0] + '_oreberry_bush')
+    event.greenhouse('oreberriesreplanted:' + ore[0] + '_oreberry_bush')
         .notConsumable('/oreberriesreplanted:' + ore[0] + '_.*berry_bush/')
         .inputFluids("distilled_water 1000")
         .itemOutputs(
@@ -227,7 +288,7 @@ function greenhouseoreberryrecipe(event, ore){
         .EUt(40)
         .circuit(3);
 
-    event.recipes.gtceu.greenhouse('oreberriesreplanted:' + ore[0] + '_oreberry_bush_fertilised')
+    event.greenhouse('oreberriesreplanted:' + ore[0] + '_oreberry_bush_fertilised')
         .notConsumable('/oreberriesreplanted:' + ore[0] + '_.*berry_bush/')
         .itemInputs("4x gtceu:fertilizer")
         .inputFluids("distilled_water 1000")
@@ -239,7 +300,7 @@ function greenhouseoreberryrecipe(event, ore){
         .circuit(4);
   }
 function crossbreed(event, breedRecipe){
-    event.recipes.gtceu.greenhouse('crosbreeding/' + breedRecipe[2])
+    event.greenhouse('crosbreeding/' + breedRecipe[2])
         .itemInputs([breedRecipe[0], breedRecipe[1], "12x gtceu:fertilizer"])
         .inputFluids("water 2000")
         .itemOutputs(breedRecipe[2])
@@ -248,7 +309,7 @@ function crossbreed(event, breedRecipe){
         .circuit(5);
 }
 function oreberry_crossbreed(event, parent, parent2, result, fluid){
-    event.recipes.gtceu.greenhouse('oreberry_crosbreeding/' + result)
+    event.greenhouse('oreberry_crosbreeding/' + result)
         .itemInputs(['oreberriesreplanted:' + parent, 'oreberriesreplanted:' + parent2, "6x gtceu:fertilizer"])
         .inputFluids(fluid)
         .itemOutputs('oreberriesreplanted:' + result)

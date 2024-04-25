@@ -3,6 +3,7 @@ const $DustProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.ma
 
 GTCEuStartupEvents.registry('gtceu:material', e => {
     
+    GTMaterials.Wood.addFlags(GTMaterialFlags.GENERATE_FRAME)
     GTMaterials.Obsidian.setProperty(PropertyKey.INGOT, new $IngotProperty());  
     GTMaterials.Andesite.setProperty(PropertyKey.DUST, new $DustProperty());  
     GTMaterials.Diamond.addFlags(GTMaterialFlags.GENERATE_DENSE)
@@ -32,12 +33,12 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .flags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE)
     e.create('unmagnetised_gold')
         .ingot()
-        .components('1x rose_gold', '1x iron')
+        .components('1x rose_gold', '2x iron')
         .color(0xFFDAE5)
         .iconSet(GTMaterialIconSet.METALLIC)
     e.create('magnetic_gold')
         .ingot()
-        .components('1x rose_gold', '1x iron')
+        .components('1x rose_gold', '2x iron')
         .color(0xFFDAE5)
         .iconSet(GTMaterialIconSet.MAGNETIC)
         .flags(GTMaterialFlags.IS_MAGNETIC, GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_FOIL, GTMaterialFlags.GENERATE_FINE_WIRE)
@@ -167,7 +168,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
     e.create('redstone_alloy')
         .ingot()
         .fluid()
-        .components('1x redstone', '1x silicon', '1x coal')
+        .components('1x red_alloy', '2x silicon')
         .color(0xE44949).secondaryColor(0x8F2121)
         .cableProperties(GTValues.V[GTValues.LV], 1, 2, false)
         .iconSet(GTMaterialIconSet.SHINY)

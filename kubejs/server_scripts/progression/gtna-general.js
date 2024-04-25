@@ -1,6 +1,8 @@
 ServerEvents.recipes(e => {
     e.replaceOutput({ output: '#forge:nuggets/aluminum' }, '#forge:nuggets/aluminum', '#forge:nuggets/aluminium')
 
+    e.replaceInput({input: '#railways:internal/nuggets/zinc_nuggets' }, '#railways:internal/nuggets/zinc_nuggets', '#forge:nuggets/zinc')
+
     e.remove({id: 'gtceu:shaped/minecart_steel'})
 
     removeBlockNuggetRecipes(e, 'minecraft', 'netherite')
@@ -27,6 +29,9 @@ ServerEvents.recipes(e => {
     e.replaceInput({input: 'createdeco:industrial_iron_sheet' }, 'createdeco:industrial_iron_sheet', '#forge:plates/wrought_iron')
     e.replaceInput({input: 'create:industrial_iron_block' }, 'create:industrial_iron_block', '#forge:storage_blocks/wrought_iron')
     e.replaceInput({mod: 'createdeco' }, '#forge:sheets/brass', '#forge:plates/brass')
+    e.replaceInput({ id: '/design_decor:stonecutting/.*sign$/' }, '#forge:nuggets/zinc', '#forge:plates/zinc')
+
+    e.replaceInput({ id: '/design_decor:item_application/industrial_gear.*/' }, '#forge:storage_blocks/wrought_iron', '#forge:double_plates/wrought_iron')
     
     e.replaceInput({mod: 'platforms' }, '#forge:rods/metal', '#forge:rods/steel')
     e.replaceInput({id: 'platforms:platform' }, 'minecraft:iron', '#forge:plates/steel')
@@ -78,5 +83,16 @@ ServerEvents.recipes(e => {
         F: 'toolbelt:pouch'
     }).id('gtna:travelersbackpack/standard')
 
+    
+    hardenWoodenRecipes(e, 'framedblocks', 'framed')
+    e.remove({id : 'framedblocks:framed_chest' })
+    e.shaped('framedblocks:framed_chest', ['AAA', 'ABA', 'AAA'], {
+        A: 'framedblocks:framed_cube', 
+        B: 'minecraft:chest'
+    })
+
+    e.remove({ id: '/morered:red_alloy_ingot.*/' })
+    e.replaceInput({ mod: 'morered' }, 'minecraft:redstone', 'morered:red_alloy_wire')
+    e.replaceInput({ mod: 'morered' }, 'minecraft:quartz', '#forge:plates/nether_quartz')
 
 })

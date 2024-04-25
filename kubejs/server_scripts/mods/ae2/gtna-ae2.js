@@ -18,7 +18,7 @@ ServerEvents.recipes(e => {
     e.remove({ mod: 'aeinfinitybooster' })
     e.remove({ id: '/megacells:inscriber/.*accum.*/' })
 
-    replaceMetalInCrafting(e, 'megacells', 'sky_steel')
+    replaceMetalTagsInCrafting(e, 'megacells', 'sky_steel')
 
     const sizes = ['1m', '4m', '16m', '64m', '256m']
     sizes.forEach(size => {
@@ -164,9 +164,11 @@ ServerEvents.recipes(e => {
 
     e.recipes.ars_nouveau.enchanting_apparatus(
         [
+            "#forge:screws/titanium",
             "#forge:double_plates/gold",
-            "#forge:plates/titanium",
             "#forge:double_plates/gold",
+            "#forge:double_plates/gold",
+            "#forge:screws/titanium",
             "ars_nouveau:manipulation_essence",
             "ars_nouveau:manipulation_essence",
             "ars_nouveau:source_jar",

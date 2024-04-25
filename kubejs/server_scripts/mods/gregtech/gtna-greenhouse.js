@@ -71,18 +71,18 @@ ServerEvents.recipes((e) => {
     const oreberries = [['iron'], ['gold'], ['copper'], ['tin'], ['aluminum'], ['lead'], ['nickel'], ['uranium'], ['osmium'], ['zinc'], ['silver'], ['essence']];
     
     trees.forEach((woodType) => {
-      greenhousetreerecipe(e, woodType)
+      greenhousetreerecipe(greg, woodType)
     });
     fruit_trees.forEach((woodType) => {
-      greenhousefruittreerecipe(e, woodType)
+      greenhousefruittreerecipe(greg, woodType)
     });
     plants.forEach((seedType) => {
-      greenhouseplantrecipe(e, seedType)
+      greenhouseplantrecipe(greg, seedType)
     });   
     oreberries.forEach((ore) => {
-      greenhouseoreberryrecipe(e, ore)
+      greenhouseoreberryrecipe(greg, ore)
     });
-    oreberry_crossbreed(e, 'lead_oreberry_bush', 'nickel_oreberry_bush', 'osmium_oreberry_bush', Fluid.of('gtceu:osmium', 1500))
+    oreberry_crossbreed(greg, 'lead_oreberry_bush', 'nickel_oreberry_bush', 'osmium_oreberry_bush', Fluid.of('gtceu:osmium', 1500))
     
   greg
     .greenhouse("rubber_wood")

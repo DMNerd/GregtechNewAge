@@ -31,11 +31,6 @@ ServerEvents.recipes(e => {
     e.shapeless('minecraft:flint',['3x minecraft:gravel']).id('gtna:shapeless/easy_flint')
     e.shapeless('notreepunching:flint_shard',['#notreepunching:loose_rocks', 'minecraft:flint']).id('gtna:shapeless/early_knapping')
     e.shapeless('2x notreepunching:flint_shard',['#forge:tools/hammers', 'minecraft:flint']).id('gtna:shapeless/lowtech_knapping')
-    e.remove({ id: 'woodenbucket:wooden_bucket' })
-    e.shaped('woodenbucket:wooden_bucket', ['ABA', ' A '], {
-        A: '#minecraft:planks', 
-        B: '#forge:tools/files'
-    })
     e.remove({ id: 'craftingstation:crafting_station' })
     e.remove({ id: 'craftingstation:crafting_station_slab' })
     e.shapeless('craftingstation:crafting_station',['minecraft:crafting_table', '#forge:tools/saws']).id('gtna:shapeless/craftingstation')
