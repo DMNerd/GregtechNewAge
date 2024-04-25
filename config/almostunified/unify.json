@@ -31,7 +31,8 @@
     "forge:rods/{material}",
     "forge:wires/{material}",
     "forge:storage_blocks/{material}",
-    "forge:storage_blocks/raw_{material}"
+    "forge:storage_blocks/raw_{material}",
+    "forge:purified_ores/{material}"
   ],
   "materials": [
     "netherite_scrap",
@@ -92,6 +93,7 @@
     "knightmetal",
     "ironwood",
     "fiery",
+    "carminite",
     "iesnium",
     "hellforged",
     "manasteel",
@@ -108,6 +110,7 @@
     "energetic_alloy",
     "vibrant_alloy",
     "pulsating_alloy",
+    "pulsating_crystal",
     "soularium",
     "andesite_alloy",
     "shadow_steel",
@@ -123,7 +126,8 @@
     "naquadah",
     "naquadah_alloy",
     "thorium",
-    "black_steel"
+    "black_steel",
+    "crystaltine"
   ],
   "priorityOverrides": {},
   "customTags": {},
