@@ -17,7 +17,7 @@ GTCEuStartupEvents.registry("gtceu:machine", (event) => {
           .aisle("BBBBB", "BDDDB", "B###B", "BGGGB")
           .aisle("0BBB0", "0BEB0", "0BBB0", "0BBB0")
           .where("E", Predicates.controller(Predicates.blocks(definition.get())))
-          .where("D", Predicates.blocks("minecraft:dirt"))
+          .where("D", Predicates.blocks("farmersdelight:rich_soil"))
           .where("G", Predicates.blocks("gtceu:tempered_glass"))
           .where(
             "B",

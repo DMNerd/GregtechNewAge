@@ -38,7 +38,11 @@ ServerEvents.recipes(e => {
     e.remove({id: 'platforms:wrench'})
 
     e.remove({id: 'minecraft:bread'})
+
+    replaceMetalTagsInCrafting(e, 'vintagedelight', 'salt')
     e.remove({id: 'vintagedelight:oat_bread'})
+    e.remove({id: '/vintagedelight:salt_block.*/'})
+    e.replaceInput({id: 'vintagedelight:salt_from_smelting' }, 'minecraft:water_bucket', 'gtceu:salt_water_bucket')
 
     e.replaceInput({mod: 'farmersdelight' }, 'minecraft:iron_ingot', '#forge:plates/iron')
 
