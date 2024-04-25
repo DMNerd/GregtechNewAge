@@ -8,6 +8,15 @@ ServerEvents.recipes(e => {
 			offspring: [`productivebees:${offspring}`]
 		})
 	}
+	function beeConversion(source, result, item) {
+		e.custom({
+			type: 'productivebees:bee_conversion',
+			source: `productivebees:${source}`,
+			result: `productivebees:${result}`,
+			item: {
+				item: item
+			}
+		})
+	}
 
-   
 })
