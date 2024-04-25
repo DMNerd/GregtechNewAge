@@ -4,8 +4,9 @@ ServerEvents.recipes(e => {
     e.replaceInput({output: '/gtceu:.*infinite_water_cover.*/' }, 'minecraft:cauldron', 'bloodmagic:watersigil')
 
 
-    e.remove({ output: '/gtceu:.*mana_steel.*/' })
-    e.remove({ output: '/gtceu:.*terra_steel.*/' })
+    e.remove({ output: /gtceu:.*mana_steel.*/ })
+    e.remove({ output: /gtceu:.*terra_steel.*/ })
+    e.remove({ output: /gtceu:dense_.*/, input:  /gtceu:.*_ingot$/ })
 
     e.shaped("gtceu:greenhouse", ["GGG", "CHC", "PUP"], {
         G: "gtceu:tempered_glass",
