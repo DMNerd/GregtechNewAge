@@ -3,6 +3,7 @@ ServerEvents.recipes(e => {
     e.replaceInput({ mod: 'create' }, 'minecraft:dried_kelp_block', '#forge:storage_blocks/polytetrafluoroethylene')
 
     e.replaceInput({ mod: 'create_new_age' }, 'create_new_age:copper_circuit', '#gtceu:circuits/lv')
+    e.replaceInput({ mod: 'create_new_age' }, 'minecraft:redstone_block', '#forge:double_plates/redstone_alloy')
     e.replaceInput({ id: '/create_new_age:.*/', input:  'minecraft:iron_nugget'}, 'minecraft:iron_nugget', '#forge:rods/iron')
     e.replaceInput({ id: '/create_new_age:.*/', input:  'create_new_age:radioactive_thorium'}, 'create_new_age:radioactive_thorium', '#forge:pure_dusts/uranium_235')
     e.replaceInput({ id: '/create_new_age:shaped/.*/' }, '#forge:ingots/magnetic_iron', '#forge:plates/magnetic_iron')
@@ -14,6 +15,7 @@ ServerEvents.recipes(e => {
 
     e.remove({ mod: 'create_new_age', id: '/create_new_age:energising/gold.*/' })
     e.remove({ mod: 'create_new_age', id: '/create_new_age:energising/iron.*/' })
+    e.remove({ mod: 'create_new_age', id: '/create_new_age:energising/diamond.*/' })
     e.remove({ mod: 'create_new_age', id: '/create_new_age:.*circuit/' })
     e.remove({ mod: 'create_new_age', output: '/create_new_age:radioactive_thorium/' })
 

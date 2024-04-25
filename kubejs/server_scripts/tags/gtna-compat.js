@@ -27,6 +27,7 @@ ServerEvents.tags('item', e => {
     e.add('forge:plates/magnetic_iron', 'create_new_age:overcharged_iron_sheet')
     e.add('forge:ingots/magnetic_gold', 'create_new_age:overcharged_gold')
     e.add('forge:plates/magnetic_gold', 'create_new_age:overcharged_golden_sheet')
+    e.add('forge:gems/pulsating_crystal', 'create_new_age:overcharged_diamond')
     e.add('forge:raw_materials/thorium', 'create_new_age:thorium')
 
     addMetalTags(e, 'vintagedelight', 'salt')
@@ -74,7 +75,7 @@ ServerEvents.tags('item', e => {
     e.add('twilightforest:sorting_logs', '#twilightforest:sortwood_logs')
 
     //EXCrafting
-    const materials = [['black_iron', 'dark_steel'], ['redstone', 'red_alloy'], ['enhanced_redstone', 'redstone_alloy'], ['ender', 'enderium'], ['enhanced_ender', 'enderium']]
+    const materials = [['black_iron', 'dark_steel'], ['redstone', 'red_alloy'], ['enhanced_redstone', 'redstone_alloy'], ['ender', 'end_steel'], ['enhanced_ender', 'enderium']]
 
     materials.forEach(material => {
         addMetalUnificationTags(e, 'extendedcrafting', material[0], material[1])

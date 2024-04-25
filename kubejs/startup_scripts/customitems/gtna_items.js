@@ -12,5 +12,7 @@ StartupEvents.registry('item', e => {
     e.create('reinforced_rocket_fin_t2').displayName("Reinforced Rocket Fin Tier 2")
     e.create('advanced_rocket_fin').displayName("Advanced Rocket Fin")
 
+    e.create('nuclear_fuel_rod').displayName("Empty Fuel Rod")
+
     e.create('fluix_crystal_cpu')
 })

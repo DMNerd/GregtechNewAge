@@ -232,4 +232,11 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .color(0xBAD4FF)
         .iconSet(GTMaterialIconSet.SHINY)
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_FOIL, GTMaterialFlags.GENERATE_FINE_WIRE, GTMaterialFlags.GENERATE_FRAME)
+    //ExCrafting
+    e.create('crystaltine')
+        .ingot()
+        .blastTemp(4000, 'mid', GTValues.VA[GTValues.EV], 1200)
+        .color(0x9CDFFC)
+        .iconSet(GTMaterialIconSet.SHINY)
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_FOIL, GTMaterialFlags.GENERATE_FINE_WIRE, GTMaterialFlags.GENERATE_FRAME)
 })

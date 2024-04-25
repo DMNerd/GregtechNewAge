@@ -5,5 +5,6 @@ ServerEvents.recipes(e => {
     materials.forEach(material => {
         removeVanillaMetalurgy(e, 'extendedcrafting', material)
     });
+    replaceMetalTagsInCrafting(e, 'extendedcrafting', 'crystaltine')
 
 })

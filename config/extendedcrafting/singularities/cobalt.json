@@ -1,10 +1,10 @@
 {
-  "name": "singularity.extendedcrafting.cobalt_brass",
+  "name": "singularity.extendedcrafting.cobalt",
   "colors": [
     "f1e2d1",
     "1d1dd6"
   ],
   "ingredient": {
-    "tag": "forge:storage_blocks/cobalt_brass"
+    "tag": "forge:storage_blocks/cobalt"
   }
 }
