@@ -155,60 +155,6 @@ function hardenArmorRecipes(event, modid, material){
         B: '#forge:tools/hammers',
     }).id('gtna:'+ modid + '/'+ material + '_boots')
 }
-function rocketryRecipe(event, output, plates, engine, noseCone, fins, id){
-    event.remove({id: /.*:nasa_workbench.* + id /})
-    event.custom({
-        "type": "ad_astra:nasa_workbench",
-        "ingredients": [
-          {
-            "item": noseCone
-          },
-          {
-            "item": plates
-          },
-          {
-            "item": plates
-          },
-          {
-            "item": plates
-          },
-          {
-            "item": plates
-          },
-          {
-            "item": plates
-          },
-          {
-            "item": plates
-          },
-          {
-            "item": fins
-          },
-          {
-            "item": plates
-          },
-          {
-            "item": plates
-          },
-          {
-            "item": fins
-          },
-          {
-            "item": fins
-          },
-          {
-            "item": engine
-          },
-          {
-            "item": fins
-          }
-        ],
-        "result": {
-          "count": 1,
-          "id": output
-        }
-    }).id('gtnn:rocketry/' + id)
-}
 function greenhousetreerecipe(event, woodType){
     event.greenhouse(woodType[0])
         .notConsumable(woodType[0])

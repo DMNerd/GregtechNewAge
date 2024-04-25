@@ -21,3 +21,10 @@ function addMetalUnificationTags(event, modid, metal, unifyTo){
     event.add('forge:plates/' + unifyTo, '/' + modid + ':' + metal + '.*_(?:plate|sheet)/')
     event.add('forge:rods/' + unifyTo, modid + ':' + metal + '_rod')
 }
+
+function addHeavyAlloyTags(event, modid, tier){
+    event.add('forge:heavy_ingots', modid + ':heavy_ingot_' + tier)
+    event.add('forge:heavy_ingots/' + tier, modid + ':heavy_ingot_' + tier)
+    event.add('forge:heavy_plates', modid + ':heavy_plate_' + tier)
+    event.add('forge:heavy_plates/' + tier, modid + ':heavy_plate_' + tier)
+}

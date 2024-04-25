@@ -61,6 +61,15 @@ ServerEvents.tags('item', e => {
     e.add('twilightforest:transformation_logs', '#twilightforest:transwood_logs')
     e.add('twilightforest:time_logs', '#twilightforest:timewood_logs')
     e.add('twilightforest:dark_logs', '#twilightforest:darkwood_logs')
+
+    //Rocketry
+    const tiers = ['t1', 't2', 't3', 't4']
+    tiers.forEach(tier => {
+        addHeavyAlloyTags(e, 'gtnn', tier)
+    });
+
+    e.add('twilightforest:sorting_logs', '#twilightforest:sortwood_logs')
+
 })
 ServerEvents.tags('block', e => {
     e.add('forge:relocation_not_supported', [/productivebees:.+/, 'minecraft:beehive', 'minecraft:bee_nest'])
