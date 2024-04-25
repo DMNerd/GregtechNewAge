@@ -102,7 +102,7 @@ ServerEvents.recipes(e => {
     const dollies = ['iron', 'diamond']
     dollies.forEach(dolly => {
         e.remove({output: 'ironchests:' + dolly + '_dolly'})
-        e.shaped('ironchests:' + dolly + '_dolly', ['CBB', 'CDB', 'EAA'], {
+        e.shaped('ironchests:' + dolly + '_dolly', ['CB ', 'CBD ', 'EAA'], {
             A: '#forge:plates/' + dolly, 
             B: '#forge:rods/' + dolly,
             C: '#forge:plates/rubber',
