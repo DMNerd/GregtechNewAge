@@ -1,10 +1,12 @@
 {
   "modPriorities": [
     "minecraft",
+    "twilightforest",
     "gtceu",
     "kubejs",
     "crafttweaker",
     "create",
+    "createdeco",
     "thermal",
     "immersiveengineering",
     "mekanism"
@@ -88,6 +90,7 @@
     "calorite",
     "knightmetal",
     "ironwood",
+    "fiery",
     "iesnium",
     "hellforged",
     "manasteel",
@@ -98,6 +101,7 @@
     "dark_steel",
     "end_steel",
     "copper_alloy",
+    "red_alloy",
     "redstone_alloy",
     "conductive_alloy",
     "energetic_alloy",
@@ -107,8 +111,16 @@
     "andesite_alloy",
     "shadow_steel",
     "refined_radiance",
+    "certus_quartz",
+    "fluix",
+    "insulating_resin",
+    "wrought_iron",
+    "magnetic_iron",
+    "magnetic_gold",
     "naquadah",
-    "naquadah_alloy"
+    "naquadah_alloy",
+    "thorium",
+    "black_steel"
   ],
   "priorityOverrides": {},
   "customTags": {},
