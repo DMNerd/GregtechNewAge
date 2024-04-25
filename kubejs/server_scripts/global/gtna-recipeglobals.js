@@ -11,8 +11,19 @@ function replaceMetalInCrafting(event, modid, metal, metalToReplace){
     event.replaceInput({input: modid + ':' + metal + '_nugget' }, modid + ':' + metal + '_nugget', '#forge:nuggets/'+ metalToReplace)
     event.replaceInput({input: '/' + modid + ':' + metal + '_(?:plate|sheet)/' }, '/' + modid + ':' + metal + '_(?:plate|sheet)/', '#forge:plates/'+ metalToReplace)
 }
-function removeBlockNuggetRecipes(event, modid, material){
-    event.remove({ id: '/' + modid + ':.*' + material + '.*_(?:block|nugget).*/' })
+function removeBlockRecipes(event, modid, material){
+    event.remove({ id: '/' + modid + ':.*' + material + '.*_block.*/' })
+}
+function removeIngotRecipes(event, modid, material){
+    event.remove({ id: '/' + modid + ':.*' + material + '.*_ingot.*/' })
+}
+function removeNuggetRecipes(event, modid, material){
+    event.remove({ id: '/' + modid + ':.*' + material + '.*_nugget.*/' })
+}
+function removeVanillaMetalurgy(event, modid, material){
+    removeBlockRecipes(event, modid, material)
+    removeIngotRecipes(event, modid, material)
+    removeNuggetRecipes(event, modid, material)
 }
 function hardenWoodenRecipes(event, modid, woodtype){
     event.remove({ output: '/' +  modid + ':.*' + woodtype + '.*_trapdoor/' })
@@ -99,8 +110,7 @@ function hardenAxeRecipes(event, modid, material, stick){
 }
 function hardenShovelRecipes(event, modid, material, stick){
     event.remove({output: modid + ':'+ material + '_shovel'})
-    event.shaped(modid + ':' + material + '_shovel', ['CAD', ' E ', ' E '], {
-        A: '#forge:ingots/' + material, 
+    event.shaped(modid + ':' + material + '_shovel', ['CBD', ' E ', ' E '], {
         B: '#forge:plates/' + material,
         C: '#forge:tools/hammers',
         D: '#forge:tools/files',

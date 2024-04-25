@@ -5,7 +5,7 @@ ServerEvents.recipes(e => {
 
     e.remove({id: 'gtceu:shaped/minecart_steel'})
 
-    removeBlockNuggetRecipes(e, 'minecraft', 'netherite')
+    removeVanillaMetalurgy(e, 'minecraft', 'netherite')
     e.remove({id: '/bloodmagic:.*/.*_netherite_.*/'})
 
     const bars_tochange = [
@@ -21,16 +21,16 @@ ServerEvents.recipes(e => {
         hardenBarsRecipes(e, bar[0], bar[1])
     });
     
-    removeBlockNuggetRecipes(e, 'minecraft', 'copper')
+    removeVanillaMetalurgy(e, 'minecraft', 'copper')
+    removeVanillaMetalurgy(e, 'createdeco', 'industrial_iron')
+    removeVanillaMetalurgy(e, 'createdeco', 'netherite')
 
-    removeBlockNuggetRecipes(e, 'createdeco', 'industrial_iron')
     e.replaceInput({input: 'createdeco:industrial_iron_ingot' }, 'createdeco:industrial_iron_ingot', '#forge:ingots/wrought_iron')
     e.replaceInput({input: 'createdeco:industrial_iron_nugget' }, 'createdeco:industrial_iron_nugget', '#forge:nuggets/wrought_iron')
     e.replaceInput({input: 'createdeco:industrial_iron_sheet' }, 'createdeco:industrial_iron_sheet', '#forge:plates/wrought_iron')
     e.replaceInput({input: 'create:industrial_iron_block' }, 'create:industrial_iron_block', '#forge:storage_blocks/wrought_iron')
     e.replaceInput({mod: 'createdeco' }, '#forge:sheets/brass', '#forge:plates/brass')
     e.replaceInput({ id: '/design_decor:stonecutting/.*sign$/' }, '#forge:nuggets/zinc', '#forge:plates/zinc')
-
     e.replaceInput({ id: '/design_decor:item_application/industrial_gear.*/' }, '#forge:storage_blocks/wrought_iron', '#forge:double_plates/wrought_iron')
     
     e.replaceInput({mod: 'platforms' }, '#forge:rods/metal', '#forge:rods/steel')
@@ -44,7 +44,7 @@ ServerEvents.recipes(e => {
     e.remove({id: '/vintagedelight:salt_block.*/'})
     e.replaceInput({id: 'vintagedelight:salt_from_smelting' }, 'minecraft:water_bucket', 'gtceu:salt_water_bucket')
 
-    e.replaceInput({mod: 'farmersdelight' }, 'minecraft:iron_ingot', '#forge:plates/iron')
+    e.replaceInput({mod: 'farmersdelight' }, 'vintagedelight:salt', '#forge:dusts/salt')
 
     //e.remove({ id: "simplemagnets:basicmagnet" });
     //e.shapeless("gtceu:lv_item_magnet", "simplemagnets:basicmagnet").id('gtna:basic_magnet')

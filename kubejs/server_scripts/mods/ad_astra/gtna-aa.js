@@ -9,11 +9,16 @@ ServerEvents.recipes(e => {
         hardenPPRecipes(e, 'ad_astra', material)
         hardenButtonRecipes(e, 'ad_astra', material)
     });
+
     hardenLadderRecipes(e, 'ad_astra', 'aeronos')
     hardenLadderRecipes(e, 'ad_astra', 'strophar')
 
-    removeBlockNuggetRecipes(e, 'ad_astra', 'steel')
-
+    let metals = ['steel', 'desh', 'ostrum', 'calorite']
+    metals.forEach(metal => {
+        removeVanillaMetalurgy(e, 'ad_astra', metal)
+        removeIngotRecipes(e, 'ad_astra', metal)
+    });
+    
     e.remove({ id: '/ad_astra:steel_ingot.*/' })
     e.remove({ id: '/ad_astra_rocketed:nasa_workbench.*/' })
 

@@ -30,6 +30,7 @@ ServerEvents.tags('item', e => {
     e.add('forge:raw_materials/thorium', 'create_new_age:thorium')
 
     addMetalTags(e, 'vintagedelight', 'salt')
+    e.add('forge:salt', '#forge:dusts/salt')
 
     //Botany
     addMetalTags(e, 'mythicbotany', 'elementium')
@@ -80,6 +81,15 @@ ServerEvents.tags('item', e => {
     });
     addMetalTags(e, 'extendedcrafting', 'crystaltine')
     addMetalTags(e, 'extendedcrafting', 'the_ultimate')
+
+    //Ironchests
+    const chest_tiers = ['blank', 'copper', 'iron', 'gold', 'crystal', 'diamond', 'obsidian', 'netherite']
+    chest_tiers.forEach(tier => {
+        e.add('ironchests:chests/' + tier, 'ironchests:' + tier + '_chest')
+        e.add('ironchests:barrel/' + tier, 'ironchests:' + tier + '_barrel')
+        e.add('ironchests:upgrades/' + tier, 'ironchests:' + tier + '_chest_upgrade')
+    });
+    e.add('ironchests:upgrades/flint', 'ironchests:blank_chest_upgrade')
 
 })
 ServerEvents.tags('block', e => {

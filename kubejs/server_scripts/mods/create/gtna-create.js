@@ -22,7 +22,7 @@ ServerEvents.recipes(e => {
 
     const materials = ['zinc', 'brass']
     materials.forEach(material => {
-        removeBlockNuggetRecipes(e, 'create', material)
+        removeVanillaMetalurgy(e, 'create', material)
     });
 
     e.shapeless('4x create:experience_nugget',['oreberriesreplanted:essence_berry']).id('gtna:shapeless/create/essenceberry_conversion')

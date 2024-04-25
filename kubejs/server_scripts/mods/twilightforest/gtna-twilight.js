@@ -6,7 +6,8 @@ ServerEvents.recipes(e => {
     const twilightmaterials = ['ironwood', 'knightmetal', 'fiery' ] 
     twilightmaterials.forEach(material => {
         hardenArmorRecipes(e, 'twilightforest', material)
-        removeBlockNuggetRecipes(e, 'twilightforest', material)
+        removeBlockRecipes(e, 'twilightforest', material)
+        removeNuggetRecipes(e, 'twilightforest', material)
     });
 
     hardenToolRecipes(e, 'twilightforest', 'ironwood', 'minecraft:stick')

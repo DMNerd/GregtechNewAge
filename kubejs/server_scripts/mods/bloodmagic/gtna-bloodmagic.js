@@ -1,3 +1,3 @@
 ServerEvents.recipes(e => {
-    removeBlockNuggetRecipes(e, 'bloodmagic', 'hellforged')
+    removeVanillaMetalurgy(e, 'bloodmagic', 'hellforged')
 })

@@ -18,6 +18,7 @@ ServerEvents.recipes(e => {
     e.remove({ mod: 'aeinfinitybooster' })
     e.remove({ id: '/megacells:inscriber/.*accum.*/' })
 
+    removeVanillaMetalurgy(e, 'megacells', 'sky_steel')
     replaceMetalTagsInCrafting(e, 'megacells', 'sky_steel')
 
     const sizes = ['1m', '4m', '16m', '64m', '256m']
@@ -177,4 +178,21 @@ ServerEvents.recipes(e => {
 	    "arseng:source_cell_housing", 
 	    1000, 
 	).id('gtna:arseng/source_cell_housing')
+
+    e.recipes.ars_nouveau.enchanting_apparatus(
+        [
+            "ars_nouveau:source_gem_block",
+            "#forge:double_plates/sky_steel",
+            "#forge:double_plates/sky_steel",
+            "#forge:double_plates/sky_steel",
+            "ars_nouveau:source_gem_block",
+            "ars_nouveau:manipulation_essence",
+            "ars_nouveau:manipulation_essence",
+        ], 
+	    "ae2:energy_acceptor", 
+	    "arseng:source_acceptor", 
+	    2000, 
+	).id('gtna:arseng/source_acceptor')
+    e.shapeless('kubejs:bound_stick',['gtna:arseng/source_cell_housing']).id('gtna:shapeless/cable_source_acceptor')
+
 })
