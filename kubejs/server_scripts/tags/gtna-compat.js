@@ -72,6 +72,15 @@ ServerEvents.tags('item', e => {
 
     e.add('twilightforest:sorting_logs', '#twilightforest:sortwood_logs')
 
+    //EXCrafting
+    const materials = [['black_iron', 'dark_steel'], ['redstone', 'red_alloy'], ['enhanced_redstone', 'redstone_alloy'], ['ender', 'enderium'], ['enhanced_ender', 'enderium']]
+
+    materials.forEach(material => {
+        addMetalUnificationTags(e, 'extendedcrafting', material[0], material[1])
+    });
+    addMetalTags(e, 'extendedcrafting', 'crystaltine')
+    addMetalTags(e, 'extendedcrafting', 'the_ultimate')
+
 })
 ServerEvents.tags('block', e => {
     e.add('forge:relocation_not_supported', [/productivebees:.+/, 'minecraft:beehive', 'minecraft:bee_nest'])
