@@ -18,7 +18,6 @@ JEIEvents.hideItems(event => {
   event.hide(/moredelight:.*_knife/)
   event.hide(/nethersdelight:.*_machete/)
 
-  
   event.hide(/productivebees:milk_bottle/)
 
   event.hide(/twilightforest:uncrafting.*/)
@@ -34,6 +33,5 @@ JEIEvents.hideItems(event => {
 
   event.hide(/create_new_age:.*circuit/)
   event.hide(/create_new_age:radioactive_thorium/)
-  
 })
   

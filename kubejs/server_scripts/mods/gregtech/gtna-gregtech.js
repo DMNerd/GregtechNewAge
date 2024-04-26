@@ -75,6 +75,11 @@ ServerEvents.recipes(e => {
         .circuit(1)
         .duration(800)
         .EUt(GTValues.V[GTValues.MV])
+    greg.coke_oven("gtna:coke_oven/ghost_charcoal")
+        .itemInputs("vintagedelight:ghost_pepper")
+        .itemOutputs("vintagedelight:ghost_charcoal")
+        .duration(500)
+        .EUt(GTValues.V[GTValues.LV]);
     greg.chemical_bath("gtna:elevator_washing/gray_elevator")
         .itemInputs("#elevatorid:elevators")
         .inputFluids("gtceu:chlorine 50")

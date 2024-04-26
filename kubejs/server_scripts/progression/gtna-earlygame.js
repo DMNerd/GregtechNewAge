@@ -7,8 +7,9 @@ ServerEvents.recipes(e => {
     e.replaceInput({ input: 'minecraft:milk_bucket' }, 'minecraft:milk_bucket', '#forge:milk')
     e.replaceInput({ input: 'minecraft:string' }, 'minecraft:string', '#forge:string')
     e.remove({ id: 'minecraft:charcoal' })
-    e.remove({ id: '/utilitarian:charcoal.*/' })
-
+    e.remove({ id: '/utilitarian:utility/charcoal.*/' })
+    e.remove({ id: '/vintagedelight:charcoal.*/' })
+    e.remove({ id: '/vintagedelight:ghost_charcoal.*/' })
 
     const tools = ['knife', 'mattock', 'saw', 'pickaxe', 'shovel', 'hoe', 'axe', 'sword']
     tools.forEach(tool => {
