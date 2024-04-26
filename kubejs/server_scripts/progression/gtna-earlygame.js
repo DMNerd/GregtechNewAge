@@ -2,9 +2,12 @@ ServerEvents.recipes(e => {
 
     e.replaceInput({ input: 'minecraft:flint'}, 'minecraft:flint', 'notreepunching:flint_shard')
     e.replaceInput({ input: 'minecraft:leather' }, 'minecraft:leather', 'leatherprocessing:dried_leather')
+    e.replaceInput({ input: '#forge:leather' }, '#forge:leather', 'leatherprocessing:dried_leather')
     e.replaceInput({ input: 'minecraft:stick', output: '#forge:tools' }, 'minecraft:stick', 'kubejs:bound_stick')
     e.replaceInput({ input: 'minecraft:milk_bucket' }, 'minecraft:milk_bucket', '#forge:milk')
     e.replaceInput({ input: 'minecraft:string' }, 'minecraft:string', '#forge:string')
+    e.remove({ id: 'minecraft:charcoal' })
+    e.remove({ id: '/utilitarian:charcoal.*/' })
 
 
     const tools = ['knife', 'mattock', 'saw', 'pickaxe', 'shovel', 'hoe', 'axe', 'sword']
@@ -53,5 +56,4 @@ ServerEvents.recipes(e => {
     })
     e.remove({ id: 'travelersbackpack:backpack_tank' })
     e.shapeless('travelersbackpack:backpack_tank',['create:fluid_tank']).id('gtna:shapeless/backpack_tank')
-
 })

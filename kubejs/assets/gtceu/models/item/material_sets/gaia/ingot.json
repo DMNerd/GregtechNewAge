@@ -1,0 +1,6 @@
+{
+    "parent": "gtceu:item/material_sets/shiny/ingot",
+    "textures": {
+      "layer2": "botania:item/gaia_ingot"
+    }
+  }

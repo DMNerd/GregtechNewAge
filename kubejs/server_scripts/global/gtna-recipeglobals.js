@@ -4,12 +4,21 @@ function replaceMetalTagsInCrafting(event, modid, metal){
     event.replaceInput({input: modid + ':' + metal + '_ingot' }, modid + ':' + metal + '_ingot', '#forge:ingots/'+ metal)
     event.replaceInput({input: modid + ':' + metal + '_nugget' }, modid + ':' + metal + '_nugget', '#forge:nuggets/'+ metal)
     event.replaceInput({input: '/' + modid + ':' + metal + '_(?:plate|sheet)/' }, '/' + modid + ':' + metal + '_(?:plate|sheet)/', '#forge:plates/'+ metal)
+    event.replaceOutput({output: modid + ':' + metal + '_block' }, modid + ':' + metal + '_block', '#forge:storage_blocks/'+ metal)
+    event.replaceOutput({output: modid + ':' + metal + '_ingot' }, modid + ':' + metal + '_ingot', '#forge:ingots/'+ metal)
+    event.replaceOutput({output: modid + ':' + metal + '_nugget' }, modid + ':' + metal + '_nugget', '#forge:nuggets/'+ metal)
+    event.replaceOutput({output: '/' + modid + ':' + metal + '_(?:plate|sheet)/' }, '/' + modid + ':' + metal + '_(?:plate|sheet)/', '#forge:plates/'+ metal)
 }
 function replaceMetalInCrafting(event, modid, metal, metalToReplace){
     event.replaceInput({input: modid + ':' + metal + '_block' }, modid + ':' + metal + '_block', '#forge:storage_blocks/'+ metalToReplace)
     event.replaceInput({input: modid + ':' + metal + '_ingot' }, modid + ':' + metal + '_ingot', '#forge:ingots/'+ metalToReplace)
     event.replaceInput({input: modid + ':' + metal + '_nugget' }, modid + ':' + metal + '_nugget', '#forge:nuggets/'+ metalToReplace)
     event.replaceInput({input: '/' + modid + ':' + metal + '_(?:plate|sheet)/' }, '/' + modid + ':' + metal + '_(?:plate|sheet)/', '#forge:plates/'+ metalToReplace)
+    event.replaceOutput({output: modid + ':' + metal + '_block' }, modid + ':' + metal + '_block', '#forge:storage_blocks/'+ metalToReplace)
+    event.replaceOutput({output: modid + ':' + metal + '_ingot' }, modid + ':' + metal + '_ingot', '#forge:ingots/'+ metalToReplace)
+    event.replaceOutput({output: modid + ':' + metal + '_nugget' }, modid + ':' + metal + '_nugget', '#forge:nuggets/'+ metalToReplace)
+    event.replaceOutput({output: '/' + modid + ':' + metal + '_(?:plate|sheet)/' }, '/' + modid + ':' + metal + '_(?:plate|sheet)/', '#forge:plates/'+ metalToReplace)
+
 }
 function removeBlockRecipes(event, modid, material){
     event.remove({ id: '/' + modid + ':.*' + material + '.*_block.*/' })
@@ -67,6 +76,15 @@ function hardenLadderRecipes(event, modid, woodtype){
         D: '#forge:tools/hammers'
     }).id('gtna:shaped/' + modid + '/'+ woodtype +'_ladder')
 }
+function hardenMetalLadderRecipes(event, modid, metal){
+    event.remove({ output: '/' + modid + ':.*' + metal + '.*_ladder/' })
+    event.shaped('/' + modid + ':.*' + metal + '.*_ladder/', ['BEB', 'CBC', 'BDB'], {
+        B: '#forge:rods/' + metal,
+        C: '#forge:screws/' + metal,
+        D: '#forge:tools/wrenches',
+        E: '#forge:tools/screwdrivers'
+    }).id('gtna:shaped/' + modid + '/'+ metal +'_ladder')
+}
 function hardenPPRecipes(event, modid, material){
     event.remove({ output: '/' + modid + ':.*' + material + '.*_pressure_plate/' })
     event.shaped('/' + modid + ':' + material + '.*_pressure_plate/', ['CDC', 'ABA', 'CEC'], {
@@ -76,6 +94,32 @@ function hardenPPRecipes(event, modid, material){
         D: '#forge:tools/mallets',
         E: '#forge:tools/screwdrivers'
     }).id('gtna:shaped/' + modid + '/'+ material +'_pressure_plate')
+}
+function hardenMetalPPRecipes(event, modid, metal){
+    event.remove({ output: '/' + modid + ':.*' + metal + '.*_pressure_plate/' })
+    event.shaped('/' + modid + ':' + metal + '.*_pressure_plate/', ['CDC', 'ABA', 'CEC'], {
+        A: '#forge:plates/' + metal, 
+        B: '#forge:springs/iron',
+        C: '#forge:bolts/' + metal,
+        D: '#forge:tools/mallets',
+        E: '#forge:tools/screwdrivers'
+    }).id('gtna:shaped/' + modid + '/'+ metal +'_pressure_plate')
+}
+function hardenMetalDoorRecipes(event, modid, metal){
+    event.remove({ output: '/' +  modid + ':.*' + metal + '.*_trapdoor/' })
+    event.shaped(modid + ':' + metal + '_trapdoor', ['ABA', 'BBB', 'ABA'], {
+        A: '#forge:plates/' + metal, 
+        B: '#forge:rods/' + metal
+    }).id('gtna:shaped/' + modid + '/'+ metal +'_trapdoor')
+    event.remove({ output: '/' + modid + ':.*' + metal + '.*_door/' })
+    event.shaped(modid + ':' + metal + '_door', ['ABE', 'ACD', 'AAF'], {
+        A: '#forge:plates/' + metal, 
+        B: modid + ':' + metal + '_trapdoor',
+        C: '#forge:rings/iron',
+        D: '#forge:screws/iron',
+        E: '#forge:tools/screwdrivers',
+        F: '#forge:tools/saws'
+    }).id('gtna:shaped/' + modid + '/'+ metal +'_door')
 }
 function hardenBarsRecipes(event, modid, material){
     event.remove({ id: modid + ':' + material + '_bars' })

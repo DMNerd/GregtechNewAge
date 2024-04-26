@@ -1,6 +1,10 @@
 ServerEvents.recipes(e => {
 
     e.replaceInput({ mod: 'create' }, 'minecraft:dried_kelp_block', '#forge:storage_blocks/polytetrafluoroethylene')
+    e.replaceInput({ mod: 'create' }, 'minecraft:copper_block', 'gtceu:steam_machine_casing')
+    e.replaceInput({ id: '/createapplied.*:.*silicon/' }, '#forge:dusts/silicon', '#forge:plates/silicon')
+    e.replaceInput({ id: '/createapplied.*:.*processor_print$/' }, '#ae2:all_certus_quartz', '#forge:plates/certus_quartz')
+    e.replaceInput({ id: '/createapplied.*:.*processor_print$/' }, 'minecraft:diamond', '#forge:plates/diamond')
 
     e.replaceInput({ mod: 'create_new_age' }, 'create_new_age:copper_circuit', '#gtceu:circuits/lv')
     e.replaceInput({ mod: 'create_new_age' }, 'minecraft:redstone_block', '#forge:double_plates/redstone_alloy')
@@ -19,8 +23,8 @@ ServerEvents.recipes(e => {
     e.remove({ mod: 'create_new_age', id: '/create_new_age:.*circuit/' })
     e.remove({ mod: 'create_new_age', output: '/create_new_age:radioactive_thorium/' })
 
-    
     e.remove({ id: '/create_new_age:energising/gold.*/' })
+    e.remove({ id: '/createapplied.*:.*processor$/' })
 
     const materials = ['zinc', 'brass']
     materials.forEach(material => {

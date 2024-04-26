@@ -10,7 +10,7 @@ ServerEvents.tags('item', e => {
         e.add('forge:dusts', flour)
         e.add('forge:dusts/wheat', flour)
     });
-
+    e.add('forge:dusts/silicon', '#forge:silicon')
     e.add('forge:milk', 'gtceu:milk_bucket')
     //Create
     e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
@@ -18,7 +18,9 @@ ServerEvents.tags('item', e => {
     e.add('forge:ingots/shadow_steel', 'create:shadow_steel')
 
     e.add('forge:rods/andesite', '#forge:rods/andesite_alloy')
+    e.add('forge:plates/andesite', '#forge:plates/andesite_alloy')
     e.add('forge:rods/industrial_iron', '#forge:rods/wrought_iron')
+    e.add('forge:screws/industrial_iron', '#forge:screws/wrought_iron')
 
     addMetalUnificationTags(e, 'createdeco', 'industrial_iron', 'wrought_iron')
     addMetalUnificationTags(e, 'create', 'industrial_iron', 'wrought_iron')

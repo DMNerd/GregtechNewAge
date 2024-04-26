@@ -8,19 +8,47 @@ ServerEvents.recipes(e => {
     removeVanillaMetalurgy(e, 'minecraft', 'netherite')
     e.remove({id: '/bloodmagic:.*/.*_netherite_.*/'})
 
-    const bars_tochange = [
+    const laddersToChange = [
+        ['create', 'andesite'],
+        ['create', 'brass'],
+        ['create', 'copper'],
+        ['createdeco', 'industrial_iron'],
+        ['createdeco', 'iron'],
+        ['createdeco', 'zinc'],
+        ['enderio', 'dark_steel'], 
+    ]
+    const barsToChange = [
         ['createdeco', 'andesite'],
         ['createdeco', 'brass'],
         ['createdeco', 'copper'],
-        ['createdeco', 'zinc'],
         ['createdeco', 'industrial_iron'],
+        ['createdeco', 'zinc'],
         ['enderio', 'dark_steel'],
         ['enderio', 'end_steel'],
     ]
-    bars_tochange.forEach(bar => {
+    const doorsToChange = [
+        ['createdeco', 'andesite'],
+        ['createdeco', 'brass'],
+        ['createdeco', 'copper'],
+        ['createdeco', 'industrial_iron'],
+        ['createdeco', 'zinc'],
+        ['enderio', 'dark_steel'],
+    ]
+    barsToChange.forEach(bar => {
         hardenBarsRecipes(e, bar[0], bar[1])
     });
-    
+    laddersToChange.forEach(ladder => {
+        hardenMetalLadderRecipes(e, ladder[0], ladder[1])
+    });
+    doorsToChange.forEach(door => {
+        hardenMetalDoorRecipes(e, door[0], door[1])
+    });
+    e.replaceInput({id: '/create:.*/andesite_door/' }, '#minecraft:wooden_doors', 'createdeco:andesite_door')
+    e.replaceInput({id: '/create:.*/brass_door/' }, '#minecraft:wooden_doors', 'createdeco:brass_door')
+    e.replaceInput({id: '/create:.*/copper_door/' }, '#minecraft:wooden_doors', 'createdeco:copper_door')
+    e.replaceInput({id: '/create:.*/train_door/' }, '#minecraft:wooden_doors', 'minecraft:iron_door')
+    e.replaceInput({id: '/create:.*/train_trapdoor/' }, '#minecraft:wooden_trapdoors', 'minecraft:iron_trapdoor')
+
     removeVanillaMetalurgy(e, 'minecraft', 'copper')
     removeVanillaMetalurgy(e, 'createdeco', 'industrial_iron')
     removeVanillaMetalurgy(e, 'createdeco', 'netherite')
@@ -66,7 +94,7 @@ ServerEvents.recipes(e => {
     }).id('gtna:steel_elevator')
     e.remove({id: 'toolbelt:pouch'})
     e.shaped('toolbelt:pouch', ['A A', 'B B', 'CBC'], {
-        A: '#forge:bolts/gold', 
+        A: '#forge:bolts/brass', 
         B: 'leatherprocessing:dried_leather',
         C: '#forge:string'
     }).id('gtna:toolbelt/toolbelt_pouch')
@@ -75,7 +103,7 @@ ServerEvents.recipes(e => {
         B: 'leatherprocessing:dried_leather',
         C: '#forge:string',
         D: 'toolbelt:pouch',
-        E: '#forge:rings/brass'
+        E: '#forge:rings/gold'
     }).id('gtna:toolbelt/toolbelt_belt')
     e.remove({id: 'travelersbackpack:standard'})
     e.shaped('travelersbackpack:standard', ['BDB', 'CAC', 'FEF'], {
@@ -89,6 +117,13 @@ ServerEvents.recipes(e => {
 
     
     hardenWoodenRecipes(e, 'framedblocks', 'framed')
+    hardenLadderRecipes(e, 'framedblocks', 'framed')
+    e.remove({id : 'framedblocks:framed_cube' })
+    e.shaped('framedblocks:framed_cube', ['BAB', 'ACA', 'BAB'], {
+        A: '#forge:rods/wood', 
+        B: '#minecraft:planks',
+        C: 'gtceu:wood_frame'
+    })
     e.remove({id : 'framedblocks:framed_chest' })
     e.shaped('framedblocks:framed_chest', ['AAA', 'ABA', 'AAA'], {
         A: 'framedblocks:framed_cube', 

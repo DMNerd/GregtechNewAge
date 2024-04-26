@@ -8,10 +8,13 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
     GTMaterials.Andesite.setProperty(PropertyKey.DUST, new $DustProperty());  
     GTMaterials.Diamond.addFlags(GTMaterialFlags.GENERATE_DENSE)
     GTMaterials.Andesite.addFlags(GTMaterialFlags.MORTAR_GRINDABLE)
+    GTMaterials.Zinc.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW)
     GTMaterials.Copper.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_RING)
+    GTMaterials.Brass.addFlags(GTMaterialFlags.GENERATE_RING)
     GTMaterials.Amethyst.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_DENSE)
-    
-    GTMaterials.get("andesite_alloy").addFlags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD)
+    GTMaterials.Nichrome.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW)
+
+    GTMaterials.get("andesite_alloy").addFlags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_BOLT_SCREW)
    
 
     e.create('soul_sand')
@@ -76,7 +79,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .gem()
         .element('yggdralium')
         .color(0xCAF4FF).secondaryColor(0x3F52B4)
-        .iconSet(GTMaterialIconSet.QUARTZ)
+        .iconSet(GTMaterialIconSet.RUBY)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
     e.create('yggdralium')
         .ingot()
@@ -186,6 +189,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.IS_MAGNETIC)
     e.create('energetic_alloy')
         .ingot()
+        .fluid()
         .components('1x conductive_alloy', '1x gold', '1x black_steel')
         .color(0xFFDC8B).secondaryColor(0xE9A300)
         .iconSet(GTMaterialIconSet.SHINY)
@@ -207,7 +211,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .components('4x soul_sand', '1x gold', '1x coal')
         .color(0x6D5B35).secondaryColor(0x5C4323)
         .iconSet(GTMaterialIconSet.DULL)
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_FRAME)
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_FRAME)
     e.create('dark_steel')
         .ingot()
         .blastTemp(1800, 'low')

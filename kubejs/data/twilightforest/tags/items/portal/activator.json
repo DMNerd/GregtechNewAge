@@ -2,8 +2,8 @@
   "replace": true,
   "values": [
     {
-      "id":"divinerpg:hellstone_ingot",
-      "required":false
+      "id":"botania:spark",
+      "required":true
     }
   ]
 }

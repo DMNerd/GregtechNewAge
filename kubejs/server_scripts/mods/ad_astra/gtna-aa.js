@@ -4,7 +4,7 @@ ServerEvents.recipes(e => {
     woodtypes.forEach(wood => {
         hardenWoodenRecipes(e, 'ad_astra', wood)
     });
-    const redstone = ['glacian', 'calorite', 'ostrum', 'iron_plating', 'steel_plating']
+    const redstone = ['glacian', 'iron_plating', 'steel_plating']
     redstone.forEach(material => {
         hardenPPRecipes(e, 'ad_astra', material)
         hardenButtonRecipes(e, 'ad_astra', material)
@@ -17,6 +17,7 @@ ServerEvents.recipes(e => {
     metals.forEach(metal => {
         removeVanillaMetalurgy(e, 'ad_astra', metal)
         removeIngotRecipes(e, 'ad_astra', metal)
+        hardenMetalPPRecipes(e, 'ad_astra', metal)
     });
     
     e.remove({ id: '/ad_astra:steel_ingot.*/' })
