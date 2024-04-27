@@ -7,6 +7,7 @@ ServerEvents.tags('item', e => {
     e.add('diet:fruits', '/miners_delight:.*cod.*/')
     e.add('diet:fruits', '/miners_delight:fish.*/')
     e.add('diet:fruits', '/twilightforest:.*juice$/')
+    e.add('diet:fruits', '/.*:.*lemonade$/')
     e.add('diet:grains', '/berries_and_cherries:.*pie$/')
     e.add('diet:grains', '/miners_delight:.noodle.*/')
     e.add('diet:grains', '/vegandelight:.*tofu.*/')
