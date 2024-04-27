@@ -3,8 +3,12 @@ ServerEvents.recipes(e => {
     e.remove({ id: '/utilitarian:utility/charcoal.*/' })
     e.remove({ id: '/vintagedelight:charcoal.*/' })
     e.remove({ id: '/vintagedelight:ghost_charcoal.*/' })
+    e.remove({ id: 'comforts:rope_and_nail' })
+    e.remove({ id: 'craftingstation:crafting_station' })
+    e.remove({ id: 'craftingstation:crafting_station_slab' })
     e.remove({ id: 'minecraft:charcoal' })
     e.remove({id: 'minecraft:bread'})
+    e.remove({id: 'woodenhopper:wooden_hopper'})
     e.replaceInput({ input: '#forge:leather' }, '#forge:leather', 'leatherprocessing:dried_leather')
     e.replaceInput({ input: 'minecraft:flint'}, 'minecraft:flint', 'notreepunching:flint_shard')
     e.replaceInput({ input: 'minecraft:leather' }, 'minecraft:leather', 'leatherprocessing:dried_leather')
@@ -17,7 +21,7 @@ ServerEvents.recipes(e => {
         e.remove({ id: '/notreepunching:.*_/' + tool })
         e.remove({ output: 'minecraft:iron_' + tool })
         e.replaceInput({ input: 'minecraft:wooden_' + tool }, 'minecraft:wooden_' + tool, 'gtceu:flint_' + tool)
-        e.replaceInput({ input: 'minecraft:stone_' + tool }, 'minecraft:wooden_' + tool, 'gtceu:flint_' + tool)
+        e.replaceInput({ input: 'minecraft:stone_' + tool }, 'minecraft:stone_' + tool, 'gtceu:flint_' + tool)
         e.replaceInput({ input: 'minecraft:iron_' + tool }, 'minecraft:iron_' + tool, 'gtceu:iron_' + tool)
         e.replaceInput({ id: '/gtceu:shaped/' + tool + '_flint/' }, 'minecraft:stick', 'kubejs:bound_stick')
     });
@@ -32,10 +36,6 @@ ServerEvents.recipes(e => {
         hardenPPRecipes(e, 'minecraft', wood)   
     }); 
 
-    e.remove({ id: 'comforts:rope_and_nail' })
-    e.remove({ id: 'craftingstation:crafting_station' })
-    e.remove({ id: 'craftingstation:crafting_station_slab' })
-    e.remove({id: 'woodenhopper:wooden_hopper'})
     e.replaceInput({ id: '/everycomp:wfha/.*/', input:  'minecraft:iron_nugget'}, 'minecraft:iron_nugget', '#forge:rods/long/iron')
     e.replaceInput({ id: '/everycomp:wfha/.*/simple.*/', input:  'minecraft:crafting_table'}, 'minecraft:crafting_table', 'craftingstation:crafting_station')
     e.replaceInput({ id: '/workshop_for_handsome_adventurer:.*/', input:  'minecraft:iron_nugget'}, 'minecraft:iron_nugget', '#forge:rods/long/iron')

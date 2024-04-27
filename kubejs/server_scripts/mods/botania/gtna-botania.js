@@ -1,8 +1,11 @@
 ServerEvents.recipes(e => {
 
+
+    e.replaceInput({ mod: 'mechanicalbotania' }, '#forge:ingots/andesite_alloy', '#forge:double_plates/andesite_alloy')
     e.replaceInput({ mod: 'mechanicalbotania' }, 'minecraft:lapis_block', '#forge:plates/manasteel')
     e.replaceInput({ mod: 'mechanicalbotania' }, 'minecraft:redstone', '#morered:red_alloy_wires')
-    e.replaceInput({ mod: 'mechanicalbotania' }, '#forge:ingots/andesite_alloy', '#forge:double_plates/andesite_alloy')
+    e.replaceInput({ id: 'botania:mana_pylon' }, '#forge:ingots/manasteel', '#forge:double_plates/manasteel')
+    e.replaceInput({ id: 'botania:mana_pylon' }, 'minecraft:gold', '#forge:double_plates/gold')
 
     const botaniaMats = ['manasteel', 'terrasteel', 'elementium']
     botaniaMats.forEach(material => {
@@ -16,8 +19,8 @@ ServerEvents.recipes(e => {
     hardenToolRecipes(e, 'botania', 'elementium', 'botania:dreamwood_twig')
     e.replaceInput({ id: 'botania:terra_pick' }, 'botania:terrasteel_ingot', '#forge:plates/terrasteel')
 
-    replaceMetalTagsInCrafting(e,'mythicbotany', 'alfsteel')
-    replaceMetalTagsInCrafting(e,'botanicpledge', 'yggdralium')
     removeVanillaMetalurgy(e, 'botanicpledge', 'yggdralium')
     removeVanillaMetalurgy(e, 'mythicbotany', 'alfsteel')
+    replaceMetalTagsInCrafting(e,'botanicpledge', 'yggdralium')
+    replaceMetalTagsInCrafting(e,'mythicbotany', 'alfsteel')
 })

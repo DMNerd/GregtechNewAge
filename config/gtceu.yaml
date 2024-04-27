@@ -187,7 +187,7 @@ machines:
 
   # Block to replace mined ores with in the miner and multiblock miner.
   # Default: minecraft:cobblestone
-  replaceMinedBlocksWith: minecraft:cobblestone
+  replaceMinedBlocksWith: minecraft:gravel
 
   # Whether to enable Assembly Line research for recipes.
   # Default: true

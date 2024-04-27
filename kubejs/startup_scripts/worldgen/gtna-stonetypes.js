@@ -5,4 +5,10 @@ GTCEuStartupEvents.registry('gtceu:tag_prefix', e => {
         .unificationEnabled(true)
         .materialIconType(GTMaterialIconType.ore)
         .generationCondition(ItemGenerationCondition.hasOreProperty)
+    e.create('limestone', 'ore') // 
+        .stateSupplier(() => Block.getBlock('create:limestone').defaultBlockState()) // 
+        .baseModelLocation('create:block/limestone') // 
+        .unificationEnabled(true)
+        .materialIconType(GTMaterialIconType.ore)
+        .generationCondition(ItemGenerationCondition.hasOreProperty)
 })

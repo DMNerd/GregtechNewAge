@@ -11,12 +11,11 @@ ServerEvents.recipes(e => {
     const buses = ['import_bus', 'export_bus']
     const filtered_buses = ['storage_bus', 'export_bus']
 
+    e.remove({ id: '/megacells:inscriber/.*accum.*/' })
+    e.remove({ mod: 'aeinfinitybooster' })
+    e.replaceInput({id: '/appbot:mana.*/' }, 'botania:manasteel_ingot', '#forge:plates/manasteel')
     e.replaceInput({id: '/gregi.*:.*/' }, 'ae2:sky_dust', 'gtceu:pure_skystone_dust')
     e.replaceInput({id: '/megacells:mega_mana.*/' }, 'ae2:sky_dust', '#forge:screws/titanium')
-    e.replaceInput({id: '/appbot:mana.*/' }, 'botania:manasteel_ingot', '#forge:plates/manasteel')
-
-    e.remove({ mod: 'aeinfinitybooster' })
-    e.remove({ id: '/megacells:inscriber/.*accum.*/' })
 
     removeVanillaMetalurgy(e, 'megacells', 'sky_steel')
     replaceMetalTagsInCrafting(e, 'megacells', 'sky_steel')
@@ -53,7 +52,6 @@ ServerEvents.recipes(e => {
             .duration(600)
             .EUt(GTValues.V[recipe[4]])
     });
-
     devices.forEach(device => {
         e.remove({id: 'megacells:network/mega_' + device })
         e.recipes.gtceu.assembler('gtna:ae2/mega/' + device)
@@ -68,7 +66,6 @@ ServerEvents.recipes(e => {
             .duration(3000)
             .EUt(GTValues.V[GTValues.LuV])
     });
-
     buses.forEach(bus => {
         e.remove({output: '/expatternprovider:ex_' + bus + '.*/' })
         e.recipes.gtceu.assembler('gtna:ae2/expatternprovider/extended_' + bus)
@@ -99,34 +96,48 @@ ServerEvents.recipes(e => {
     });
     e.replaceInput({id: '/ae2insertexport_card:.*/' }, 'minecraft:redstone_block', 'gtceu:redstone_alloy_plate')
     
-    e.replaceInput({id: '/expatternprovider:ex_molecular.*/' }, 'ae2:engineering_processor', 'megacells:accumulation_processor')
-    e.replaceInput({id: '/expatternprovider:ex_molecular.*/' }, '#forge:gems/fluix', '#forge:double_plates/pfstalloy')
+    e.replaceInput({id: '/expatternprovider:(?:water|cobblestone).*_cell/' }, 'ae2:cell_component_16k', 'megacells:cell_component_256m')
+    e.replaceInput({id: '/expatternprovider:(?:water|cobblestone).*_cell/' }, 'ae2:quartz_glass', 'gtceu:laminated_glass')
+    e.replaceInput({id: '/expatternprovider:(?:water|cobblestone).*_cell/' }, 'minecraft:diamond', '#forge:double_plates/pfstalloy')
+    e.replaceInput({id: '/expatternprovider:(?:water|cobblestone).*_cell/' }, 'minecraft:water_bucket', 'gtceu:infinite_water_cover')
+    e.replaceInput({id: '/expatternprovider:cobblestone.*_cell/' }, 'minecraft:lava_bucket', 'bloodmagic:lavasigil')
+    e.replaceInput({id: '/expatternprovider:crystal_fix.*/' }, '#forge:gems/fluix', 'gtceu:kanthal_coil_block')
+    e.replaceInput({id: '/expatternprovider:crystal_fix.*/' }, 'minecraft:iron', '#forge:double_plates/iron')
+    e.replaceInput({id: '/expatternprovider:crystal_fix.*/' }, 'minecraft:iron', '#forge:plates/stainless_steel')
     e.replaceInput({id: '/expatternprovider:ex_io.*/' }, 'ae2:engineering_processor', 'megacells:accumulation_processor')
     e.replaceInput({id: '/expatternprovider:ex_io.*/' }, 'ae2:logic_processor', 'megacells:accumulation_processor')
     e.replaceInput({id: '/expatternprovider:ex_io.*/' }, 'ae2:speed_card', '#forge:double_plates/pfstalloy')
-    e.replaceInput({id: 'expatternprovider:ex_drive' }, '#forge:dusts/fluix', '#forge:double_plates/pfstalloy')
-    e.replaceInput({id: 'expatternprovider:ex_drive' }, '#ae2:glass_cable', 'megacells:accumulation_processor')
+    e.replaceInput({id: '/expatternprovider:ex_molecular.*/' }, '#forge:gems/fluix', '#forge:double_plates/pfstalloy')
+    e.replaceInput({id: '/expatternprovider:ex_molecular.*/' }, 'ae2:engineering_processor', 'megacells:accumulation_processor')
     e.replaceInput({id: '/expatternprovider:ingredient.*/' }, 'minecraft:iron', '#forge:double_plates/iron')
-    e.replaceInput({id: '/expatternprovider:crystal_fix.*/' }, 'minecraft:iron', '#forge:double_plates/iron')
-    e.replaceInput({id: '/expatternprovider:crystal_fix.*/' }, '#forge:gems/fluix', 'gtceu:kanthal_coil_block')
-    e.replaceInput({id: '/expatternprovider:crystal_fix.*/' }, 'minecraft:iron', '#forge:plates/stainless_steel')
+    e.replaceInput({id: '/expatternprovider:wireless_conn.*/' }, '#ae2:smart_cable', 'ae2:engineering_processor')
     e.replaceInput({id: '/expatternprovider:wireless_conn.*/' }, 'ae2:engineering_processor', '#forge:double_plates/titanium')
     e.replaceInput({id: '/expatternprovider:wireless_conn.*/' }, 'ae2:sky_dust', '#forge:plates/fluix')
-    e.replaceInput({id: '/expatternprovider:wireless_conn.*/' }, '#ae2:smart_cable', 'ae2:engineering_processor')
-    e.replaceInput({id: '/expatternprovider:(?:water|cobblestone).*_cell/' }, 'minecraft:diamond', '#forge:double_plates/pfstalloy')
-    e.replaceInput({id: '/expatternprovider:(?:water|cobblestone).*_cell/' }, 'ae2:cell_component_16k', 'megacells:cell_component_256m')
-    e.replaceInput({id: '/expatternprovider:(?:water|cobblestone).*_cell/' }, 'ae2:quartz_glass', 'gtceu:laminated_glass')
-    e.replaceInput({id: '/expatternprovider:(?:water|cobblestone).*_cell/' }, 'minecraft:water_bucket', 'gtceu:infinite_water_cover')
-    e.replaceInput({id: '/expatternprovider:cobblestone.*_cell/' }, 'minecraft:lava_bucket', 'bloodmagic:lavasigil')
+    e.replaceInput({id: 'expatternprovider:drive_upgrade' }, '#ae2:glass_cable', 'megacells:accumulation_processor')
+    e.replaceInput({id: 'expatternprovider:drive_upgrade' }, '#forge:dusts/fluix', '#forge:double_plates/pfstalloy')
+    e.replaceInput({id: 'expatternprovider:ex_drive' }, '#ae2:glass_cable', 'megacells:accumulation_processor')
+    e.replaceInput({id: 'expatternprovider:ex_drive' }, '#forge:dusts/fluix', '#forge:double_plates/pfstalloy')
     
     e.replaceInput({id: '/megacells:.*_component/' }, 'ae2:sky_dust', '#forge:plates/fluix')
-    e.replaceInput({id: '/megacells:cells/mega_mana.*_housing/' }, 'ae2:sky_dust', '#forge:double_plates/terrasteel')
     e.replaceInput({id: '/megacells:cells/mega_mana.*_housing/' }, 'ae2:quartz_vibrant_glass', '#forge:double_plates/terrasteel')
+    e.replaceInput({id: '/megacells:cells/mega_mana.*_housing/' }, 'ae2:sky_dust', '#forge:double_plates/terrasteel')
 
+    e.replaceInput({id: '/arseng:mega.*_housing/' }, '#forge:ingots/sky_steel', '#forge:double_plates/titanium')
     e.replaceInput({id: '/gtceu:.*_flux_cell_housing/' }, '#forge:ingots/insulating_resin', '#forge:double_plates/insulating_resin')
     e.replaceInput({id: '/gtceu:.*mana_cell_housing/' }, '#forge:ingots/manasteel', '#forge:double_plates/manasteel')
-    e.replaceInput({id: '/arseng:mega.*_housing/' }, '#forge:ingots/sky_steel', '#forge:double_plates/titanium')
-
+    
+    e.remove({output: 'expatternprovider:ex_pattern_access_part' })
+    e.recipes.gtceu.assembler('gtna:ae2/expatternprovider/ex_pattern_access_part')
+        .itemInputs(['ae2:pattern_access_terminal', '3x #forge:plates/fluix', 'megacells:accumulation_processor'])
+        .itemOutputs('expatternprovider:ex_pattern_access_part' )
+        .duration(3000)
+        .EUt(GTValues.V[GTValues.IV])
+    e.remove({output: '/expatternprovider:.*_upgrade/' })
+    e.recipes.gtceu.assembler('gtna:ae2/expatternprovider/pattern_terminal_upgrade')
+        .itemInputs(['#forge:plates/steel', '3x #forge:plates/fluix', 'megacells:accumulation_processor'])
+        .itemOutputs('expatternprovider:pattern_terminal_upgrade' )
+        .duration(3000)
+        .EUt(GTValues.V[GTValues.IV])
     e.remove({ id: 'expatternprovider:wireless_tool' })
     e.shaped('expatternprovider:wireless_tool', ['FBF', 'CGC', 'AEA'], {
         A: '#forge:plates/fluix', 
