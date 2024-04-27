@@ -101,6 +101,7 @@ ServerEvents.tags('block', e => {
     e.add('ars_nouveau:golem/budding', ['minecraft:budding_amethyst', 'ae2:damaged_budding_quartz', 'ae2:chipped_budding_quartz', 'ae2:flawed_budding_quartz', 'ae2:flawless_budding_quartz'])
     e.add('ars_nouveau:golem/cluster', ['minecraft:amethyst_cluster', 'ae2:quartz_cluster'])
     e.add('entangled:invalid_targets', ['@megacells','@expatternprovider','@ae2'])
+    e.add('gtna:livingrock_ore_replaceables', 'botania:livingrock')
 })
 ServerEvents.tags('fluid', e => {
     e.remove('minecraft:water',[

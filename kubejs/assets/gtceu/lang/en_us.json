@@ -1,8 +1,9 @@
 {
-    "tagprefix.livingrock": "Livingrock %s Ore",
-    "gtceu.create_mixer": "Mechanical Mixer",
     "block.gtceu.greenhouse": "Greenhouse",
+    "block.gtceu.mega_ebf": "Mega Blast Furnace",
+    "gtceu.create_mixer": "Mechanical Mixer",
     "gtceu.greenhouse": "Greenhouse",
+    "gtceu.mega_ebf": "Mega Blast Furnace",
     "material.gtceu.alfsteel": "Alfsteel",
     "material.gtceu.carminite": "Carminite",
     "material.gtceu.conductive_alloy": "Conductive Iron",
@@ -37,5 +38,6 @@
     "material.gtceu.unmagnetised_gold": "Gold Alloy",
     "material.gtceu.vibrant_alloy": "Vibrant Alloy",
     "material.gtceu.yggdralium": "Yggdralium Alloy",
-    "material.gtceu.yggdralium_shard": "Pure Yggdralium"
+    "material.gtceu.yggdralium_shard": "Pure Yggdralium",
+    "tagprefix.livingrock": "Livingrock %s Ore"
 }

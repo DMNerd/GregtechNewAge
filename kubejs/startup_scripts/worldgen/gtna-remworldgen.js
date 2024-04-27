@@ -15,7 +15,10 @@ WorldgenEvents.remove(e => {
             "oreberriesreplanted:osmium_oreberry_bush",
             "sgjourney:deepslate_naquadah_ore",
             "sgjourney:naquadah_ore",
-            "sgjourney:nether_naquadah_ore"
+            "sgjourney:nether_naquadah_ore",
+            "theurgy:deepslate_sal_ammoniac_ore",
+            "theurgy:sal_ammoniac_ore"
+
         ]
     })
   })

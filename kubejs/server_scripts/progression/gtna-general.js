@@ -10,7 +10,6 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: '/utilitarian:utility/.*doors$/' })
 
-
     const laddersToChange = [
         ['create', 'andesite'],
         ['create', 'brass'],
