@@ -102,10 +102,6 @@ ServerEvents.tags('item', e => {
         e.add('ironchests:upgrades/' + tier, 'ironchests:' + tier + '_chest_upgrade')
     });
     e.add('ironchests:upgrades/flint', 'ironchests:blank_chest_upgrade')
-    
-    e.add('drawers:1x1', '/functionalstorage:.*_1/')
-    e.add('drawers:1x2', '/functionalstorage:.*_2/')
-    e.add('drawers:2x2', '/functionalstorage:.*_4/')
 
 })
 ServerEvents.tags('block', e => {

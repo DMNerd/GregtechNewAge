@@ -3,11 +3,12 @@ ServerEvents.recipes(e => {
     e.remove({ id: '/utilitarian:utility/.*doors$/' })
     e.remove({id: '/bloodmagic:.*/.*_netherite_.*/'})
     e.remove({id: 'gtceu:shaped/minecart_steel'})
+    e.remove({mod: 'moblassos'})
     e.replaceInput({input: '#railways:internal/nuggets/zinc_nuggets' }, '#railways:internal/nuggets/zinc_nuggets', '#forge:nuggets/zinc')
     e.replaceOutput({ input: 'leatherprocessing:dried_leather',  output: 'minecraft:book'}, 'leatherprocessing:dried_leather', '#forge:binding_material')
     e.replaceOutput({ output: '#forge:nuggets/aluminum' }, '#forge:nuggets/aluminum', '#forge:nuggets/aluminium')
     removeVanillaMetalurgy(e, 'minecraft', 'netherite')
-    
+
     const laddersToChange = [
         ['create', 'andesite'],
         ['create', 'brass'],

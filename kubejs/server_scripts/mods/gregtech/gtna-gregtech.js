@@ -15,7 +15,11 @@ ServerEvents.recipes(e => {
         P: "gtceu:mv_electric_piston",
         U: "gtceu:mv_electric_pump",
     });
-
+    greg.assembler('gtna:gtceu/assembler/golden_lasso')
+        .itemInputs(['#forge:gems/ender_pearl', '4x #forge:fine_wires/gold'])
+        .itemOutputs('moblassos:golden_lasso')
+        .duration(600)
+        .EUt(GTValues.V[GTValues.LV])
     greg.assembler('gtna:gtceu/assembler/accumulation_processor')
         .itemInputs(['kubejs:fluix_crystal_cpu', 'ae2:printed_silicon'])
         .inputFluids(Fluid.of('gtceu:fluix', 144))
