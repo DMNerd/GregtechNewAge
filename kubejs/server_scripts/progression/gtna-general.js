@@ -63,8 +63,9 @@ ServerEvents.recipes(e => {
     e.replaceInput({ id: '/design_decor:stonecutting/.*sign$/' }, '#forge:nuggets/zinc', '#forge:plates/zinc')
     e.replaceInput({ id: '/design_decor:item_application/industrial_gear.*/' }, '#forge:storage_blocks/wrought_iron', '#forge:double_plates/wrought_iron')
     
-    e.replaceInput({mod: 'platforms' }, '#forge:rods/metal', '#forge:rods/steel')
-    e.replaceInput({id: 'platforms:platform' }, 'minecraft:iron', '#forge:plates/steel')
+    e.replaceInput({id: 'platforms:wrench' }, '#forge:rods/metal', '#forge:rods/steel')
+    e.replaceInput({id: 'platforms:wrench' }, 'minecraft:iron_ingot', '#forge:plates/steel')
+    e.replaceInput({id: 'platforms:platform' }, 'minecraft:iron_ingot', '#forge:plates/steel')
     e.remove({id: 'platforms:wrench'})
 
     e.remove({id: 'minecraft:bread'})
@@ -73,7 +74,7 @@ ServerEvents.recipes(e => {
     e.remove({id: 'vintagedelight:oat_bread'})
     e.remove({id: '/vintagedelight:salt_block.*/'})
     e.replaceInput({id: 'vintagedelight:salt_from_smelting' }, 'minecraft:water_bucket', 'gtceu:salt_water_bucket')
-
+    e.replaceInput({input: '/.*:.*cheese.*slice$/' }, '/.*:.*cheese.*slice$/', '#forge:cheeses')
     e.replaceInput({mod: 'farmersdelight' }, 'vintagedelight:salt', '#forge:dusts/salt')
 
     //e.remove({ id: "simplemagnets:basicmagnet" });

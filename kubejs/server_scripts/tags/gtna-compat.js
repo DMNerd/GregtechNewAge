@@ -12,6 +12,9 @@ ServerEvents.tags('item', e => {
     });
     e.add('forge:dusts/silicon', '#forge:silicon')
     e.add('forge:milk', 'gtceu:milk_bucket')
+    e.add('forge:cheeses', 'ad_astra:cheese')
+    e.add('forge:cheeses', '/casualness_delight:cheese.*slice$/')
+
     //Create
     e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
     e.add('forge:ingots/refined_radiance', 'create:refined_radiance')
@@ -34,6 +37,7 @@ ServerEvents.tags('item', e => {
 
     addMetalTags(e, 'vintagedelight', 'salt')
     e.add('forge:salt', '#forge:dusts/salt')
+    e.add('forge:rods/metal', '#forge:rods/steel')
 
     //Botany
     addMetalTags(e, 'mythicbotany', 'elementium')
