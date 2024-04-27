@@ -16,18 +16,24 @@ ServerEvents.recipes(e => {
         fstorageUpgrade(material)
     });
 
-    e.replaceInput({id: '/functionalstorage:.*framed.*/' }, 'minecraft:iron_nugget', 'framedblocks:framed_cube')
-    e.replaceInput({id: '/functionalstorage:.*framed.*/' }, 'minecraft:iron_ingot', '#forge:double_plates/iron')
-    e.replaceInput({id: '/functionalstorage:.*compact.*/' }, 'minecraft:iron_ingot', '#forge:double_plates/iron')
+    e.replaceInput({id: '/functionalstorage:.*compact.*/' }, '#forge:double_plates/iron', '#forge:double_plates/red_alloy')
+    e.replaceInput({id: '/functionalstorage:.*compact.*/' }, 'minecraft:iron_ingot', '#forge:double_plates/red_alloy')
+    e.replaceInput({id: '/functionalstorage:.*compact.*/' }, 'minecraft:stone', '#forge:plates/iron')
     e.replaceInput({id: '/functionalstorage:.*fluid.*/' }, 'minecraft:bucket', 'create:fluid_tank')
-    e.replaceInput({id: 'functionalstorage:linking_tool' }, 'minecraft:gold_ingot', '#forge:plates/gold')
-    e.replaceInput({id: 'functionalstorage:linking_tool' }, 'minecraft:diamond', '#forge:plates/diamond')
-    e.replaceInput({id: 'functionalstorage:linking_tool' }, 'minecraft:paper', '#forge:plates/polyethylene')
-    e.replaceInput({id: 'functionalstorage:linking_tool' }, '#functionalstorage:drawer', '#gtceu:circuits/lv')
-    e.replaceInput({id: 'functionalstorage:configuration_tool' }, 'minecraft:gold_ingot', '#forge:plates/gold')
-    e.replaceInput({id: 'functionalstorage:configuration_tool' }, 'minecraft:emerald', '#forge:plates/emerald')
-    e.replaceInput({id: 'functionalstorage:configuration_tool' }, 'minecraft:paper', '#forge:plates/polyethylene')
+    e.replaceInput({id: '/functionalstorage:.*framed.*/' }, 'minecraft:iron_ingot', '#forge:double_plates/iron')
+    e.replaceInput({id: '/functionalstorage:.*framed.*/' }, 'minecraft:iron_nugget', 'framedblocks:framed_cube')
     e.replaceInput({id: 'functionalstorage:configuration_tool' }, '#functionalstorage:drawer', '#gtceu:circuits/lv')
+    e.replaceInput({id: 'functionalstorage:configuration_tool' }, 'minecraft:emerald', '#forge:plates/emerald')
+    e.replaceInput({id: 'functionalstorage:configuration_tool' }, 'minecraft:gold_ingot', '#forge:plates/gold')
+    e.replaceInput({id: 'functionalstorage:configuration_tool' }, 'minecraft:paper', '#forge:plates/polyethylene')
+    e.replaceInput({id: 'functionalstorage:framed_controller_extension' }, '#functionalstorage:drawer', 'framedblocks:framed_cube')
+    e.replaceInput({id: 'functionalstorage:framed_controller_extension' }, 'minecraft:repeater', 'functionalstorage:controller_extension')
+    e.replaceInput({id: 'functionalstorage:framed_storage_controller' }, '#functionalstorage:drawer', 'framedblocks:framed_cube')
+    e.replaceInput({id: 'functionalstorage:framed_storage_controller' }, 'minecraft:comparator', 'functionalstorage:storage_controller')
+    e.replaceInput({id: 'functionalstorage:linking_tool' }, '#functionalstorage:drawer', '#gtceu:circuits/lv')
+    e.replaceInput({id: 'functionalstorage:linking_tool' }, 'minecraft:diamond', '#forge:plates/diamond')
+    e.replaceInput({id: 'functionalstorage:linking_tool' }, 'minecraft:gold_ingot', '#forge:plates/gold')
+    e.replaceInput({id: 'functionalstorage:linking_tool' }, 'minecraft:paper', '#forge:plates/polyethylene')
 
     e.remove({id: '/functionalstorage:.*alternate.*/'})
     e.remove({id: 'functionalstorage:storage_controller'})
@@ -42,13 +48,14 @@ ServerEvents.recipes(e => {
         E: '#functionalstorage:drawer',
         F: 'minecraft:comparator'
     })
+
     e.shaped('functionalstorage:controller_extension', ['ADA', 'FEF', 'BCB'], {
         A: '#forge:plates/stainless_steel', 
         B: '#forge:plates/obsidian',
         C: '#forge:plates/ender_eye',
         D: '#gtceu:circuits/mv',
         E: '#functionalstorage:drawer',
-        F: 'minecraft:comparator'
+        F: 'minecraft:repeater'
     })
     e.remove({output: 'functionalstorage:void_upgrade'})
     e.shaped('functionalstorage:void_upgrade', ['BAB', 'ACA', 'BAB'], {
