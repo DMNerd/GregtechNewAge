@@ -17,6 +17,10 @@ ServerEvents.recipes(e => {
     e.replaceInput({ id: '/create_new_age:thorium/.*/' }, '#forge:plates/iron', '#forge:plates/lead')
     e.replaceInput({ id: '/create_new_age:reactor/.*/' }, '#forge:plates/gold', '#forge:plates/lead')
 
+    e.replaceInput({ id: '/create:.*steam_engine$/' }, '#forge:plates/gold', '#forge:plates/andesite_alloy')
+    e.replaceInput({ id: '/create:.*steam_engine$/' }, '#forge:ingots/andesite_alloy', '#forge:pistons')
+    e.replaceInput({ id: 'create:shaft' }, '#forge:ingots/andesite_alloy', '#forge:pistons')
+
     e.remove({ mod: 'create_new_age', id: '/create_new_age:energising/gold.*/' })
     e.remove({ mod: 'create_new_age', id: '/create_new_age:energising/iron.*/' })
     e.remove({ mod: 'create_new_age', id: '/create_new_age:energising/diamond.*/' })

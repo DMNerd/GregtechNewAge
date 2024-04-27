@@ -34,5 +34,7 @@ ServerEvents.recipes(e => {
     e.replaceInput({ id: 'ad_astra_giselle_addon:crafting/automation_nasa_workbench' }, '#ad_astra:steel_plates', 'gtceu:assembly_line_casing')
     e.replaceInput({ id: 'ad_astra_giselle_addon:crafting/automation_nasa_workbench' }, 'minecraft:redstone', '#gtceu:circuits/iv')
     e.replaceInput({ id: 'ad_astra_giselle_addon:crafting/automation_nasa_workbench' }, 'minecraft:hopper', 'gtceu:iv_coneyor_module')
+   
+    e.replaceInput({ id: 'ad_astra:wheel' }, 'minecraft:black_wool', '#forge:plates/rubber')
 
 })

@@ -8,6 +8,9 @@ ServerEvents.recipes(e => {
     removeVanillaMetalurgy(e, 'minecraft', 'netherite')
     e.remove({id: '/bloodmagic:.*/.*_netherite_.*/'})
 
+    e.remove({ id: '/utilitarian:utility/.*doors$/' })
+
+
     const laddersToChange = [
         ['create', 'andesite'],
         ['create', 'brass'],

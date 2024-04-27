@@ -19,4 +19,5 @@ ServerEvents.recipes(e => {
     replaceMetalTagsInCrafting(e,'mythicbotany', 'alfsteel')
     replaceMetalTagsInCrafting(e,'botanicpledge', 'yggdralium')
     removeVanillaMetalurgy(e, 'botanicpledge', 'yggdralium')
+    removeVanillaMetalurgy(e, 'mythicbotany', 'alfsteel')
 })

@@ -45,9 +45,9 @@ ServerEvents.recipes((e) => {
     const plants = [
       ["ars_nouveau:magebloom_crop", "ars_nouveau:magebloom", 4],
       ["ars_nouveau:sourceberry_bush", "ars_nouveau:sourceberry_bush", 4],
-      ["berries_and_cherries:black_grapes", "berries_and_cherries:black_grapes", 16],
+      ["berries_and_cherries:black_grape_tree_sapling", "berries_and_cherries:black_grapes", 16],
       ["berries_and_cherries:blueberry", "berries_and_cherries:blueberry", 16],
-      ["berries_and_cherries:green_grapes", "berries_and_cherries:green_grapes", 16],
+      ["berries_and_cherries:green_grape_tree_sapling", "berries_and_cherries:green_grapes", 16],
       ["berries_and_cherries:raspberry", "berries_and_cherries:raspberry", 16],
       ["berries_and_cherries:strawberry", "berries_and_cherries:strawberry", 16],
       ["delightful:cantaloupe_seeds", "delightful:cantaloupe", 6],

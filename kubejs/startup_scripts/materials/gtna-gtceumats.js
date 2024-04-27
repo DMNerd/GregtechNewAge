@@ -1,5 +1,6 @@
 const $IngotProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty');
 const $DustProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty');
+const $OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty');
 
 GTCEuStartupEvents.registry('gtceu:material', e => {
     
@@ -15,7 +16,8 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
     GTMaterials.Nichrome.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW)
 
     GTMaterials.get("andesite_alloy").addFlags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_BOLT_SCREW)
-   
+    GTMaterials.get("elementium").setProperty(PropertyKey.ORE, new $OreProperty())
+    GTMaterials.get("elementium").setMaterialARGB(0xC543A8)
 
     e.create('soul_sand')
         .dust()
@@ -74,7 +76,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .element('alfsteel')
         .color(0xFFA10B).secondaryColor(0x863E04)
         .iconSet(GTMaterialIconSet.SHINY)
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_FRAME)
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_FRAME)    
     e.create('yggdralium_shard')
         .gem()
         .element('yggdralium')

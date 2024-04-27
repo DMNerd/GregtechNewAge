@@ -1,4 +1,6 @@
 {
+    "tagprefix.livingrock": "Livingrock %s Ore",
+    "gtceu.create_mixer": "Mechanical Mixer",
     "block.gtceu.greenhouse": "Greenhouse",
     "gtceu.greenhouse": "Greenhouse",
     "material.gtceu.alfsteel": "Alfsteel",
