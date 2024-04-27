@@ -1,14 +1,11 @@
 ServerEvents.recipes(e => {
-    e.replaceOutput({ output: '#forge:nuggets/aluminum' }, '#forge:nuggets/aluminum', '#forge:nuggets/aluminium')
-
-    e.replaceInput({input: '#railways:internal/nuggets/zinc_nuggets' }, '#railways:internal/nuggets/zinc_nuggets', '#forge:nuggets/zinc')
-
-    e.remove({id: 'gtceu:shaped/minecart_steel'})
-
-    removeVanillaMetalurgy(e, 'minecraft', 'netherite')
-    e.remove({id: '/bloodmagic:.*/.*_netherite_.*/'})
 
     e.remove({ id: '/utilitarian:utility/.*doors$/' })
+    e.remove({id: '/bloodmagic:.*/.*_netherite_.*/'})
+    e.remove({id: 'gtceu:shaped/minecart_steel'})
+    e.replaceInput({input: '#railways:internal/nuggets/zinc_nuggets' }, '#railways:internal/nuggets/zinc_nuggets', '#forge:nuggets/zinc')
+    e.replaceOutput({ output: '#forge:nuggets/aluminum' }, '#forge:nuggets/aluminum', '#forge:nuggets/aluminium')
+    removeVanillaMetalurgy(e, 'minecraft', 'netherite')
 
     const laddersToChange = [
         ['create', 'andesite'],
@@ -51,39 +48,36 @@ ServerEvents.recipes(e => {
     e.replaceInput({id: '/create:.*/train_door/' }, '#minecraft:wooden_doors', 'minecraft:iron_door')
     e.replaceInput({id: '/create:.*/train_trapdoor/' }, '#minecraft:wooden_trapdoors', 'minecraft:iron_trapdoor')
 
-    removeVanillaMetalurgy(e, 'minecraft', 'copper')
     removeVanillaMetalurgy(e, 'createdeco', 'industrial_iron')
     removeVanillaMetalurgy(e, 'createdeco', 'netherite')
+    removeVanillaMetalurgy(e, 'minecraft', 'copper')
 
+    e.replaceInput({ id: '/design_decor:item_application/industrial_gear.*/' }, '#forge:storage_blocks/wrought_iron', '#forge:double_plates/wrought_iron')
+    e.replaceInput({ id: '/design_decor:stonecutting/.*sign$/' }, '#forge:nuggets/zinc', '#forge:plates/zinc')
+    e.replaceInput({input: 'create:industrial_iron_block' }, 'create:industrial_iron_block', '#forge:storage_blocks/wrought_iron')
     e.replaceInput({input: 'createdeco:industrial_iron_ingot' }, 'createdeco:industrial_iron_ingot', '#forge:ingots/wrought_iron')
     e.replaceInput({input: 'createdeco:industrial_iron_nugget' }, 'createdeco:industrial_iron_nugget', '#forge:nuggets/wrought_iron')
     e.replaceInput({input: 'createdeco:industrial_iron_sheet' }, 'createdeco:industrial_iron_sheet', '#forge:plates/wrought_iron')
-    e.replaceInput({input: 'create:industrial_iron_block' }, 'create:industrial_iron_block', '#forge:storage_blocks/wrought_iron')
     e.replaceInput({mod: 'createdeco' }, '#forge:sheets/brass', '#forge:plates/brass')
-    e.replaceInput({ id: '/design_decor:stonecutting/.*sign$/' }, '#forge:nuggets/zinc', '#forge:plates/zinc')
-    e.replaceInput({ id: '/design_decor:item_application/industrial_gear.*/' }, '#forge:storage_blocks/wrought_iron', '#forge:double_plates/wrought_iron')
-    
+
+    e.remove({id: '/vintagedelight:salt_block.*/'})
+    e.remove({id: 'platforms:wrench'})
+    e.remove({id: 'vintagedelight:oat_bread'})
+    e.replaceInput({id: 'platforms:platform' }, 'minecraft:iron_ingot', '#forge:plates/steel')
     e.replaceInput({id: 'platforms:wrench' }, '#forge:rods/metal', '#forge:rods/steel')
     e.replaceInput({id: 'platforms:wrench' }, 'minecraft:iron_ingot', '#forge:plates/steel')
-    e.replaceInput({id: 'platforms:platform' }, 'minecraft:iron_ingot', '#forge:plates/steel')
-    e.remove({id: 'platforms:wrench'})
-
-    e.remove({id: 'minecraft:bread'})
-
-    replaceMetalTagsInCrafting(e, 'vintagedelight', 'salt')
-    e.remove({id: 'vintagedelight:oat_bread'})
-    e.remove({id: '/vintagedelight:salt_block.*/'})
     e.replaceInput({id: 'vintagedelight:salt_from_smelting' }, 'minecraft:water_bucket', 'gtceu:salt_water_bucket')
     e.replaceInput({input: '/.*:.*cheese.*slice$/' }, '/.*:.*cheese.*slice$/', '#forge:cheeses')
     e.replaceInput({mod: 'farmersdelight' }, 'vintagedelight:salt', '#forge:dusts/salt')
+    replaceMetalTagsInCrafting(e, 'vintagedelight', 'salt')
 
     //e.remove({ id: "simplemagnets:basicmagnet" });
     //e.shapeless("gtceu:lv_item_magnet", "simplemagnets:basicmagnet").id('gtna:basic_magnet')
     //e.remove({ output: "simplemagnets:advancedmagnet" });
     //e.shapeless("gtceu:hv_item_magnet", "simplemagnets:advancedmagnet").id('gtna:advanced_magnet')
 
-    e.remove({id: "simplemagnets:basic_demagnetization_coil"})
     e.remove({id: "simplemagnets:advanced_demagnetization_coil"})
+    e.remove({id: "simplemagnets:basic_demagnetization_coil"})
 
     e.replaceInput({ id: 'travelersbackpack:hose' }, '#forge:dyes/green', 'gtceu:polytetrafluoroethylene_tiny_fluid_pipe')
     e.replaceInput({ id: 'travelersbackpack:hose_nozzle' }, 'minecraft:gold_ingot', 'gtceu:gold_normal_fluid_pipe')
@@ -134,7 +128,7 @@ ServerEvents.recipes(e => {
     })
 
     e.remove({ id: '/morered:red_alloy_ingot.*/' })
-    e.replaceInput({ mod: 'morered' }, 'minecraft:redstone', 'morered:red_alloy_wire')
     e.replaceInput({ mod: 'morered' }, 'minecraft:quartz', '#forge:plates/nether_quartz')
+    e.replaceInput({ mod: 'morered' }, 'minecraft:redstone', 'morered:red_alloy_wire')
 
 })

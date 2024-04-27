@@ -1,43 +1,44 @@
 ServerEvents.tags('item', e => {
     
+    e.add('forge:dusts/ender', 'ae2:ender_dust')
     e.add('forge:shards/flint', 'notreepunching:flint_shard')
     e.add('occultism:tools/knives', '#forge:tools/butchery_knives')
     e.add('travelersbackpack:sleeping_bags', '#comforts:sleeping_bags')
-    e.add('forge:dusts/ender', 'ae2:ender_dust')
 
     const flours = ['create:wheat_flour', 'enderio:flour']
     flours.forEach(flour => {
         e.add('forge:dusts', flour)
         e.add('forge:dusts/wheat', flour)
     });
+    e.add('forge:cheeses', '/casualness_delight:cheese.*slice$/')
+    e.add('forge:cheeses', 'ad_astra:cheese')
     e.add('forge:dusts/silicon', '#forge:silicon')
     e.add('forge:milk', 'gtceu:milk_bucket')
-    e.add('forge:cheeses', 'ad_astra:cheese')
-    e.add('forge:cheeses', '/casualness_delight:cheese.*slice$/')
 
     //Create
+
     e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
     e.add('forge:ingots/refined_radiance', 'create:refined_radiance')
     e.add('forge:ingots/shadow_steel', 'create:shadow_steel')
-
-    e.add('forge:rods/andesite', '#forge:rods/andesite_alloy')
     e.add('forge:plates/andesite', '#forge:plates/andesite_alloy')
+    e.add('forge:rods/andesite', '#forge:rods/andesite_alloy')
     e.add('forge:rods/industrial_iron', '#forge:rods/wrought_iron')
     e.add('forge:screws/industrial_iron', '#forge:screws/wrought_iron')
 
-    addMetalUnificationTags(e, 'createdeco', 'industrial_iron', 'wrought_iron')
-    addMetalUnificationTags(e, 'create', 'industrial_iron', 'wrought_iron')
 
-    e.add('forge:ingots/magnetic_iron', 'create_new_age:overcharged_iron')
-    e.add('forge:plates/magnetic_iron', 'create_new_age:overcharged_iron_sheet')
-    e.add('forge:ingots/magnetic_gold', 'create_new_age:overcharged_gold')
-    e.add('forge:plates/magnetic_gold', 'create_new_age:overcharged_golden_sheet')
+    addMetalUnificationTags(e, 'create', 'industrial_iron', 'wrought_iron')
+    addMetalUnificationTags(e, 'createdeco', 'industrial_iron', 'wrought_iron')
+    
     e.add('forge:gems/pulsating_crystal', 'create_new_age:overcharged_diamond')
+    e.add('forge:ingots/magnetic_gold', 'create_new_age:overcharged_gold')
+    e.add('forge:ingots/magnetic_iron', 'create_new_age:overcharged_iron')
+    e.add('forge:plates/magnetic_gold', 'create_new_age:overcharged_golden_sheet')
+    e.add('forge:plates/magnetic_iron', 'create_new_age:overcharged_iron_sheet')
     e.add('forge:raw_materials/thorium', 'create_new_age:thorium')
 
     addMetalTags(e, 'vintagedelight', 'salt')
-    e.add('forge:salt', '#forge:dusts/salt')
     e.add('forge:rods/metal', '#forge:rods/steel')
+    e.add('forge:salt', '#forge:dusts/salt')
 
     //Botany
     addMetalTags(e, 'mythicbotany', 'elementium')
@@ -67,10 +68,10 @@ ServerEvents.tags('item', e => {
     e.add('forge:storage_blocks/hellforged', 'bloodmagic:dungeon_metal')
 
     //Twilight
-    e.add('twilightforest:sorting_logs', '#twilightforest:sortwood_logs')
-    e.add('twilightforest:transformation_logs', '#twilightforest:transwood_logs')
-    e.add('twilightforest:time_logs', '#twilightforest:timewood_logs')
     e.add('twilightforest:dark_logs', '#twilightforest:darkwood_logs')
+    e.add('twilightforest:sorting_logs', '#twilightforest:sortwood_logs')
+    e.add('twilightforest:time_logs', '#twilightforest:timewood_logs')
+    e.add('twilightforest:transformation_logs', '#twilightforest:transwood_logs')
 
     //Rocketry
     const tiers = ['t1', 't2', 't3', 't4']
