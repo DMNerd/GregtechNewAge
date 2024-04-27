@@ -9,6 +9,8 @@ JEIes.hideItems(e => {
   e.hide(/notreepunching:.*_hoe/)
   e.hide(/notreepunching:.*_shovel/)
 
+  e.hide(/leatherprocessing:wet_leather/)
+
   e.hide(/occultism:.*_knife/)
   e.hide(/delightful:.*_knife/)
   e.hide(/ends_delight:.*_knife/)

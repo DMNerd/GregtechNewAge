@@ -7,6 +7,9 @@ ServerEvents.recipes(e => {
     e.remove({ id: 'craftingstation:crafting_station' })
     e.remove({ id: 'craftingstation:crafting_station_slab' })
     e.remove({ id: 'minecraft:charcoal' })
+    e.remove({id: 'farmersdelight:book_from_canvas'})
+    e.remove({id: 'leatherprocessing:bound_leather'})
+    e.remove({id: 'leatherprocessing:wet_leather'})
     e.remove({id: 'minecraft:bread'})
     e.remove({id: 'woodenhopper:wooden_hopper'})
     e.replaceInput({ input: '#forge:leather' }, '#forge:leather', 'leatherprocessing:dried_leather')
@@ -18,7 +21,7 @@ ServerEvents.recipes(e => {
 
     const tools = ['knife', 'mattock', 'saw', 'pickaxe', 'shovel', 'hoe', 'axe', 'sword']
     tools.forEach(tool => {
-        e.remove({ id: '/notreepunching:.*_/' + tool })
+        e.remove({ id: '/notreepunching:.*_' + tool + '$/' })
         e.remove({ output: 'minecraft:iron_' + tool })
         e.replaceInput({ input: 'minecraft:wooden_' + tool }, 'minecraft:wooden_' + tool, 'gtceu:flint_' + tool)
         e.replaceInput({ input: 'minecraft:stone_' + tool }, 'minecraft:stone_' + tool, 'gtceu:flint_' + tool)
@@ -58,4 +61,10 @@ ServerEvents.recipes(e => {
     })
     e.remove({ id: 'travelersbackpack:backpack_tank' })
     e.shapeless('travelersbackpack:backpack_tank',['create:fluid_tank']).id('gtna:shapeless/backpack_tank')
+    e.shaped('leatherprocessing:bound_leather', ['ABA', 'BCB', 'ABA'], {
+        A: '#forge:string', 
+        B: '#forge:leather',
+        C: 'farmersdelight:canvas'
+    })
+    e.blasting('notreepunching:plant_fiber', 'farmersdelight:canvas')
 })

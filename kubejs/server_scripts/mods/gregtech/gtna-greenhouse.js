@@ -65,6 +65,7 @@ ServerEvents.recipes((e) => {
       ["minecraft:cactus", "minecraft:cactus", 12],
       ["minecraft:carrot", "minecraft:carrot", 12],
       ["minecraft:glow_berries", "minecraft:glow_berries", 8],
+      ["minecraft:grass", "farmersdelight:straw", 16],
       ["minecraft:kelp", "minecraft:kelp", 12],
       ["minecraft:melon_seeds", "minecraft:melon", 6],
       ["minecraft:nether_wart", "minecraft:nether_wart", 12],

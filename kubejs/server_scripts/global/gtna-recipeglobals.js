@@ -316,3 +316,8 @@ function oreberry_crossbreed(event, parent, parent2, result, fluid){
         .EUt(40)
         .circuit(6);
 }
+function multiSmelt(e, input, output){
+    event.smelting(input, output)
+    event.blasting(input, output)
+    event.campfireCooking(input, output)
+}

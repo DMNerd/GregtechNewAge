@@ -4,9 +4,10 @@ ServerEvents.recipes(e => {
     e.remove({id: '/bloodmagic:.*/.*_netherite_.*/'})
     e.remove({id: 'gtceu:shaped/minecart_steel'})
     e.replaceInput({input: '#railways:internal/nuggets/zinc_nuggets' }, '#railways:internal/nuggets/zinc_nuggets', '#forge:nuggets/zinc')
+    e.replaceOutput({ input: 'leatherprocessing:dried_leather',  output: 'minecraft:book'}, 'leatherprocessing:dried_leather', '#forge:binding_material')
     e.replaceOutput({ output: '#forge:nuggets/aluminum' }, '#forge:nuggets/aluminum', '#forge:nuggets/aluminium')
     removeVanillaMetalurgy(e, 'minecraft', 'netherite')
-
+    
     const laddersToChange = [
         ['create', 'andesite'],
         ['create', 'brass'],
@@ -130,5 +131,11 @@ ServerEvents.recipes(e => {
     e.remove({ id: '/morered:red_alloy_ingot.*/' })
     e.replaceInput({ mod: 'morered' }, 'minecraft:quartz', '#forge:plates/nether_quartz')
     e.replaceInput({ mod: 'morered' }, 'minecraft:redstone', 'morered:red_alloy_wire')
+    e.shaped('computercraft:printed_book', ['BCB', 'ADA'], {
+        A: '#forge:string', 
+        B: '#forge:binding_material',
+        C: 'computercraft:printed_page',
+        D: 'gtceu:sticky_resin'
+    })
 
 })

@@ -49,7 +49,7 @@ ServerEvents.recipes(e => {
     e.shaped('create:fluid_tank', ['BCB', 'DAE', 'BCB'], {
         A: 'gtceu:tempered_glass', 
         B: '#forge:screws/copper',
-        C: '#forge:rings/copper',
+        C: '#forge:plates/copper',
         D: '#forge:tools/wrench',
         E: '#forge:tools/screwdrivers'
     }).id('gtna:shaped/create/basic_fluid_tank')

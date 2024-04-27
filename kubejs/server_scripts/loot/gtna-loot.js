@@ -17,4 +17,9 @@ LootJS.modifiers(e => {
     metalsToReplace.forEach(metal => {
         replaceMetalInLoot(metal[0], metal[1])
     });
+
+    e.addBlockLootModifier("#forge:grasses")        
+        .matchMainHand('#forge:tools/knives')
+        .addLoot("farmersdelight:straw")
+        .randomChance(0.3)
 });

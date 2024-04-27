@@ -15,6 +15,9 @@ ServerEvents.tags('item', e => {
     e.add('forge:dusts/silicon', '#forge:silicon')
     e.add('forge:milk', 'gtceu:milk_bucket')
 
+    e.add('forge:binding_material', 'leatherprocessing:dried_leather')
+    e.add('forge:binding_material', 'gtceu:treated_wood_plate')
+
     //Create
 
     e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
@@ -112,6 +115,8 @@ ServerEvents.tags('block', e => {
     e.add('ars_nouveau:golem/cluster', ['minecraft:amethyst_cluster', 'ae2:quartz_cluster'])
     e.add('entangled:invalid_targets', ['@megacells','@expatternprovider','@ae2'])
     e.add('gtna:livingrock_ore_replaceables', 'botania:livingrock')
+    e.add('forge:grasses', '/minecraft:.*grass$/')
+    e.add('forge:grasses', '/minecraft:.*fern$/')
 })
 ServerEvents.tags('fluid', e => {
     e.remove('minecraft:water',[
