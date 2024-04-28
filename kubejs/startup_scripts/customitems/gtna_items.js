@@ -14,7 +14,7 @@ StartupEvents.registry('item', e => {
 
     e.create('nuclear_fuel_rod').displayName("Empty Fuel Rod")
 
-    e.create('third_eye').displayName("Third Eye of Magitech").tooltip('§c It opens your eyes to the world of magic')
+    e.create('third_eye').displayName("Third Eye of Magitech").tooltip('§cIt opens your eyes to the world of magic')
 
     e.create('fluix_crystal_cpu')
 })
