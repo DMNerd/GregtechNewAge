@@ -2,7 +2,7 @@
   "replace": true,
   "values": [
     {
-      "id":"botania:spark",
+      "id":"kubejs:third_eye",
       "required":true
     }
   ]

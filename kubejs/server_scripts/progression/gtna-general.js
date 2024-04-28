@@ -4,7 +4,7 @@ ServerEvents.recipes(e => {
     e.remove({id: '/utilitarian:utility/.*doors$/'})
     e.remove({id: 'gtceu:shaped/minecart_steel'})
     e.remove({mod: 'moblassos'})
-    e.remove({output: 'extendedcrafting:luminessence'})
+    e.remove({id: 'extendedcrafting:luminessence'})
     e.replaceInput({input: '#railways:internal/nuggets/zinc_nuggets' }, '#railways:internal/nuggets/zinc_nuggets', '#forge:nuggets/zinc')
     e.replaceOutput({ input: 'leatherprocessing:dried_leather',  output: 'minecraft:book'}, 'leatherprocessing:dried_leather', '#forge:binding_material')
     e.replaceOutput({ output: '#forge:nuggets/aluminum' }, '#forge:nuggets/aluminum', '#forge:nuggets/aluminium')
@@ -73,11 +73,6 @@ ServerEvents.recipes(e => {
     e.replaceInput({input: '/.*:.*cheese.*slice$/' }, '/.*:.*cheese.*slice$/', '#forge:cheeses')
     e.replaceInput({mod: 'farmersdelight' }, 'vintagedelight:salt', '#forge:dusts/salt')
     replaceMetalTagsInCrafting(e, 'vintagedelight', 'salt')
-
-    //e.remove({ id: "simplemagnets:basicmagnet" });
-    //e.shapeless("gtceu:lv_item_magnet", "simplemagnets:basicmagnet").id('gtna:basic_magnet')
-    //e.remove({ output: "simplemagnets:advancedmagnet" });
-    //e.shapeless("gtceu:hv_item_magnet", "simplemagnets:advancedmagnet").id('gtna:advanced_magnet')
 
     e.remove({id: "simplemagnets:advanced_demagnetization_coil"})
     e.remove({id: "simplemagnets:basic_demagnetization_coil"})

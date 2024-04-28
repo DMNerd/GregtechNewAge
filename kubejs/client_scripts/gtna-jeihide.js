@@ -1,4 +1,4 @@
-JEIes.hideItems(e => {
+JEIEvents.hideItems(e => {
   e.hide(/ae2:facade/)
 
   e.hide(/notreepunching:.*_knife/)

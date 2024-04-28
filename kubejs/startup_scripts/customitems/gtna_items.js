@@ -14,5 +14,7 @@ StartupEvents.registry('item', e => {
 
     e.create('nuclear_fuel_rod').displayName("Empty Fuel Rod")
 
+    e.create('third_eye').displayName("Third Eye of Magitech")
+
     e.create('fluix_crystal_cpu')
 })

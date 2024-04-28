@@ -247,6 +247,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_FOIL, GTMaterialFlags.GENERATE_FINE_WIRE, GTMaterialFlags.GENERATE_FRAME)
     e.create('luminessence')
         .dust()
+        .fluid()
         .components('1x redstone', '2x phosphorus', '1x saltpeter')
         .color(0xFFFF87).secondaryColor(0xD6D845)
         .iconSet(GTMaterialIconSet.SHINY)
