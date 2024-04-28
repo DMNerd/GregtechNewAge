@@ -93,6 +93,8 @@ ServerEvents.tags('item', e => {
     });
     addMetalTags(e, 'extendedcrafting', 'crystaltine')
     addMetalTags(e, 'extendedcrafting', 'the_ultimate')
+    e.add('forge:plates/dark_steel', 'extendedcrafting:black_iron_slate')
+    e.add('forge:dusts/luminessence', 'extendedcrafting:luminessence')
 
     //Ironchests
     const chest_tiers = ['blank', 'copper', 'iron', 'gold', 'crystal', 'diamond', 'obsidian', 'netherite']
