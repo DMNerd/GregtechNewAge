@@ -1,7 +1,7 @@
 ServerEvents.recipes(e => {
 
     e.remove({id: '/bloodmagic:.*/.*_netherite_.*/'})
-    e.remove({id: '/utilitarian:utility/.*doors$/'})
+    e.remove({id: '/utilitarian:utility/.*/'})
     e.remove({id: 'gtceu:shaped/minecart_steel'})
     e.remove({mod: 'moblassos'})
     e.remove({id: 'extendedcrafting:luminessence'})
@@ -110,7 +110,6 @@ ServerEvents.recipes(e => {
         F: 'toolbelt:pouch'
     }).id('gtna:travelersbackpack/standard')
 
-    
     hardenWoodenRecipes(e, 'framedblocks', 'framed')
     hardenLadderRecipes(e, 'framedblocks', 'framed')
     e.remove({id : 'framedblocks:framed_cube' })
@@ -139,5 +138,11 @@ ServerEvents.recipes(e => {
         B: '#forge:ender_pearls',
         C: '#forge:tools/hammers',
     }).id('gtna:trashcans/item')
+
+    e.replaceInput({mod: 'silence_s_defense_tower' }, 'minecraft:iron_ingot', '#forge:plates/steel')
+    e.replaceInput({mod: 'silence_s_defense_tower' }, 'minecraft:iron_block', '#forge:double_plates/steel')
+    e.replaceInput({mod: 'silence_s_defense_tower' }, 'minecraft:iron_bars', '#forge:springs/steel')
+    e.replaceInput({mod: 'silence_s_defense_tower' }, 'minecraft:piston', 'gtceu:hv_electric_piston')
+    e.replaceInput({mod: 'silence_s_defense_tower' }, 'minecraft:repeater', '#gtceu:circuits/hv')
 
 })

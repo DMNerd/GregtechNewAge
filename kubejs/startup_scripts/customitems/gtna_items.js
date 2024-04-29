@@ -1,5 +1,7 @@
 // Listen to item registry event
 StartupEvents.registry('item', e => {
+    e.create('pack_icon').maxStackSize(1)
+
     e.create('bound_stick')
 
     e.create('reinforced_rocket_nose_cone').displayName("Reinforced Nose Cone Tier 1")

@@ -36,5 +36,7 @@ ServerEvents.recipes(e => {
     e.replaceInput({ id: 'ad_astra_giselle_addon:crafting/automation_nasa_workbench' }, 'minecraft:hopper', 'gtceu:iv_coneyor_module')
    
     e.replaceInput({ id: 'ad_astra:wheel' }, 'minecraft:black_wool', '#forge:plates/rubber')
+    e.replaceInput({ id: '/ad_astra:.*_cable/' }, 'minecraft:copper_ingot', 'gtceu:copper_single_wire')
+    e.replaceInput({ id: '/ad_astra:.*pipe$/' }, 'minecraft:glass', 'gtceu:copper_normal_fluid_pipe')
 
 })
