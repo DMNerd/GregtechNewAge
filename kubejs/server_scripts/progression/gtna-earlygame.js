@@ -66,5 +66,16 @@ ServerEvents.recipes(e => {
         B: '#forge:leather',
         C: 'farmersdelight:canvas'
     })
-    e.blasting('notreepunching:plant_fiber', 'farmersdelight:canvas')
+    e.blasting('notreepunching:plant_fiber', 'farmersdelight:straw')
+    Color.DYE.forEach(color => {
+        e.remove({output: 'comforts:sleeping_bag_' + color})
+        e.remove({output: 'travelersbackpack:' + color + '_sleeping_bag'})
+        e.shaped('comforts:sleeping_bag_' + color, ['CCC', 'BBB', 'AAA'], {
+            A: 'leatherprocessing:dried_leather', 
+            B: '#chipped:' + color + '_wool',
+            C: '#chipped:' + color + '_carpet',
+        }).id('gtna:sleeping_bag_' +color)
+        e.shapeless('comforts:sleeping_bag_' + color,['travelersbackpack:' + color + '_sleeping_bag']).id('gtna:shapeless/sleeping_bag_conversion_1_' + color)
+        e.shapeless('travelersbackpack:' + color + '_sleeping_bag',['comforts:sleeping_bag_' + color]).id('gtna:shapeless/sleeping_bag_conversion_2_' + color)
+    });
 })
