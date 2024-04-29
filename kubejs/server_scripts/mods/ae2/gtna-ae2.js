@@ -43,14 +43,14 @@ ServerEvents.recipes(e => {
     });
     base_sizes.forEach(size => {
         e.remove({ id: 'ae2things:cells/disk_drive_' + size })
-        e.shaped('ae2things:disk_drive_' + size, ['ECF', 'B B', 'AAA'], {
+        e.shaped('ae2things:disk_drive_' + size, ['ECF', 'BDB', 'AAA'], {
             A: '#forge:double_plates/netherite', 
             B: '#forge:screws/titanium',
             C: 'ae2:quartz_vibrant_glass',
             D: 'ae2:cell_component_' + size,
             E: '#forge:tools/screwdrivers',
             F: '#forge:tools/wrench'
-        }).id('gtna:ae2things/disk_drive_' + size)
+        }).id('gtna:ae2things/cell/disk_drive_' + size)
     });
 
     component_recipe.forEach(recipe => {
