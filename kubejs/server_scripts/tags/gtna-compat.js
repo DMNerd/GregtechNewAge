@@ -62,6 +62,7 @@ ServerEvents.tags('item', e => {
     e.add('botania:terra_sword', 'botania:terra_sword')
     e.add('botania:thor_ring', 'botania:thor_ring')
     e.add('forge:dusts/pixie', 'botania:pixie_dust')
+    e.add('forge:rods/dreamwood', 'botania:dreamwood_twig')
     e.add('forge:rods/livingwood', 'botania:livingwood_twig')
     e.add('forge:storage_blocks/elf_quartz', 'botania:elf_quartz')
     e.remove('forge:storage_blocks/quartz', 'botania:elf_quartz')
@@ -69,7 +70,7 @@ ServerEvents.tags('item', e => {
     //Mythic Botany
     addMetalTags(e, 'mythicbotany', 'alfsteel')
     addMetalTags(e, 'mythicbotany', 'elementium')
-
+    
     //Botanic Pledge
     addMetalTags(e ,'botanicpledge', 'yggdralium')
     addGemTags(e, 'botanicpledge', 'yggdralium_shard')
