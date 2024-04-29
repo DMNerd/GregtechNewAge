@@ -13,7 +13,7 @@ LootJS.modifiers(e => {
     tools.forEach(tool => {
         replaceMaterialsInLoot(tool, material)
     });
-    const metalsToReplace = [['enderio', 'dark_steel']]
+    const metalsToReplace = [['enderio', 'dark_steel'], ['botania', 'manasteel'], ['botania', 'terrasteel']]
     metalsToReplace.forEach(metal => {
         replaceMetalInLoot(metal[0], metal[1])
     });

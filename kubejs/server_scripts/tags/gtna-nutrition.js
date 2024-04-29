@@ -49,6 +49,7 @@ ServerEvents.tags('item', e => {
     e.add('diet:proteins', 'ad_astra:cheese')
     e.add('diet:sugars', '/.*:.*cake.*/')
     e.add('diet:sugars', '/.*:.*pie.*/')
+    e.add('diet:sugars', '/.*:oatmeal/')
     e.add('diet:vegetables', '/casualness_delight:.*chicken/')
     e.add('diet:vegetables', '/casualness_delight:.*fish/')
     e.add('diet:vegetables', '/casualness_delight:.*rice/')

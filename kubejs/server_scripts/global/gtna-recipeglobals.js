@@ -321,3 +321,68 @@ function multiSmelt(e, input, output){
     event.blasting(input, output)
     event.campfireCooking(input, output)
 }
+function mythicbotanyInfuser(event, inputs, output, outputCount, manaCost){
+    //event.remove({output: output})
+    event.custom({
+            "type": "mythicbotany:infuser",
+            "fromColor": 16711821,
+            "group": "infuser",
+            "ingredients": [
+              {
+                "tag": inputs[0]
+              },
+              {
+                "tag": inputs[1]
+              },
+              {
+                "tag": inputs[2]
+              }
+            ],
+            "mana": manaCost,
+            "output": {
+              "count": outputCount,
+              "item": output
+            },
+            "toColor": 16750080
+        }).id('gtna:mythicpotany/infuser/' + output.replace(':', '_'))
+}
+function botanicpledgeRital(event, reagent, inputs, output, manaCost, keepNbtOfReagent){
+    event.remove({id: '/botanicpledge:botanic_ritual/' + output + '/'})
+    event.custom({
+            "type": "botanicpledge:botanic_ritual",
+            "reagent": {
+              "item": reagent
+            },
+            "pedestalItems": [
+              {
+                "tag": inputs[0]
+              },
+              {
+                "tag": inputs[1]
+              },
+              {
+                "tag": inputs[2]
+              },
+              {
+                "tag": inputs[3]
+              },
+              {
+                "tag": inputs[4]
+              },
+              {
+                "tag": inputs[5]
+              },
+              {
+                "tag": inputs[6]
+              },
+              {
+                "tag": inputs[7]
+              }
+            ],
+            "output": {
+              "item": output
+            },
+            "manaCost": manaCost,
+            "keepNbtOfReagent": keepNbtOfReagent
+        }).id('gtna:botanicpledge/ritual/' + output.replace(':', '_'))
+}

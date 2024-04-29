@@ -78,10 +78,6 @@ ServerEvents.recipes((e) => {
       ["twilightforest:mushgloom", "twilightforest:mushgloom", 12],
       ["twilightforest:torchberries", "twilightforest:torchberries", 6],
       ["vegandelight:soybean", "vegandelight:soybean", 16],
-      ["vintagedelight:cucumber_seeds", "vintagedelight:cucumber", 12],
-      ["vintagedelight:ghost_pepper_seeds", "vintagedelight:ghost_pepper", 12],
-      ["vintagedelight:oat_seeds", "vintagedelight:oat", 16],
-      ["vintagedelight:peanut", "vintagedelight:peanut", 16],
     ];
     const oreberries = [['iron'], ['gold'], ['copper'], ['tin'], ['aluminum'], ['lead'], ['nickel'], ['uranium'], ['osmium'], ['zinc'], ['silver'], ['essence']];
     

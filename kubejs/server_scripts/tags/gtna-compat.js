@@ -44,8 +44,7 @@ ServerEvents.tags('item', e => {
     e.add('forge:salt', '#forge:dusts/salt')
     e.add('forge:ingots/bronze', 'gtceu:bronze_ingot')
 
-    //Botany
-    addMetalTags(e, 'mythicbotany', 'elementium')
+   
 
     //Ars
     e.add('ars_nouveau:golem/shard', ['minecraft:amethyst_shard', 'ae2:certus_quartz_crystal'])
@@ -55,8 +54,14 @@ ServerEvents.tags('item', e => {
     sgmats.forEach(material => {
         addMetalTags(e, 'sgjourney', material)
     });
+    //Botany
+    e.add('forge:dusts/pixie', 'botania:pixie_dust')
+    e.add('botania:terra_sword', 'botania:terra_sword')
+    addStoneTags(e, 'botania', 'livingrock')
+
     //Mythic Botany
     addMetalTags(e, 'mythicbotany', 'alfsteel')
+    addMetalTags(e, 'mythicbotany', 'elementium')
 
     //Botanic Pledge
     addMetalTags(e ,'botanicpledge', 'yggdralium')

@@ -25,6 +25,10 @@ function addMetalUnificationTags(event, modid, metal, unifyTo){
     event.add('forge:dusts/' + unifyTo, modid + ':' + metal + '_dust')
 
 }
+function addStoneTags(event, modid, stone){
+    event.add('forge:stone', modid + ':' + stone )
+    event.add('forge:stone/' + stone, modid + ':' + stone)
+}
 
 function addHeavyAlloyTags(event, modid, tier){
     event.add('forge:heavy_ingots', modid + ':heavy_ingot_' + tier)

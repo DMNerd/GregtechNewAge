@@ -2,6 +2,7 @@ WorldgenEvents.remove(e => {
     e.removeOres(b => {
         b.worldgenLayer = 'underground_ores';
         b.blocks = [
+            "ad_astra:oil",
             "create:deepslate_zinc_ore",
             "create:zinc_ore",
             "create_new_age:magnetite_block",
@@ -16,9 +17,6 @@ WorldgenEvents.remove(e => {
             "sgjourney:deepslate_naquadah_ore",
             "sgjourney:naquadah_ore",
             "sgjourney:nether_naquadah_ore",
-            "theurgy:deepslate_sal_ammoniac_ore",
-            "theurgy:sal_ammoniac_ore"
-
         ]
     })
   })

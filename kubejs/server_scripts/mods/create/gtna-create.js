@@ -20,6 +20,8 @@ ServerEvents.recipes(e => {
     e.replaceInput({ id: '/create:.*steam_engine$/' }, '#forge:plates/gold', '#forge:plates/andesite_alloy')
     e.replaceInput({ id: '/create:.*steam_engine$/' }, '#forge:ingots/andesite_alloy', '#forge:pistons')
     e.replaceInput({ id: 'create:shaft' }, '#forge:ingots/andesite_alloy', '#forge:pistons')
+    
+    e.replaceInput({ id: '/create_connected:crafting/palettes/copycat.*/' }, '#forge:ingots/zinc', '#forge:double_plates/zinc')
 
     e.remove({ mod: 'create_new_age', id: '/create_new_age:energising/gold.*/' })
     e.remove({ mod: 'create_new_age', id: '/create_new_age:energising/iron.*/' })
@@ -38,6 +40,12 @@ ServerEvents.recipes(e => {
     e.shapeless('4x create:experience_nugget',['oreberriesreplanted:essence_berry']).id('gtna:shapeless/create/essenceberry_conversion')
     
     e.remove({ id: '/create:industrial_iron_block.*_stonecutting$/' })
+    e.remove({id: 'create:crafting/kinetics/shaft'})
+    e.replaceInput({ id: 'create:cutting/andesite_alloy' }, '#forge:ingots/andesite_alloy', '#forge:rods/long/andesite_alloy')
+    e.shaped('8x create:shaft', ['B', 'A', 'A'], {
+        A: '#forge:rods/long/andesite_alloy', 
+        B: '#forge:tools/hammers'
+    }).id('gtna:shaped/create_shaft')
 
     e.remove({ id: '/create:crafting/materials/andesite_alloy.*/' })
     e.shapeless('2x gtceu:andesite_alloy_dust',['2x #forge:dusts/iron', '2x #forge:dusts/andesite']).id('gtna:shapeless/create/andesite_alloy_dust')

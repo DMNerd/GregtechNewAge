@@ -63,16 +63,12 @@ ServerEvents.recipes(e => {
     e.replaceInput({input: 'createdeco:industrial_iron_sheet' }, 'createdeco:industrial_iron_sheet', '#forge:plates/wrought_iron')
     e.replaceInput({mod: 'createdeco' }, '#forge:sheets/brass', '#forge:plates/brass')
 
-    e.remove({id: '/vintagedelight:salt_block.*/'})
     e.remove({id: 'platforms:wrench'})
-    e.remove({id: 'vintagedelight:oat_bread'})
     e.replaceInput({id: 'platforms:platform' }, 'minecraft:iron_ingot', '#forge:plates/steel')
     e.replaceInput({id: 'platforms:wrench' }, '#forge:rods/metal', '#forge:rods/steel')
     e.replaceInput({id: 'platforms:wrench' }, 'minecraft:iron_ingot', '#forge:plates/steel')
-    e.replaceInput({id: 'vintagedelight:salt_from_smelting' }, 'minecraft:water_bucket', 'gtceu:salt_water_bucket')
     e.replaceInput({input: '/.*:.*cheese.*slice$/' }, '/.*:.*cheese.*slice$/', '#forge:cheeses')
-    e.replaceInput({mod: 'farmersdelight' }, 'vintagedelight:salt', '#forge:dusts/salt')
-    replaceMetalTagsInCrafting(e, 'vintagedelight', 'salt')
+    e.replaceInput({id: 'miners_delight:copper_pot' }, 'minecraft:copper_ingot', '#forge:plates/copper')
 
     e.remove({id: "simplemagnets:advanced_demagnetization_coil"})
     e.remove({id: "simplemagnets:basic_demagnetization_coil"})
@@ -80,6 +76,10 @@ ServerEvents.recipes(e => {
     e.replaceInput({ id: 'travelersbackpack:hose' }, '#forge:dyes/green', 'gtceu:polytetrafluoroethylene_tiny_fluid_pipe')
     e.replaceInput({ id: 'travelersbackpack:hose_nozzle' }, 'minecraft:gold_ingot', 'gtceu:gold_normal_fluid_pipe')
     e.replaceInput({ id: 'travelersbackpack:hose_nozzle' }, 'minecraft:iron_ingot', '#forge:plates/iron')
+    
+    e.remove({id: 'trashcans:item_trash_can'})
+    e.remove({id: 'trashcans:liquid_trash_can'})
+    e.remove({id: 'trashcans:energy_trash_can'})
 
     e.remove({ mod: "elevatorid" });
     e.shaped("elevatorid:elevator_gray", ["PPP", "GFG", "PPP"], {
@@ -118,12 +118,12 @@ ServerEvents.recipes(e => {
         A: '#forge:rods/wood', 
         B: '#minecraft:planks',
         C: 'gtceu:wood_frame'
-    })
+    }).id('gtna:framedblocks/cube')
     e.remove({id : 'framedblocks:framed_chest' })
     e.shaped('framedblocks:framed_chest', ['AAA', 'ABA', 'AAA'], {
         A: 'framedblocks:framed_cube', 
         B: 'minecraft:chest'
-    })
+    }).id('gtna:framedblocks/chest')
 
     e.remove({ id: '/morered:red_alloy_ingot.*/' })
     e.replaceInput({ mod: 'morered' }, 'minecraft:quartz', '#forge:plates/nether_quartz')
@@ -133,6 +133,11 @@ ServerEvents.recipes(e => {
         B: '#forge:binding_material',
         C: 'computercraft:printed_page',
         D: 'gtceu:sticky_resin'
-    })
+    }).id('gtna:printed_book')
+    e.shaped('trashcans:item_trash_can', ['ACA', 'ABA', 'AAA'], {
+        A: '#forge:plates/iron', 
+        B: '#forge:ender_pearls',
+        C: '#forge:tools/hammers',
+    }).id('gtna:trashcans/item')
 
 })

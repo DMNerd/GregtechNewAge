@@ -61,7 +61,7 @@ ServerEvents.recipes(e => {
     e.shaped('functionalstorage:void_upgrade', ['BAB', 'ACA', 'BAB'], {
         A: '#forge:plates/iron', 
         B: '#forge:plates/obsidian', 
-        C: 'trashcans:item_trash_can'
+        C: 'trashcans:ultimate_trash_can'
     }).id('gtna/functionalstorage/upgrade_void')
     e.remove({output: 'functionalstorage:iron_downgrade'})
     e.shaped('functionalstorage:iron_downgrade', ['ADA', 'DBD', 'ACA'], {

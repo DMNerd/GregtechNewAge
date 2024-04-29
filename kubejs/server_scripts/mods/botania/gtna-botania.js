@@ -23,4 +23,10 @@ ServerEvents.recipes(e => {
     removeVanillaMetalurgy(e, 'mythicbotany', 'alfsteel')
     replaceMetalTagsInCrafting(e,'botanicpledge', 'yggdralium')
     replaceMetalTagsInCrafting(e,'mythicbotany', 'alfsteel')
+
+    mythicbotanyInfuser(e, ['forge:ingots/elementium', 'forge:gems/dragonstone', 'forge:dusts/pixie'], 'gtceu:alfsteel_ingot', 1, 1500000)
+
+    botanicpledgeRital(e, 'botanicpledge:marias_core', ['botania:terra_sword', 'forge:ingots/yggdralium', 'botania:terra_sword', 'forge:ingots/yggdralium', 'forge:ingots/yggdralium', 'botania:terra_sword', 'forge:ingots/yggdralium', 'botania:terra_sword'], 'botanicpledge:yggd_ramus', 1000000, false)
+    botanicpledgeRital(e, 'botanicpledge:ritual_pedestal', ['forge:stones/livingrock', 'forge:ingots/yggdralium', 'forge:stones/livingrock', 'forge:ingots/yggdralium', 'forge:ingots/yggdralium', 'forge:stones/livingrock', 'forge:ingots/yggdralium', 'forge:stones/livingrock'], 'botanicpledge:modification_altar', 1000000, false)
+
 })
