@@ -322,7 +322,7 @@ function multiSmelt(e, input, output){
     event.campfireCooking(input, output)
 }
 function mythicbotanyInfuser(event, inputs, output, outputCount, manaCost){
-    //event.remove({output: output})
+    event.remove({id: '/mythicbotany:mythicbotany_infusion/.*/', output: output})
     event.custom({
             "type": "mythicbotany:infuser",
             "fromColor": 16711821,
@@ -344,10 +344,10 @@ function mythicbotanyInfuser(event, inputs, output, outputCount, manaCost){
               "item": output
             },
             "toColor": 16750080
-        }).id('gtna:mythicpotany/infuser/' + output.replace(':', '_'))
+        }).id('gtna:mythicbotany/infuser/' + output.replace(':', '_'))
 }
 function botanicpledgeRital(event, reagent, inputs, output, manaCost, keepNbtOfReagent){
-    event.remove({id: '/botanicpledge:botanic_ritual/' + output + '/'})
+    event.remove({id: '/botanicpledge:botanic_ritual/.*/', output: output})
     event.custom({
             "type": "botanicpledge:botanic_ritual",
             "reagent": {

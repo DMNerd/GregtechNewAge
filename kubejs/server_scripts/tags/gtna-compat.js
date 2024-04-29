@@ -19,7 +19,6 @@ ServerEvents.tags('item', e => {
     e.add('forge:binding_material', 'gtceu:treated_wood_plate')
 
     //Create
-
     e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
     e.add('forge:ingots/refined_radiance', 'create:refined_radiance')
     e.add('forge:ingots/shadow_steel', 'create:shadow_steel')
@@ -45,19 +44,27 @@ ServerEvents.tags('item', e => {
     e.add('forge:ingots/bronze', 'gtceu:bronze_ingot')
 
    
-
-    //Ars
-    e.add('ars_nouveau:golem/shard', ['minecraft:amethyst_shard', 'ae2:certus_quartz_crystal'])
-
     //Stargate Journey
     const sgmats = ['naquadah', 'naquadah_alloy']
     sgmats.forEach(material => {
         addMetalTags(e, 'sgjourney', material)
     });
+
+    //Ars
+    e.add('ars_nouveau:golem/shard', ['minecraft:amethyst_shard', 'ae2:certus_quartz_crystal'])
+    e.add('forge:string/magebloom', 'ars_nouveau:magebloom_fiber')
+
     //Botany
-    e.add('forge:dusts/pixie', 'botania:pixie_dust')
-    e.add('botania:terra_sword', 'botania:terra_sword')
     addStoneTags(e, 'botania', 'livingrock')
+    e.add('botania:alfheim_portal', 'botania:alfheim_portal')
+    e.add('botania:loki_ring', 'botania:loki_ring')
+    e.add('botania:odin_ring', 'botania:odin_ring')
+    e.add('botania:terra_sword', 'botania:terra_sword')
+    e.add('botania:thor_ring', 'botania:thor_ring')
+    e.add('forge:dusts/pixie', 'botania:pixie_dust')
+    e.add('forge:rods/livingwood', 'botania:livingwood_twig')
+    e.add('forge:storage_blocks/elf_quartz', 'botania:elf_quartz')
+    e.remove('forge:storage_blocks/quartz', 'botania:elf_quartz')
 
     //Mythic Botany
     addMetalTags(e, 'mythicbotany', 'alfsteel')
@@ -65,8 +72,9 @@ ServerEvents.tags('item', e => {
 
     //Botanic Pledge
     addMetalTags(e ,'botanicpledge', 'yggdralium')
-    e.add('forge:gems', 'botanicpledge:yggdralium_shard')
-    e.add('forge:gems/yggdralium_shard', 'botanicpledge:yggdralium_shard')
+    addGemTags(e, 'botanicpledge', 'yggdralium_shard')
+    addGemTags(e, 'botanicpledge', 'soul_shard')
+    e.add('forge:rods/world_ash', 'botanicpledge:world_ash_branch')
 
     const netherstar_inputs = ['minecraft:netherstar', '#forge:dusts/nether_star']
     netherstar_inputs.forEach(input => {
