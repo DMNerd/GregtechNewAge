@@ -2,7 +2,6 @@ WorldgenEvents.remove(e => {
     e.removeOres(b => {
         b.worldgenLayer = 'underground_ores';
         b.blocks = [
-            "ad_astra:oil",
             "create:deepslate_zinc_ore",
             "create:zinc_ore",
             "create_new_age:magnetite_block",
@@ -19,4 +18,6 @@ WorldgenEvents.remove(e => {
             "sgjourney:nether_naquadah_ore",
         ]
     })
-  })
+    e.removeFeatureById('surface_structures', 'ad_astra:oil_well')
+    e.removeFeatureById('surface_structures', 'ad_astra:meteor')
+})

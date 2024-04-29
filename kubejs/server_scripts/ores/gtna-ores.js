@@ -1,6 +1,6 @@
 GTCEuServerEvents.oreVeins(e => {
     e.add("gtna:elementium", v => {
-        v.weight(500) 
+        v.weight(50) 
         v.clusterSize(40) 
         v.density(0.5) 
         v.discardChanceOnAirExposure(0)
