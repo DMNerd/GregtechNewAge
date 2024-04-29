@@ -19,7 +19,7 @@ ServerEvents.recipes(e => {
 
     removeVanillaMetalurgy(e, 'megacells', 'sky_steel')
     replaceMetalTagsInCrafting(e, 'megacells', 'sky_steel')
-
+    const base_sizes = ['1k', '4k', '16k', '64k']
     const sizes = ['1m', '4m', '16m', '64m', '256m']
     sizes.forEach(size => {
         e.remove({ id: 'megacells:cells/standard/item_storage_cell_' + size })
@@ -40,6 +40,17 @@ ServerEvents.recipes(e => {
             E: '#forge:tools/screwdrivers',
             F: '#forge:tools/wrench'
         }).id('gtna:megacells/cell/fluid_' + size)
+    });
+    base_sizes.forEach(size => {
+        e.remove({ id: 'ae2things:cells/disk_drive_' + size })
+        e.shaped('ae2things:disk_drive_' + size, ['ECF', 'B B', 'AAA'], {
+            A: '#forge:double_plates/netherite', 
+            B: '#forge:screws/titanium',
+            C: 'ae2:quartz_vibrant_glass',
+            D: 'ae2:cell_component_' + size,
+            E: '#forge:tools/screwdrivers',
+            F: '#forge:tools/wrench'
+        }).id('gtna:ae2things/disk_drive_' + size)
     });
 
     component_recipe.forEach(recipe => {
