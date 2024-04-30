@@ -44,7 +44,7 @@ ServerEvents.recipes(e => {
     base_sizes.forEach(size => {
         e.remove({ id: 'ae2things:cells/disk_drive_' + size })
         e.shaped('ae2things:disk_drive_' + size, ['ECF', 'BDB', 'AAA'], {
-            A: '#forge:double_plates/netherite', 
+            A: '#forge:double_plates/chromatic', 
             B: '#forge:screws/titanium',
             C: 'ae2:quartz_vibrant_glass',
             D: 'ae2:cell_component_' + size,
@@ -186,7 +186,7 @@ ServerEvents.recipes(e => {
     }).id('gtna:megacells/cell/bulk')
     e.remove({ id: 'ae2things:cells/disk_housing' })
     e.shaped('ae2things:disk_housing', ['ECF', 'B B', 'AAA'], {
-        A: '#forge:double_plates/netherite', 
+        A: '#forge:double_plates/chromatic', 
         B: '#forge:screws/titanium',
         C: 'ae2:quartz_vibrant_glass',
         E: '#forge:tools/screwdrivers',

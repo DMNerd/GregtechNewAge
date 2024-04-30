@@ -44,7 +44,7 @@ ServerEvents.recipes(e => {
         .duration(200)
         .EUt(GTValues.V[GTValues.LV])
     greg.assembler('gtna:gtceu/assembler/nuclear_fuel_rod')
-        .itemInputs(['4x #forge:plates/tungsten_steel', '2x #forge:rings/tungsten_steel'])
+        .itemInputs(['4x #forge:dense_plates/tungsten_steel', '2x #forge:rings/tungsten_steel'])
         .itemOutputs('kubejs:nuclear_fuel_rod')
         .circuit(2)
         .duration(200)

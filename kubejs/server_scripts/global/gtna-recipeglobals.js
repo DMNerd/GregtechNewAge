@@ -130,7 +130,7 @@ function hardenBarsRecipes(event, modid, material){
 }
 function hardenButtonRecipes(event, modid, material){
     event.remove({ output: '/' + modid + ':.*' + material + '.*_button/' })
-    event.shapeless('/' + modid + ':' + material + '.*_button/',[modid + ':' + material + '_pressure_plate', '#forge:tools/saws']).id('gtna:shapeless/' + modid + '/'+ material +'_button')
+    event.shapeless('6x /' + modid + ':' + material + '.*_button/',[modid + ':' + material + '_pressure_plate', '#forge:tools/saws']).id('gtna:shapeless/' + modid + '/'+ material +'_button')
 }
 function hardenPickaxeRecipes(event, modid, material, stick){
     event.remove({output: '/' + modid + ':'+ material + '_pick.*/'})

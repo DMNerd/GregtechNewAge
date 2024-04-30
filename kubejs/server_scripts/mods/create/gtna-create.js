@@ -37,6 +37,25 @@ ServerEvents.recipes(e => {
     materials.forEach(material => {
         removeVanillaMetalurgy(e, 'create', material)
     });
+    const woodtypes = ['smoked', 'rose', 'spirit', 'rubber']
+    woodtypes.forEach(wood => {
+        hardenWoodenRecipes(e, 'create_dd', wood)
+        hardenPPRecipes(e, 'create_dd', wood)
+        hardenButtonRecipes(e, 'create_dd', wood)
+    });
+    const ddmaterials = ['bronze', 'chromatic', 'mithril', 'lapis_alloy', 'shadow_steel']
+    ddmaterials.forEach(material => {
+        replaceMetalTagsInCrafting(e, 'create_dd', material)
+        removeVanillaMetalurgy(e, 'create_dd', material)
+    });
+    e.remove({id: 'create_dd:smoking/rubber' })
+    e.remove({output: 'create:chromatic_compound' })
+    e.remove({output: 'create_dd:copycat_block' })
+    e.replaceInput({ id: 'create_dd:spectral_ruby' }, 'minecraft:amethyst_shard', '#forge:gems/ruby')
+    e.replaceInput({ input: 'create_dd:chromatic_compund' }, 'create_dd:chromatic_compund', '#forge:ingots/chromatic')
+    e.replaceOutput({id: 'create_dd:mixing/chromatic_compound'}, 'gtceu:chromatic_ingot', 'gtceu:chromatic_dust')
+    e.replaceOutput({id: 'create_dd:mixing/raw_rubber'}, 'create_dd:raw_rubber', 'gtceu:sticky_resin')
+    e.replaceOutput({output: 'create_dd:shadow_steel'}, 'create_dd:shadow_steel', '#forge:ingots/shadow_steel')
 
     e.shapeless('4x create:experience_nugget',['oreberriesreplanted:essence_berry']).id('gtna:shapeless/create/essenceberry_conversion')
     

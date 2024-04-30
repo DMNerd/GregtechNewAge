@@ -20,14 +20,15 @@ ServerEvents.tags('item', e => {
 
     //Create
     e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
+    e.add('forge:ingots/chromatic_compound', 'create:chromatic')
     e.add('forge:ingots/refined_radiance', 'create:refined_radiance')
     e.add('forge:ingots/shadow_steel', 'create:shadow_steel')
     e.add('forge:plates/andesite', '#forge:plates/andesite_alloy')
+    e.add('forge:plates/bronze', 'create_dd:bronze_sheet')
     e.add('forge:rods/andesite', '#forge:rods/andesite_alloy')
     e.add('forge:rods/industrial_iron', '#forge:rods/wrought_iron')
     e.add('forge:screws/industrial_iron', '#forge:screws/wrought_iron')
-
-
+    
     addMetalUnificationTags(e, 'create', 'industrial_iron', 'wrought_iron')
     addMetalUnificationTags(e, 'createdeco', 'industrial_iron', 'wrought_iron')
     
@@ -131,6 +132,8 @@ ServerEvents.tags('block', e => {
     e.add('forge:grasses', '/minecraft:.*fern$/')
     e.add('blockrunner:very_quick_blocks', '/.*:.*asphalt.*/')
     e.add('blockrunner:quick_blocks', '/.*:.*path.*/')
+    e.add('blockrunner:quick_blocks', '/.*:.*concrete.*/')
+
 })
 ServerEvents.tags('fluid', e => {
     e.remove('minecraft:water',[
