@@ -129,6 +129,8 @@ ServerEvents.tags('block', e => {
     e.add('gtna:livingrock_ore_replaceables', 'botania:livingrock')
     e.add('forge:grasses', '/minecraft:.*grass$/')
     e.add('forge:grasses', '/minecraft:.*fern$/')
+    e.add('blockrunner:very_quick_blocks', '/.*:.*asphalt.*/')
+    e.add('blockrunner:quick_blocks', '/.*:.*path.*/')
 })
 ServerEvents.tags('fluid', e => {
     e.remove('minecraft:water',[

@@ -15,6 +15,8 @@ StartupEvents.registry('item', e => {
     e.create('advanced_rocket_fin').displayName("Advanced Rocket Fin")
 
     e.create('nuclear_fuel_rod').displayName("Empty Fuel Rod")
+    e.create('nuclear_fuel_uranium').displayName("Uranium Fuel Rod").tag('create_new_age:nuclear/is_nuclear_fuel').tag('create_new_age:nuclear/time_320000')
+    e.create('nuclear_fuel_plutonium').displayName("Plutonium Fuel Rod").tag('create_new_age:nuclear/is_nuclear_fuel').tag('create_new_age:nuclear/time_420000')
 
     e.create('third_eye').displayName("Third Eye of Magitech").tooltip('§cIt opens your eyes to the world of magic')
 

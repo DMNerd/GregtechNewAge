@@ -9,7 +9,7 @@ ServerEvents.recipes(e => {
     ars.imbuement(
         "#forge:stone", 
         "ars_nouveau:sourcestone", 
-        50, 
+        200, 
         []
     ).id('gtna:ars/sourcestone')
 })

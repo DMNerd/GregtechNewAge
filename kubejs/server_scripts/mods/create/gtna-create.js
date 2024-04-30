@@ -9,7 +9,6 @@ ServerEvents.recipes(e => {
     e.replaceInput({ mod: 'create_new_age' }, 'create_new_age:copper_circuit', '#gtceu:circuits/lv')
     e.replaceInput({ mod: 'create_new_age' }, 'minecraft:redstone_block', '#forge:double_plates/redstone_alloy')
     e.replaceInput({ id: '/create_new_age:.*/', input:  'minecraft:iron_nugget'}, 'minecraft:iron_nugget', '#forge:rods/iron')
-    e.replaceInput({ id: '/create_new_age:.*/', input:  'create_new_age:radioactive_thorium'}, 'create_new_age:radioactive_thorium', '#forge:pure_dusts/uranium_235')
     e.replaceInput({ id: '/create_new_age:shaped/.*/' }, '#forge:ingots/magnetic_iron', '#forge:plates/magnetic_iron')
     e.replaceInput({ id: '/create_new_age:shaped/.*/' }, '#forge:ingots/magnetic_gold', '#forge:plates/magnetic_gold')
     e.replaceInput({ id: '/create_new_age:shaped/.*/' }, 'minecraft:netherite_scrap', '#forge:plates/netherite')
@@ -19,8 +18,9 @@ ServerEvents.recipes(e => {
 
     e.replaceInput({ id: '/create:.*steam_engine$/' }, '#forge:plates/gold', '#forge:plates/andesite_alloy')
     e.replaceInput({ id: '/create:.*steam_engine$/' }, '#forge:ingots/andesite_alloy', '#forge:pistons')
-    e.replaceInput({ id: 'create:shaft' }, '#forge:ingots/andesite_alloy', '#forge:pistons')
-    
+    e.replaceInput({ id: 'create:crafting/kinetics/hand_crank' }, '#forge:ingots/andesite_alloy', '#forge:rods/andesite_alloy')
+    e.replaceInput({ id: 'create:crafting/kinetics/hand_crank' }, '#minecraft:planks', '#minecraft:wooden_slabs')
+
     e.replaceInput({ id: '/create_connected:crafting/palettes/copycat.*/' }, '#forge:ingots/zinc', '#forge:double_plates/zinc')
 
     e.remove({ mod: 'create_new_age', id: '/create_new_age:energising/gold.*/' })
@@ -29,6 +29,7 @@ ServerEvents.recipes(e => {
     e.remove({ mod: 'create_new_age', id: '/create_new_age:.*circuit/' })
     e.remove({ mod: 'create_new_age', output: '/create_new_age:radioactive_thorium/' })
 
+    e.remove({ output: 'create_new_age:nuclear_fuel' })
     e.remove({ id: '/create_new_age:energising/gold.*/' })
     e.remove({ id: '/createapplied.*:.*processor$/' })
 

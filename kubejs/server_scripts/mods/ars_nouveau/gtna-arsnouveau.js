@@ -31,7 +31,7 @@ ServerEvents.recipes(e => {
         A: 'ars_nouveau:sourcestone',
         B: 'ars_nouveau:source_gem',
         C: '#forge:rods/long/gold',
-        D: '#forge:plates/gold',
+        D: '#forge:double_plates/gold',
     }).id('gtna:ars/arcane_pedestal')
 
 })
