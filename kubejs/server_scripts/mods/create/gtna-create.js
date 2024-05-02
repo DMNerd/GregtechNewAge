@@ -55,7 +55,9 @@ ServerEvents.recipes(e => {
         A: '#forge:rods/long/andesite_alloy', 
         B: '#forge:tools/hammers'
     }).id('gtna:shaped/create_shaft')
-    e.replaceInput({ id: 'create:crafting/kinetics/cogwheel' }, '#minecraft:planks', '#forge:gears/wood')
+    e.remove({ id: 'create:crafting/kinetics/large_cogwheel' })
+    e.replaceInput({ outut: 'create:cogwheel' }, '#minecraft:planks', '#forge:gears/wood')
+    e.replaceInput({ outut: 'create:large_cogwheel' }, '#minecraft:planks', '#forge:gears/wood')
     e.remove({ id: '/create:crafting/materials/andesite_alloy.*/' })
     e.shapeless('2x gtceu:andesite_alloy_dust',['2x #forge:dusts/iron', '2x #forge:dusts/andesite']).id('gtna:shapeless/create/andesite_alloy_dust')
     e.shaped('#forge:dusts/andesite', ['A', 'B'], {

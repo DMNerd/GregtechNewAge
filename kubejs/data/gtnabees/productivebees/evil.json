@@ -1,0 +1,8 @@
+{
+    "primaryColor": "#7F0000",
+    "secondaryColor": "#000000",
+    "particleColor": "#7F0000",
+    "flowerTag": "chipped:soul_sand",
+    "beeTexture": "kubejs:textures/entity/bee/evil",
+    "fireproof": true
+}

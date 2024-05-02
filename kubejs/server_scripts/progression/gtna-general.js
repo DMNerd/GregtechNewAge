@@ -127,6 +127,9 @@ ServerEvents.recipes(e => {
     e.remove({ id: '/morered:red_alloy_ingot.*/' })
     e.replaceInput({ mod: 'morered' }, 'minecraft:quartz', '#forge:plates/nether_quartz')
     e.replaceInput({ mod: 'morered' }, 'minecraft:redstone', 'morered:red_alloy_wire')
+    e.remove({ id: 'morered:red_alloy_wire' })
+    e.shapeless('morered:red_alloy_wire',['gtceu:red_alloy_single_wire']).id('gtna:shapeless/red_alloy_wire')
+
     e.shaped('computercraft:printed_book', ['BCB', 'ADA'], {
         A: '#forge:string', 
         B: '#forge:binding_material',
