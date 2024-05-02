@@ -15,4 +15,5 @@ ServerEvents.recipes(e => {
     });
 
     e.remove({output: /enderio:.*capacitor/})
+    e.remove({id: /enderio:.*gear.*/})
 })

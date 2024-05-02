@@ -32,30 +32,19 @@ ServerEvents.recipes(e => {
     e.remove({ output: 'create_new_age:nuclear_fuel' })
     e.remove({ id: '/create_new_age:energising/gold.*/' })
     e.remove({ id: '/createapplied.*:.*processor$/' })
+    e.remove({ id: 'createdeco:industrial_iron_sheet_metal' })
 
     const materials = ['zinc', 'brass']
     materials.forEach(material => {
         removeVanillaMetalurgy(e, 'create', material)
     });
-    const woodtypes = ['smoked', 'rose', 'spirit', 'rubber']
-    woodtypes.forEach(wood => {
-        hardenWoodenRecipes(e, 'create_dd', wood)
-        hardenPPRecipes(e, 'create_dd', wood)
-        hardenButtonRecipes(e, 'create_dd', wood)
-    });
-    const ddmaterials = ['bronze', 'chromatic', 'mithril', 'lapis_alloy', 'shadow_steel']
-    ddmaterials.forEach(material => {
-        replaceMetalTagsInCrafting(e, 'create_dd', material)
-        removeVanillaMetalurgy(e, 'create_dd', material)
-    });
     e.remove({id: 'create_dd:smoking/rubber' })
+    e.remove({id: '/create_dd:crafting/industrial_iron.*/' })
+    e.remove({id: '/create_dd:compacting/steel.*/' })
     e.remove({output: 'create:chromatic_compound' })
     e.remove({output: 'create_dd:copycat_block' })
-    e.replaceInput({ id: 'create_dd:spectral_ruby' }, 'minecraft:amethyst_shard', '#forge:gems/ruby')
-    e.replaceInput({ input: 'create_dd:chromatic_compund' }, 'create_dd:chromatic_compund', '#forge:ingots/chromatic')
-    e.replaceOutput({id: 'create_dd:mixing/chromatic_compound'}, 'gtceu:chromatic_ingot', 'gtceu:chromatic_dust')
-    e.replaceOutput({id: 'create_dd:mixing/raw_rubber'}, 'create_dd:raw_rubber', 'gtceu:sticky_resin')
-    e.replaceOutput({output: 'create_dd:shadow_steel'}, 'create_dd:shadow_steel', '#forge:ingots/shadow_steel')
+    e.remove({output: 'create_dd:copycat_slab' })
+    e.replaceInput({ id: 'create:sequenced_assembly/precision_mechanism' }, 'minecraft:iron_nugget', '#forge:small_gears/iron')
 
     e.shapeless('4x create:experience_nugget',['oreberriesreplanted:essence_berry']).id('gtna:shapeless/create/essenceberry_conversion')
     
@@ -66,7 +55,7 @@ ServerEvents.recipes(e => {
         A: '#forge:rods/long/andesite_alloy', 
         B: '#forge:tools/hammers'
     }).id('gtna:shaped/create_shaft')
-
+    e.replaceInput({ id: 'create:crafting/kinetics/cogwheel' }, '#minecraft:planks', '#forge:gears/wood')
     e.remove({ id: '/create:crafting/materials/andesite_alloy.*/' })
     e.shapeless('2x gtceu:andesite_alloy_dust',['2x #forge:dusts/iron', '2x #forge:dusts/andesite']).id('gtna:shapeless/create/andesite_alloy_dust')
     e.shaped('#forge:dusts/andesite', ['A', 'B'], {
@@ -89,5 +78,11 @@ ServerEvents.recipes(e => {
         D: '#forge:tools/wrench',
         E: '#forge:tools/screwdrivers'
     }).id('gtna:shaped/railways/basic_fuel_tank')
+    e.remove({ output: 'create:flywheel' })
+    e.shaped('create:flywheel', ['CBC', 'BAB', 'CBC'], {
+        A: 'create:shaft', 
+        B: '#forge:rods/brass',
+        C: '#forge:plates/brass'
+    }).id('gtna:shaped/create/flywheel')
 
 })

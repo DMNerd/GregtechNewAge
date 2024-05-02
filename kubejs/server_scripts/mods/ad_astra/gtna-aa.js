@@ -16,7 +16,6 @@ ServerEvents.recipes(e => {
     let metals = ['steel', 'desh', 'ostrum', 'calorite']
     metals.forEach(metal => {
         removeVanillaMetalurgy(e, 'ad_astra', metal)
-        removeIngotRecipes(e, 'ad_astra', metal)
         hardenMetalPPRecipes(e, 'ad_astra', metal)
     });
     

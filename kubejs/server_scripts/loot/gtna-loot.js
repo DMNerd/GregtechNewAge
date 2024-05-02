@@ -5,8 +5,8 @@ LootJS.modifiers(e => {
         });
     }
     function replaceMetalInLoot(modid, metal){
-        e.addLootTableModifier("/.*:.*/").replaceLoot(modid + ":" + metal[0] + '_ingot', 'gtceu:' + metal[1] + '_ingot')
-        e.addLootTableModifier("/.*:.*/").replaceLoot(modid + ":" + metal[0] + '_nugget', 'gtceu:' + metal[1] + '_nugget')
+        e.addLootTableModifier("/.*:.*/").replaceLoot(modid + ":" + metal + '_ingot', 'gtceu:' + metal[1] + '_ingot')
+        e.addLootTableModifier("/.*:.*/").replaceLoot(modid + ":" + metal + '_nugget', 'gtceu:' + metal[1] + '_nugget')
     }
     const material = [['wooden', 'flint'], ['stone', 'flint'], ['iron', 'iron']]
     const tools = ['pickaxe', 'shovel', 'hoe', 'axe', 'sword']

@@ -30,6 +30,5 @@ ServerEvents.recipes(e => {
         "arseng:source_acceptor", 
         2000, 
     ).id('gtna:arseng/source_acceptor')
-    e.shapeless('kubejs:bound_stick',['gtna:arseng/source_cell_housing']).id('gtna:shapeless/cable_source_acceptor')
-    
+
 })

@@ -44,5 +44,6 @@
     "material.gtceu.yggdralium": "Yggdralium Alloy",
     "material.gtceu.yggdralium_shard": "Pure Yggdralium",
     "tagprefix.limestone": "Limestone %s Ore",
-    "tagprefix.livingrock": "Livingrock %s Ore"
+    "tagprefix.livingrock": "Livingrock %s Ore",
+    "tagprefix.weathered_limestone": "Weathered Limestone %s Ore"
 }

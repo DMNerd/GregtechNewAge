@@ -137,6 +137,13 @@ ServerEvents.recipes(e => {
     e.replaceInput({id: '/gtceu:.*_flux_cell_housing/' }, '#forge:ingots/insulating_resin', '#forge:double_plates/insulating_resin')
     e.replaceInput({id: '/gtceu:.*mana_cell_housing/' }, '#forge:ingots/manasteel', '#forge:double_plates/manasteel')
     
+    e.replaceInput({id: 'packagedauto:recipe_holder' }, 'minecraft:gold_ingot', '#forge:double_plates/gold')
+    e.replaceInput({id: 'packagedauto:recipe_holder' }, 'minecraft:copper_ingot', '#forge:plates/copper_alloy')
+    e.replaceInput({id: 'packagedauto:recipe_holder' }, 'minecraft:redstone', '#forge:plates/red_alloy')
+
+    e.shapeless('arseng:cable_source_acceptor',['arseng:source_acceptor']).id('gtna:shapeless/cable_source_acceptor')
+    e.shapeless('ae2:cable_energy_acceptor',['ae2:cable_energy_acceptor']).id('gtna:shapeless/cable_acceptor')
+
     e.remove({output: 'expatternprovider:ex_pattern_access_part' })
     e.recipes.gtceu.assembler('gtna:ae2/expatternprovider/ex_pattern_access_part')
         .itemInputs(['ae2:pattern_access_terminal', '3x #forge:plates/fluix', 'megacells:accumulation_processor'])

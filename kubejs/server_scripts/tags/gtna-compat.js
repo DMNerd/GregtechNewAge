@@ -20,18 +20,18 @@ ServerEvents.tags('item', e => {
 
     //Create
     e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
-    e.add('forge:ingots/chromatic_compound', 'create:chromatic')
+    e.add('forge:ingots/chromatic', 'create:chromatic_compound')
     e.add('forge:ingots/refined_radiance', 'create:refined_radiance')
     e.add('forge:ingots/shadow_steel', 'create:shadow_steel')
     e.add('forge:plates/andesite', '#forge:plates/andesite_alloy')
-    e.add('forge:plates/bronze', 'create_dd:bronze_sheet')
+    e.add('forge:screws/andesite', '#forge:screws/andesite_alloy')
     e.add('forge:rods/andesite', '#forge:rods/andesite_alloy')
     e.add('forge:rods/industrial_iron', '#forge:rods/wrought_iron')
     e.add('forge:screws/industrial_iron', '#forge:screws/wrought_iron')
     
     addMetalUnificationTags(e, 'create', 'industrial_iron', 'wrought_iron')
     addMetalUnificationTags(e, 'createdeco', 'industrial_iron', 'wrought_iron')
-    
+
     e.add('forge:gems/pulsating_crystal', 'create_new_age:overcharged_diamond')
     e.add('forge:ingots/magnetic_gold', 'create_new_age:overcharged_gold')
     e.add('forge:ingots/magnetic_iron', 'create_new_age:overcharged_iron')
@@ -44,7 +44,9 @@ ServerEvents.tags('item', e => {
     e.add('forge:salt', '#forge:dusts/salt')
     e.add('forge:ingots/bronze', 'gtceu:bronze_ingot')
 
-   
+    e.add('forge:nuggets/experience', 'create:experience_nugget')
+    //e.add('forge:nuggets/experience', 'sfm:xp_goop')
+
     //Stargate Journey
     const sgmats = ['naquadah', 'naquadah_alloy']
     sgmats.forEach(material => {
