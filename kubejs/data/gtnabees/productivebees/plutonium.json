@@ -1,6 +1,8 @@
 {
-    "primaryColor": "#D15F5F",
-    "secondaryColor": "#A34A4A",
-    "particleColor": "#F9A49D",
-    "flowerTag": "forge:storage_blocks/plutonium"
+  "primaryColor": "#D15F5F",
+  "particleColor": "#F9A49D",
+  "flowerItem": "gtceu:plutonium_dust",
+  "beeTexture": "productivebees:textures/entity/bee/plutonium/bee",
+  "size": 0.6,
+  "selfbreed": false
 }

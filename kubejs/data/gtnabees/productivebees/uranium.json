@@ -2,5 +2,6 @@
     "primaryColor": "#187318",
     "secondaryColor": "#135913",
     "particleColor": "#70B169",
-    "flowerTag": "forge:storage_blocks/uranium"
+    "flowerTag": "forge:storage_blocks/uranium",
+    "selfbreed": false
 }

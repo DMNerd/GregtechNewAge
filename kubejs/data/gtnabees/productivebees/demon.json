@@ -3,6 +3,8 @@
     "secondaryColor": "#000000",
     "particleColor": "#AF4600",
     "flowerBlock": "occultism:datura",
-    "beeTexture": "kubejs:textures/entity/bee/demon",
-    "fireproof": true
+    "beeTexture": "gtnabees:textures/entity/bee/demon/bee",
+    "fireproof": true,
+    "selfbreed": false
+
 }

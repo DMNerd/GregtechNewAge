@@ -2,5 +2,6 @@
     "primaryColor": "#FFFFFF",
     "secondaryColor": "#FFD700",
     "particleColor": "#FFFFFF",
-    "flowerTag": "chipped:gold_block"
+    "flowerTag": "chipped:gold_block",
+    "selfbreed": false
 }

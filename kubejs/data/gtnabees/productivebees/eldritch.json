@@ -1,0 +1,10 @@
+{
+    "primaryColor": "#B200FF",
+    "secondaryColor": "#B85CD0",
+    "particleColor": "#B200FF",
+    "flowerTag": "chipped:soul_sand",
+    "beeTexture": "gtnabees:textures/entity/bee/eldritch/bee",
+    "description": "gtnabees.description.eldritch",
+    "fireproof": true,
+    "selfbreed": false
+}

@@ -2,6 +2,6 @@
     "primaryColor": "#703131",
     "secondaryColor": "#4F1515",
     "particleColor": "#703131",
-    "flowerTag": "minecraft:netherrrack",
+    "flowerItem": "gtna:netherrrack_dust",
     "fireproof": true
 }

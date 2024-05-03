@@ -2,5 +2,7 @@
     "primaryColor": "#BED2FA",
     "secondaryColor": "#B7CAF1",
     "particleColor": "#BED2FA",
-    "flowerTag": "forge:storage_blocks/certus_quartz"
+    "flowerTag": "forge:storage_blocks/certus_quartz",
+    "selfbreed": false
+
 }
