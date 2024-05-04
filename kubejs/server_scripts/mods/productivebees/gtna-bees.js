@@ -50,6 +50,10 @@ ServerEvents.recipes(e => {
 	beeBreeding('productivebees:gold', 'gtnabees:noble', 'gtnabees:empress')
 	beeBreeding('gtnabees:demon', 'gtnabees:nether', 'productivebees:withering')
 	beeBreeding('gtnabees:nether', 'productivebees:magmatic', 'gtnabees:evil')
+	beeBreeding('productivebees:farmer_bee', 'productivebees:chocolate_mining_bee', 'productivebees:chocolate')
+	beeBreeding('productivebees:tungsten', 'productivebees:platinum', 'productivebees:iridium')
+	beeBreeding('productivebees:titanium', 'gtnabees:aluminium', 'gtnabees:manganese')
+	beeBreeding('productivebees:redstone', 'gtnabees:aluminium', 'productivebees:titanium')
 
 
 })

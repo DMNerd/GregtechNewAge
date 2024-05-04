@@ -3,5 +3,6 @@
     "secondaryColor": "#135913",
     "particleColor": "#70B169",
     "flowerTag": "forge:storage_blocks/uranium",
+    "size": 0.6,
     "selfbreed": false
 }

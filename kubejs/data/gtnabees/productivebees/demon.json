@@ -5,6 +5,7 @@
     "flowerBlock": "occultism:datura",
     "beeTexture": "gtnabees:textures/entity/bee/demon/bee",
     "fireproof": true,
+    "size": 1.2,
     "selfbreed": false
 
 }

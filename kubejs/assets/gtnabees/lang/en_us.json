@@ -1,4 +1,5 @@
 {
+    "entity.productivebees.aluminium_bee": "Aluminium Bee",
     "entity.productivebees.certus_bee": "Certus Bee",
     "entity.productivebees.demon_bee": "Demonic Bee",
     "entity.productivebees.eldritch_bee": "Eldritch Bee",
@@ -6,12 +7,11 @@
     "entity.productivebees.evil_bee": "Evil Bee",
     "entity.productivebees.hellforged_bee": "Hellforged Bee",
     "entity.productivebees.hermit_bee": "Hermit Bee",
+    "entity.productivebees.industrial_bee": "Industrialist Bee",
     "entity.productivebees.lone_bee": "Lone Bee",
     "entity.productivebees.naquadria_bee": "Naquadria Bee",
     "entity.productivebees.nether_bee": "Nether Bee",
     "entity.productivebees.noble_bee": "Noble Bee",
     "entity.productivebees.olivine_bee": "Olivine Bee",
-    "entity.productivebees.uranium_bee": "Uranium Bee",
-    "gtnabees.description.eldritch": "§Horrors from the deep"
-
+    "entity.productivebees.uranium_bee": "Uranium Bee"
 }

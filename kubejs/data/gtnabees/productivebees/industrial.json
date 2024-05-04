@@ -1,0 +1,8 @@
+{
+    "primaryColor": "#808080",
+    "secondaryColor": "#7A6554",
+    "particleColor": "#808080",
+    "beeTexture": "gtnabees:textures/entity/bee/industrial/bee",
+    "flowerItem": "gtceu:wrought_iron",
+    "selfbreed": false
+}

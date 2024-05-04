@@ -2,9 +2,9 @@
     "primaryColor": "#B200FF",
     "secondaryColor": "#B85CD0",
     "particleColor": "#B200FF",
-    "flowerTag": "chipped:soul_sand",
+    "flowerItem": "twilightforest:fiery_blood",
     "beeTexture": "gtnabees:textures/entity/bee/eldritch/bee",
-    "description": "gtnabees.description.eldritch",
+    "size": 1.3,
     "fireproof": true,
     "selfbreed": false
 }

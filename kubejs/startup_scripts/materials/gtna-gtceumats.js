@@ -169,7 +169,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .flags(GTMaterialFlags.GENERATE_PLATE)
     e.create('fiery')
         .ingot()
-        .color(0x191313)
+        .color(0xFA9524)
         .element('fierium')
         .blastTemp(2200, 'low', GTValues.VA[GTValues.MV], 2000) 
         .iconSet(GTMaterialIconSet.METALLIC)

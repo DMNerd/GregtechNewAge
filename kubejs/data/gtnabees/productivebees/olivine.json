@@ -1,7 +1,11 @@
 {
     "primaryColor": "#82B203",
     "secondaryColor": "#90C503",
+    "tertiaryColor": "#90C503",
     "particleColor": "#90C503",
+    "particleType": "pop",
     "flowerTag": "forge:storage_blocks/olivine",
-    "selfbreed": false
+    "size": 0.8,
+    "selfbreed": false,
+    "renderer": "default_crystal"
 }
