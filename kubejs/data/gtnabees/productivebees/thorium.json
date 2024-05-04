@@ -1,0 +1,8 @@
+{
+  "primaryColor": "#e6e6ea",
+  "particleColor": "#ffffff",
+  "flowerTag": "forge:storage_blocks/thorium",
+  "beeTexture": "productivebees:textures/entity/bee/thorium/bee",
+  "breedingItem": "chemlib:thorium_ingot",
+  "selfbreed": false
+}

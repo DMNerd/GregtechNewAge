@@ -54,6 +54,17 @@ ServerEvents.recipes(e => {
 	beeBreeding('productivebees:tungsten', 'productivebees:platinum', 'productivebees:iridium')
 	beeBreeding('productivebees:titanium', 'gtnabees:aluminium', 'gtnabees:manganese')
 	beeBreeding('productivebees:redstone', 'gtnabees:aluminium', 'productivebees:titanium')
-
+	beeBreeding('productivebees:industrial', 'gtnabees:demon', 'productivebees:redstone')
+	beeBreeding('productivebees:nickel', 'productivebees:zinc', 'gtnabees:aluminium')
+	beeBreeding('productivebees:iron', 'productivebees:copper', 'productivebees:nickel')
+	beeBreeding('productivebees:tin', 'productivebees:copper', 'productivebees:iron')
+	beeBreeding('productivebees:diamond', 'productivebees:chromite', 'productivebees:titanium')
+	beeBreeding('productivebees:titanium', 'productivebees:ruby', 'productivebees:chromite')
+	beeBreeding('productivebees:redstone', 'productivebees:diamond', 'productivebees:ruby')
+	beeBreeding('gtnabees:industrial', 'productivebees:digger_bee', 'productivebees:coal')
+	beeBreeding('gtnabees:americium', 'gtnabees:naquadria', 'productivebees:neutronium')
+	beeBreeding('gtnabees:lutetium', 'productivebees:chromite', 'gtnabees:americium')
+	beeBreeding('gtnabees:thorium', 'productivebees:radioactive', 'gtnabees:lutetium')
+	beeBreeding('gtnabees:uranium', 'productivebees:coal', 'gtnabees:thorium')
 
 })

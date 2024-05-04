@@ -1,0 +1,8 @@
+{
+  "primaryColor": "#d88087",
+  "particleColor": "#d49a9e",
+  "flowerItem": "gtceu:lutetium_dust",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/lutetium/bee",
+  "selfbreed": false
+}

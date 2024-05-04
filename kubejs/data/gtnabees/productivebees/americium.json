@@ -1,0 +1,9 @@
+{
+  "primaryColor": "#ed220c",
+  "particleColor": "#0c0ced",
+  "flowerTag": "forge:storage_blocks/americium",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/americium/bee",
+  "size": 0.5,
+  "selfbreed": false
+}
