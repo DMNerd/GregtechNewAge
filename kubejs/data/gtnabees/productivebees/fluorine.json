@@ -1,0 +1,8 @@
+{
+  "primaryColor": "#cac12c",
+  "particleColor": "#f3ee80",
+  "flowerItem": "gtceu:fluorine_bucket",
+  "beeTexture": "productivebees:textures/entity/bee/fluorine/bee",
+  "size": 0.4,
+  "translucent": true
+}

@@ -1,0 +1,8 @@
+{
+  "primaryColor": "#adafe4",
+  "particleColor": "#bcbcd7",
+  "flowerItem": "gtceu:hydrogen_bucket",
+  "beeTexture": "productivebees:textures/entity/bee/hydrogen/bee",
+  "size": 0.7,
+  "translucent": true
+}

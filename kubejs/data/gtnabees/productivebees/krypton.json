@@ -1,0 +1,8 @@
+{
+  "primaryColor": "#bcadca",
+  "particleColor": "#d0c1d0",
+  "flowerFluid": "gtceu:krypton_bucket",
+  "beeTexture": "productivebees:textures/entity/bee/krypton/bee",
+  "size": 0.7,
+  "translucent": true
+}

@@ -1,0 +1,8 @@
+{
+  "primaryColor": "#e5dec7",
+  "particleColor": "#efe8d4",
+  "flowerItem": "gtcue:helium_bucket",
+  "beeTexture": "productivebees:textures/entity/bee/helium/bee",
+  "size": 0.7,
+  "translucent": true
+}
