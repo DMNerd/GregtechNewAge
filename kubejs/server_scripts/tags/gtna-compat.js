@@ -45,7 +45,11 @@ ServerEvents.tags('item', e => {
     e.add('forge:ingots/bronze', 'gtceu:bronze_ingot')
 
     e.add('forge:nuggets/experience', 'create:experience_nugget')
+    e.add('forge:blocks/experience', 'create:experience_block')
+
     e.add('forge:nuggets/experience', 'sfm:xp_shard')
+    e.add('forge:blocks/experience', 'sfm:xp_goop')
+
 
     //Stargate Journey
     const sgmats = ['naquadah', 'naquadah_alloy']

@@ -8,11 +8,25 @@ ServerEvents.recipes(e => {
     e.replaceInput({output: 'enderio:ensouled_chassis' }, 'minecraft:quartz', 'enderio:double_layer_capacitor')
     e.replaceInput({output: 'enderio:ensouled_chassis' }, 'gtceu:soularium_ingot', '#forge:plates/soularium')
     e.replaceInput({output: 'enderio:ensouled_chassis' }, 'enderio:soul_chain', 'gtceu:soularium_frame')
-    
+    e.replaceInput({output: 'enderio:glider_wing' }, '#forge:ingots/dark_steel', '#forge:rods/long/dark_steel')
+
     const endermats = ['copper_alloy', 'redstone_alloy', 'conductive_alloy', 'energetic_alloy', 'vibrant_alloy', 'pulsating_alloy', 'soularium', 'dark_steel', 'end_steel']
     endermats.forEach(material => {
         removeVanillaMetalurgy(e, 'enderio', material)
     });
+
+    e.remove({ id: "enderio:staff_of_travelling" });
+    e.shaped(`enderio:staff_of_travelling`, ["  P", " R ", "R  "], {
+      R: "#forge:rods/dark_steel",
+      P: "enderio:ender_crystal",
+    });
+    e.remove({ id: "enderio:travel_anchor" });
+    e.shaped(`enderio:travel_anchor`, ["SGS", "GPG", "SGS"], {
+      S: "#forge:plates/dark_steel",
+      G: "enderio:pulsating_crystal",
+      P: "ender_pearl",
+    });
+  
 
     e.remove({output: /enderio:.*capacitor/})
     e.remove({id: /enderio:.*gear.*/})

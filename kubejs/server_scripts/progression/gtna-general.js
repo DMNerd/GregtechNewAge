@@ -208,7 +208,7 @@ ServerEvents.recipes(e => {
     e.shaped("hangglider:glider_wing", ["hRL", "RLL", "LLL"], {
         h: "#forge:tools/hammers",
         R: "#forge:rods/steel",
-        L: "minecraft:leather",
+        L: "leatherprocessing:dried_leather",
     });
     e.remove({ id: "hangglider:glider_framework" });
     e.shaped("hangglider:glider_framework", [" R ", "RhR", "RRR"], {
@@ -225,7 +225,7 @@ ServerEvents.recipes(e => {
     e.shaped("hangglider:reinforced_hang_glider", ["SVS", "LML", "SVS"], {
         S: "#forge:screws/vanadium_steel",
         V: "#forge:rods/vanadium_steel",
-        L: "hangglider:glider_wing",
+        L: "enderio:glider_wing",
         M: "hangglider:hang_glider",
     });
     // Mega Torch
@@ -258,4 +258,10 @@ ServerEvents.recipes(e => {
 
     // Frozen Pearl
     e.remove({ id: "torchmaster:frozen_pearl" });
+
+    e.remove({ id: "javd:portal_block" });
+    e.shaped(`javd:portal_block`, ["PPP", "PEP", "PPP"], {
+      P: "#forge:plates/obsidian",
+      E: "gtceu:ender_pearl_block",
+    });
 })

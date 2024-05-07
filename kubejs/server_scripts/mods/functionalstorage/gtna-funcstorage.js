@@ -15,6 +15,7 @@ ServerEvents.recipes(e => {
     upgradeMaterials.forEach(material => {
         fstorageUpgrade(material)
     });
+    e.replaceInput({mod: 'functionalstorage' }, 'minecraft:piston', 'ulvcovm:ulv_electric_piston')
 
     e.replaceInput({id: '/functionalstorage:.*compact.*/' }, '#forge:double_plates/iron', '#forge:double_plates/red_alloy')
     e.replaceInput({id: '/functionalstorage:.*compact.*/' }, 'minecraft:iron_ingot', '#forge:double_plates/red_alloy')

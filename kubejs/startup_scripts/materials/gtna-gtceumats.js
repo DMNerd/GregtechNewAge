@@ -16,7 +16,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
     GTMaterials.NetherQuartz.addFlags(GTMaterialFlags.GENERATE_LENS)
     GTMaterials.Nichrome.addFlags(GTMaterialFlags.GENERATE_BOLT_SCREW)
     GTMaterials.TungstenSteel.addFlags(GTMaterialFlags.GENERATE_DENSE)
-    GTMaterials.get("andesite_alloy").addFlags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_BOLT_SCREW)
+    GTMaterials.get("andesite_alloy").addFlags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_GEAR)
     GTMaterials.get("elementium").setProperty(PropertyKey.ORE, new $OreProperty())
     GTMaterials.get("elementium").setMaterialARGB(0xC543A8)
     GTMaterials.get("shadow_steel").setMaterialARGB(0x423C58)

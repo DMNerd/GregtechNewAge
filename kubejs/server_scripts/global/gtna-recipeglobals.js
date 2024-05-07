@@ -51,18 +51,18 @@ function hardenWoodenRecipes(event, modid, woodtype){
     }).id('gtna:shaped/' + modid + '/'+ woodtype +'_door')
     event.remove({ output: '/' + modid + ':.*' + woodtype + '.*_fence/' })
     event.shaped(modid + ':' + woodtype + '_fence', ['ABA', 'ABA', 'ABA'], {
-        A: '/' +modid + ':' + woodtype + '_(?:planks|cube|mosaic$)/', 
+        A: '/' +modid + ':' + woodtype + '_(?:planks|cube)/', 
         B: '#forge:rods/wood'
     }).id('gtna:shaped/' + modid + '/'+ woodtype +'_fence')
     event.remove({ output: '/' + modid + ':.*' + woodtype + '.*_fence_gate/' })
     event.shaped('2x ' + modid + ':' + woodtype + '_fence_gate', ['CDC', 'BAB', 'BAB'], {
-        A: '/' + modid + ':' + woodtype + '_(?:planks|cube|mosaic$)/', 
+        A: '/' + modid + ':' + woodtype + '_(?:planks|cube)/', 
         B: '#forge:rods/wood',
         C: '#forge:screws/iron',
         D: '#forge:tools/screwdrivers'
     }).id('gtna:shaped/' + modid + '/'+ woodtype +'_fence_gate_screwing')
     event.shaped(modid + ':' + woodtype + '_fence_gate', ['C C', 'BAB', 'BAB'], {
-        A: '/' + modid + ':' + woodtype + '_(?:planks|cube|mosaic$)/', 
+        A: '/' + modid + ':' + woodtype + '_(?:planks|cube)/', 
         B: '#forge:rods/wood',
         C: '#forge:shards/flint'
     }).id('gtna:shaped/' + modid + '/'+ woodtype +'_fence_gate_simple')
@@ -91,7 +91,7 @@ function hardenMetalLadderRecipes(event, modid, metal){
         E: '#forge:tools/screwdrivers'
     }).id('gtna:shaped/' + modid + '/'+ metal +'_ladder')
     event.recipes.gtceu.assembler('gtna:assembler/ladder_' + metal )
-        .itemInputs('7x #forge:rods/wood')
+        .itemInputs('7x #forge:rods/' + metal)
         .itemOutputs('/' + modid + ':.*' + metal + '.*_ladder/')
         .circuit(7)
         .EUt(1)
