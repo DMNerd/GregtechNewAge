@@ -30,6 +30,7 @@ ServerEvents.tags('item', e => {
     e.add('diet:proteins', '/ends_delight:.*egg/')
     e.add('diet:proteins', '/ends_delight:.*leg.*/')
     e.add('diet:proteins', '/ends_delight:.*meat.*/')
+    e.add('diet:proteins', '/miners_delight:.*arthropod.*/')
     e.add('diet:proteins', '/miners_delight:.*beef.*/')
     e.add('diet:proteins', '/miners_delight:.*chicken.*/')
     e.add('diet:proteins', '/miners_delight:.*cod.*/')

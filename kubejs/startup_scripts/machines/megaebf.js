@@ -2,7 +2,7 @@ GTCEuStartupEvents.registry("gtceu:machine", e => {
     e.create("mega_ebf", "multiblock")
       .rotationState(RotationState.NON_Y_AXIS)
       .recipeTypes('electric_blast_furnace')
-      .recipeModifier(GTRecipeModifiers.PARALLEL_HATCH.apply(OverclockingLogic.PERFECT_OVERCLOCK, GTRecipeModifiers.ELECTRIC_OVERCLOCK))
+      .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK))
       .appearanceBlock(GTBlocks.CASING_INVAR_HEATPROOF)
       .pattern((definition) => FactoryBlockPattern.start()
         .aisle("BBBBBBBBBBBBBBB", "GGGGGGGGGGGGGGG", "GGGGGGGGGGGGGGG", "GGGGGGGGGGGGGGG", "GGGGGGGGGGGGGGG", "GGGGGGGGGGGGGGG", "GGGGGGGGGGGGGGG", "GGGGGGGGGGGGGGG", "GGGGGGGGGGGGGGG", "GGGGGGGGGGGGGGG", "GGGGGGGGGGGGGGG", "GGGGGGGGGGGGGGG", "GGGGGGGGGGGGGGG", "GGGGGGGGGGGGGGG", "BBBBBBBBBBBBBBB")

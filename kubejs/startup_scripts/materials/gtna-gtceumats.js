@@ -34,7 +34,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .iconSet(GTMaterialIconSet.METALLIC)
     e.create('netherite')
         .ingot()
-        .components('4x netherite_scrap', '4x gold')
+        .components('4x netherite_scrap', '4x gold', '1x tungsten')
         .blastTemp(1800, 'low', GTValues.VA[GTValues.MV], 2000) 
         .color(0x4B4243)
         .iconSet(GTMaterialIconSet.METALLIC)

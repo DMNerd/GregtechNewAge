@@ -17,6 +17,7 @@ ServerEvents.recipes(e => {
     metals.forEach(metal => {
         removeVanillaMetalurgy(e, 'ad_astra', metal)
         hardenMetalPPRecipes(e, 'ad_astra', metal)
+        hardenButtonRecipes(e, 'ad_astra', metal)
     });
     
     e.remove({ id: '/ad_astra:steel_ingot.*/' })

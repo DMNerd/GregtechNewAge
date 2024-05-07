@@ -110,6 +110,10 @@ ServerEvents.recipes(e => {
         F: 'toolbelt:pouch'
     }).id('gtna:travelersbackpack/standard')
 
+    hardenWoodenRecipes(e, 'mynethersdelight', 'powdery')
+    hardenPPRecipes(e, 'mynethersdelight', 'powdery')
+    hardenButtonRecipes(e, 'mynethersdelight', 'powdery')
+
     hardenWoodenRecipes(e, 'framedblocks', 'framed')
     hardenLadderRecipes(e, 'framedblocks', 'framed')
     e.remove({id : 'framedblocks:framed_cube' })
@@ -142,10 +146,116 @@ ServerEvents.recipes(e => {
         C: '#forge:tools/hammers',
     }).id('gtna:trashcans/item')
 
-    e.replaceInput({mod: 'silence_s_defense_tower' }, 'minecraft:iron_ingot', '#forge:plates/steel')
-    e.replaceInput({mod: 'silence_s_defense_tower' }, 'minecraft:iron_block', '#forge:double_plates/steel')
-    e.replaceInput({mod: 'silence_s_defense_tower' }, 'minecraft:iron_bars', '#forge:springs/steel')
-    e.replaceInput({mod: 'silence_s_defense_tower' }, 'minecraft:piston', 'gtceu:hv_electric_piston')
-    e.replaceInput({mod: 'silence_s_defense_tower' }, 'minecraft:repeater', '#gtceu:circuits/hv')
+    //Building Gadgets
 
+    // Building Tool
+    e.remove({ output: "buildinggadgets2:gadget_building" });
+    e.shaped("buildinggadgets2:gadget_building", ["PLP", "DCD", "PKP"], {
+        P: "#forge:plates/steel",
+        L: "#forge:plates/lapis",
+        D: "#forge:plates/diamond",
+        C: "#gtceu:circuits/lv",
+        K: "gtceu:tin_single_cable",
+    });
+    // Exchanging Tool
+    e.remove({ output: "buildinggadgets2:gadget_exchanging" });
+    e.shaped("buildinggadgets2:gadget_exchanging", ["PLP", "DCD", "PKP"], {
+        P: "#forge:plates/steel",
+        L: "#forge:plates/gold",
+        D: "#forge:plates/diamond",
+        C: "#gtceu:circuits/lv",
+        K: "gtceu:tin_single_cable",
+    });
+    // Copy-paste Tool
+    e.remove({ output: "buildinggadgets2:gadget_copy_paste" });
+    e.shaped("buildinggadgets2:gadget_copy_paste", ["PLP", "DCD", "PKP"], {
+        P: "#forge:plates/steel",
+        L: "#forge:plates/redstone",
+        D: "#forge:plates/emerald",
+        C: "#gtceu:circuits/lv",
+        K: "gtceu:tin_single_cable",
+    });
+
+    // Template Manager
+    e.remove({ output: "buildinggadgets2:template_manager" });
+    e.shaped("buildinggadgets2:template_manager", ["KCK", "CHC", "KCK"], {
+        K: "gtceu:tin_single_cable",
+        C: "#gtceu:circuits/lv",
+        H: "gtceu:lv_machine_hull",
+    });
+
+    // Destruction Gadget
+    e.remove({ output: "buildinggadgets2:gadget_destruction" });
+    e.shaped("buildinggadgets2:gadget_destruction", ["PLP", "DCD", "PKP"], {
+        P: "#forge:plates/aluminium",
+        L: "#forge:plates/nether_quartz",
+        D: "#forge:plates/ender_pearl",
+        C: "#gtceu:circuits/mv",
+        K: "gtceu:copper_single_cable",
+    });
+
+    // Cut 'n' Paste Gadget
+    e.remove({ output: "buildinggadgets2:gadget_cut_paste" });
+    e.shaped("buildinggadgets2:gadget_cut_paste", ["PLP", "DCD", "PKP"], {
+        P: "#forge:plates/aluminium",
+        L: "#forge:plates/lapis",
+        D: "gtceu:iron_buzz_saw_blade",
+        C: "#gtceu:circuits/mv",
+        K: "gtceu:copper_single_cable",
+    });
+    //Hang Glider
+    e.remove({ id: "hangglider:glider_wing" });
+    e.shaped("hangglider:glider_wing", ["hRL", "RLL", "LLL"], {
+        h: "#forge:tools/hammers",
+        R: "#forge:rods/steel",
+        L: "minecraft:leather",
+    });
+    e.remove({ id: "hangglider:glider_framework" });
+    e.shaped("hangglider:glider_framework", [" R ", "RhR", "RRR"], {
+        h: "#forge:tools/hammers",
+        R: "#forge:rods/steel",
+    });
+    e.remove({ id: "hangglider:hang_glider" });
+    e.shaped("hangglider:hang_glider", ["SSS", "LML", "SSS"], {
+        S: "#forge:screws/iron",
+        L: "hangglider:glider_wing",
+        M: "hangglider:glider_framework",
+    });
+    e.remove({ output: "hangglider:reinforced_hang_glider" });
+    e.shaped("hangglider:reinforced_hang_glider", ["SVS", "LML", "SVS"], {
+        S: "#forge:screws/vanadium_steel",
+        V: "#forge:rods/vanadium_steel",
+        L: "hangglider:glider_wing",
+        M: "hangglider:hang_glider",
+    });
+    // Mega Torch
+    e.remove({ id: "torchmaster:megatorch" });
+    e.shaped("torchmaster:megatorch", ["SDR", "IBD", "RIS"], {
+        S: "#forge:screws/iron",
+        D: "#forge:gems/diamond",
+        R: "#forge:rings/gold",
+        I: "minecraft:stick",
+        B: "#forge:storage_blocks/coke",
+    });
+
+    // Dread Lamp
+    e.remove({ id: "torchmaster:dreadlamp" });
+    e.shaped("torchmaster:dreadlamp", ["PPP", "GLG", "PPP"], {
+        P: "#forge:plates/obsidian",
+        L: "minecraft:glowstone",
+        G: "#forge:glass_panes",
+    });
+
+    // Feral Flare Lantern
+    e.remove({ id: "torchmaster:feral_flare_lantern" });
+    e.shaped("torchmaster:feral_flare_lantern", ["SPR", "INP", "RIS"], {
+        S: "#forge:screws/iron",
+        P: "#forge:plates/glowstone",
+        R: "#forge:rings/steel",
+        I: "#forge:rods/steel",
+        N: "#forge:small_springs/gold",
+    });
+
+    // Frozen Pearl
+    e.remove({ id: "torchmaster:frozen_pearl" });
 })

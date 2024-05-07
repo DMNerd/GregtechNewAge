@@ -51,18 +51,18 @@ function hardenWoodenRecipes(event, modid, woodtype){
     }).id('gtna:shaped/' + modid + '/'+ woodtype +'_door')
     event.remove({ output: '/' + modid + ':.*' + woodtype + '.*_fence/' })
     event.shaped(modid + ':' + woodtype + '_fence', ['ABA', 'ABA', 'ABA'], {
-        A: '/' +modid + ':' + woodtype + '_(?:planks|cube)/', 
+        A: '/' +modid + ':' + woodtype + '_(?:planks|cube|mosaic$)/', 
         B: '#forge:rods/wood'
     }).id('gtna:shaped/' + modid + '/'+ woodtype +'_fence')
     event.remove({ output: '/' + modid + ':.*' + woodtype + '.*_fence_gate/' })
     event.shaped('2x ' + modid + ':' + woodtype + '_fence_gate', ['CDC', 'BAB', 'BAB'], {
-        A: '/' + modid + ':' + woodtype + '_(?:planks|cube)/', 
+        A: '/' + modid + ':' + woodtype + '_(?:planks|cube|mosaic$)/', 
         B: '#forge:rods/wood',
         C: '#forge:screws/iron',
         D: '#forge:tools/screwdrivers'
     }).id('gtna:shaped/' + modid + '/'+ woodtype +'_fence_gate_screwing')
     event.shaped(modid + ':' + woodtype + '_fence_gate', ['C C', 'BAB', 'BAB'], {
-        A: '/' + modid + ':' + woodtype + '_(?:planks|cube)/', 
+        A: '/' + modid + ':' + woodtype + '_(?:planks|cube|mosaic$)/', 
         B: '#forge:rods/wood',
         C: '#forge:shards/flint'
     }).id('gtna:shaped/' + modid + '/'+ woodtype +'_fence_gate_simple')
@@ -75,6 +75,12 @@ function hardenLadderRecipes(event, modid, woodtype){
         C: '#forge:tools/mallets',
         D: '#forge:tools/hammers'
     }).id('gtna:shaped/' + modid + '/'+ woodtype +'_ladder')
+    event.recipes.gtceu.assembler('gtna:assembler/ladder_' + woodtype )
+        .itemInputs(['/' + modid + ':' + woodtype + '_slab.*/', '5x #forge:rods/wood'])
+        .itemOutputs('2x ' + modid + ':' + woodtype + '_ladder')
+        .circuit(7)
+        .EUt(1)
+        .duration(100);
 }
 function hardenMetalLadderRecipes(event, modid, metal){
     event.remove({ output: '/' + modid + ':.*' + metal + '.*_ladder/' })
@@ -84,6 +90,12 @@ function hardenMetalLadderRecipes(event, modid, metal){
         D: '#forge:tools/wrenches',
         E: '#forge:tools/screwdrivers'
     }).id('gtna:shaped/' + modid + '/'+ metal +'_ladder')
+    event.recipes.gtceu.assembler('gtna:assembler/ladder_' + metal )
+        .itemInputs('7x #forge:rods/wood')
+        .itemOutputs('/' + modid + ':.*' + metal + '.*_ladder/')
+        .circuit(7)
+        .EUt(1)
+        .duration(100);
 }
 function hardenPPRecipes(event, modid, material){
     event.remove({ output: '/' + modid + ':.*' + material + '.*_pressure_plate/' })
@@ -94,6 +106,11 @@ function hardenPPRecipes(event, modid, material){
         D: '#forge:tools/mallets',
         E: '#forge:tools/screwdrivers'
     }).id('gtna:shaped/' + modid + '/'+ material +'_pressure_plate')
+    event.recipes.gtceu.assembler('gtna:assembler/pressure_plate_' + material )
+        .itemInputs(['2x /' + modid + ':' + material + '_slab.*/', '#forge:springs/iron'])
+        .itemOutputs('2x /' + modid + ':' + material + '.*_pressure_plate/')
+        .EUt(7)
+        .duration(100);
 }
 function hardenMetalPPRecipes(event, modid, metal){
     event.remove({ output: '/' + modid + ':.*' + metal + '.*_pressure_plate/' })
@@ -104,6 +121,11 @@ function hardenMetalPPRecipes(event, modid, metal){
         D: '#forge:tools/mallets',
         E: '#forge:tools/screwdrivers'
     }).id('gtna:shaped/' + modid + '/'+ metal +'_pressure_plate')
+    event.recipes.gtceu.assembler('gtna:assembler/pressure_plate_' + metal )
+        .itemInputs(['#forge:plates/' + metal, '#forge:springs/iron'])
+        .itemOutputs('2x /' + modid + ':' + metal + '.*_pressure_plate/')
+        .EUt(7)
+        .duration(100);
 }
 function hardenMetalDoorRecipes(event, modid, metal){
     event.remove({ output: '/' +  modid + ':.*' + metal + '.*_trapdoor/' })
@@ -130,7 +152,25 @@ function hardenBarsRecipes(event, modid, material){
 }
 function hardenButtonRecipes(event, modid, material){
     event.remove({ output: '/' + modid + ':.*' + material + '.*_button/' })
-    event.shapeless('6x /' + modid + ':' + material + '.*_button/',[modid + ':' + material + '_pressure_plate', '#forge:tools/saws']).id('gtna:shapeless/' + modid + '/'+ material +'_button')
+    event.shapeless('6x /' + modid + ':' + material + '.*_button/',['/' + modid + ':' + material + '.*_pressure_plate/', '#forge:tools/saws']).id('gtna:shapeless/' + modid + '/'+ material +'_button')
+    event.recipes.gtceu.cutter('gtna:cutter/lubricant/button_' + material )
+        .itemInputs('/' + modid + ':' + material + '.*_pressure_plate/')
+        .itemOutputs('12x /' + modid + ':.*' + material + '.*_button/')
+        .inputFluids("gtceu:lubricant 1")
+        .EUt(7)
+        .duration(20);
+    event.recipes.gtceu.cutter('gtna:cutter/distilled/button_' + material )
+        .itemInputs('/' + modid + ':' + material + '.*_pressure_plate/')
+        .itemOutputs('12x /' + modid + ':.*' + material + '.*_button/')
+        .inputFluids("gtceu:distilled_water 3")
+        .EUt(7)
+        .duration(20);
+    event.recipes.gtceu.cutter('gtna:cutter/water/button_' + material )
+        .itemInputs('/' + modid + ':' + material + '.*_pressure_plate/')
+        .itemOutputs('12x /' + modid + ':.*' + material + '.*_button/')
+        .inputFluids("minecraft:water 4")
+        .EUt(7)
+        .duration(20);
 }
 function hardenPickaxeRecipes(event, modid, material, stick){
     event.remove({output: '/' + modid + ':'+ material + '_pick.*/'})
@@ -386,3 +426,12 @@ function botanicpledgeRital(event, reagent, inputs, output, manaCost, keepNbtOfR
             "keepNbtOfReagent": keepNbtOfReagent
         }).id('gtna:botanicpledge/ritual/' + output.replace(':', '_'))
 }
+
+function xtoneRecipe(event, input1, input2, output, modifier) {
+    event.remove({ id: output });
+    event.recipes.gtceu.mixer(output)
+      .itemInputs(input1, input2)
+      .itemOutputs(`${modifier}x ${output}`)
+      .EUt(2)
+      .duration(20);
+  }

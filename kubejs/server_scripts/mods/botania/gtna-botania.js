@@ -7,6 +7,8 @@ ServerEvents.recipes(e => {
     e.replaceInput({ id: 'botania:mana_pylon' }, '#forge:ingots/manasteel', '#forge:double_plates/manasteel')
     e.replaceInput({ id: 'botania:mana_pylon' }, 'minecraft:gold', '#forge:double_plates/gold')
     e.replaceInput({ id: 'botania:alfheim_portal' }, '#forge:nuggets/terrasteel', '#forge:plates/terrasteel')
+    e.remove({id: '/botania:mana_tablet.*/'})
+    e.remove({id: '/botania:runic_altar.*/'})
 
     const botaniaMats = ['manasteel', 'terrasteel', 'elementium']
     botaniaMats.forEach(material => {
