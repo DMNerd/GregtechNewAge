@@ -195,6 +195,7 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         .flags(GTMaterialFlags.SOLDER_MATERIAL_GOOD ,GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_FOIL, GTMaterialFlags.GENERATE_FINE_WIRE,)
     e.create('conductive_alloy')
         .ingot()
+        .fluid()
         .components('1x redstone_alloy', '1x iron', '1x silver')
         .color(0xDDB2AC).secondaryColor(0xCAA99F)
         .iconSet(GTMaterialIconSet.SHINY)

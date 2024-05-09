@@ -32,13 +32,6 @@ ServerEvents.tags('item', e => {
     addMetalUnificationTags(e, 'create', 'industrial_iron', 'wrought_iron')
     addMetalUnificationTags(e, 'createdeco', 'industrial_iron', 'wrought_iron')
 
-    e.add('forge:gems/pulsating_crystal', 'create_new_age:overcharged_diamond')
-    e.add('forge:ingots/magnetic_gold', 'create_new_age:overcharged_gold')
-    e.add('forge:ingots/magnetic_iron', 'create_new_age:overcharged_iron')
-    e.add('forge:plates/magnetic_gold', 'create_new_age:overcharged_golden_sheet')
-    e.add('forge:plates/magnetic_iron', 'create_new_age:overcharged_iron_sheet')
-    e.add('forge:raw_materials/thorium', 'create_new_age:thorium')
-
     addMetalTags(e, 'vintagedelight', 'salt')
     e.add('forge:rods/metal', '#forge:rods/steel')
     e.add('forge:salt', '#forge:dusts/salt')
@@ -50,6 +43,9 @@ ServerEvents.tags('item', e => {
     e.add('forge:nuggets/experience', 'sfm:xp_shard')
     e.add('forge:blocks/experience', 'sfm:xp_goop')
 
+    e.add('forge:dusts/endstone', '#forge:dusts/end_stone')
+
+    e.add('forge:dusts/ender_pearl', 'enderio:powdered_ender_pearl')
 
     //Stargate Journey
     const sgmats = ['naquadah', 'naquadah_alloy']

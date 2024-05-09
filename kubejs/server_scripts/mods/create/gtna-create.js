@@ -30,6 +30,7 @@ ServerEvents.recipes(e => {
     e.replaceInput({ id: '/create:crafting/kinetics/spout.*/' }, 'minecraft:dried_kelp', 'gtceu:copper_normal_fluid_pipe')
     e.replaceInput({ id: '/create:crafting/logistics/brass_tunnel.*/' }, 'create:electron_tube', 'ulvcovm:ulv_conveyor_module')
     e.replaceInput({ id: '/create:crafting/logistics/hose_pulley.*/' }, '#forge:plates/copper', 'ulvcovm:ulv_electric_pump')
+    e.replaceInput({ id: '/create:crafting/schematics/schematiccannon.*/' }, 'minecraft:iron_block', 'gtceu:brass_large_item_pipe')
     e.replaceInput({ id: '/create_enchantment_industry:crafting/printer.*/' }, 'minecraft:dried_kelp', '#forge:plates/polytetrafluoroethylene')
     e.replaceInput({ id: '/create_connected:crafting/palettes/copycat.*/' }, '#forge:ingots/zinc', '#forge:double_plates/zinc')
     e.replaceInput({ id: '/createapplied.*:.*processor_print$/' }, '#ae2:all_certus_quartz', '#forge:plates/certus_quartz')

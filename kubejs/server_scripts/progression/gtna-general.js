@@ -114,6 +114,8 @@ ServerEvents.recipes(e => {
     hardenPPRecipes(e, 'mynethersdelight', 'powdery')
     hardenButtonRecipes(e, 'mynethersdelight', 'powdery')
 
+    const gtceuWoods = ['rubber', 'treated']
+
     hardenWoodenRecipes(e, 'framedblocks', 'framed')
     hardenLadderRecipes(e, 'framedblocks', 'framed')
     e.remove({id : 'framedblocks:framed_cube' })
@@ -264,4 +266,16 @@ ServerEvents.recipes(e => {
       P: "#forge:plates/obsidian",
       E: "gtceu:ender_pearl_block",
     });
+
+    e.remove({output: 'naturescompass:naturescompass'})
+    e.remove({output: 'enderchests:ender_chest'})
+    e.remove({output: 'enderchests:ender_bag'})
+    e.remove({output: 'endertanks:ender_tank'})
+    e.remove({output: 'endertanks:ender_bucket'})
+    e.remove({output: 'travellersbootsreloaded:travellers_boots_tier1'})
+    e.remove({output: 'travellersbootsreloaded:travellers_boots_tier2'})
+    e.remove({output: 'travellersbootsreloaded:travellers_boots_tier3'})
+    e.remove({output: 'travellersbootsreloaded:travellers_boots_tier4'})
+    e.remove({output: 'travellersbootsreloaded:travellers_boots_tier5'})
+
 })

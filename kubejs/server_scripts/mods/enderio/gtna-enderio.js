@@ -26,8 +26,23 @@ ServerEvents.recipes(e => {
       G: "enderio:pulsating_crystal",
       P: "ender_pearl",
     });
-  
+    e.remove({output: /enderio:coordinate_selector/})
+    e.shaped(`enderio:coordinate_selector`, ["ACA", "BDB", "ACA"], {
+      A: "#forge:plates/dark_steel",
+      B: "#forge:plates/pulsating_alloy",
+      C: "enderio:ender_crystal",
+      D: "minecraft:compass"
+    });
+    e.remove({output: /enderio:vacuum_chest/})
+    e.shaped(`enderio:coordinate_selector`, ["ABA", "BCB", "ABA"], {
+      A: "#forge:dense_plates/obsidian",
+      B: "minecraft:hopper",
+      C: "#forge:plates/diamond",
+    });
 
     e.remove({output: /enderio:.*capacitor/})
+    e.remove({output: /enderio:.*magnet/})
     e.remove({id: /enderio:.*gear.*/})
+    e.remove({output: /enderio:.*conduit/})
+
 })

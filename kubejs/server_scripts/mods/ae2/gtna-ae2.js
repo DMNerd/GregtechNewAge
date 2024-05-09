@@ -128,7 +128,8 @@ ServerEvents.recipes(e => {
     e.replaceInput({id: 'expatternprovider:drive_upgrade' }, '#forge:dusts/fluix', '#forge:double_plates/pfstalloy')
     e.replaceInput({id: 'expatternprovider:ex_drive' }, '#ae2:glass_cable', 'megacells:accumulation_processor')
     e.replaceInput({id: 'expatternprovider:ex_drive' }, '#forge:dusts/fluix', '#forge:double_plates/pfstalloy')
-    
+    e.replaceInput({id: 'expatternprovider:pattern_modifier' }, '#balm:green_dyes', '#forge:plates/ender_pearl')
+
     e.replaceInput({id: '/megacells:.*_component/' }, 'ae2:sky_dust', '#forge:plates/fluix')
     e.replaceInput({id: '/megacells:cells/mega_mana.*_housing/' }, 'ae2:quartz_vibrant_glass', '#forge:double_plates/terrasteel')
     e.replaceInput({id: '/megacells:cells/mega_mana.*_housing/' }, 'ae2:sky_dust', '#forge:double_plates/terrasteel')
@@ -137,10 +138,10 @@ ServerEvents.recipes(e => {
     e.replaceInput({id: '/gtceu:.*_flux_cell_housing/' }, '#forge:ingots/insulating_resin', '#forge:double_plates/insulating_resin')
     e.replaceInput({id: '/gtceu:.*mana_cell_housing/' }, '#forge:ingots/manasteel', '#forge:double_plates/manasteel')
     
-    e.replaceInput({id: 'packagedauto:recipe_holder' }, 'minecraft:gold_ingot', '#forge:double_plates/gold')
     e.replaceInput({id: 'packagedauto:recipe_holder' }, 'minecraft:copper_ingot', '#forge:plates/copper_alloy')
+    e.replaceInput({id: 'packagedauto:recipe_holder' }, 'minecraft:gold_ingot', '#forge:double_plates/gold')
     e.replaceInput({id: 'packagedauto:recipe_holder' }, 'minecraft:redstone', '#forge:plates/red_alloy')
-
+    
     e.shapeless('arseng:cable_source_acceptor',['arseng:source_acceptor']).id('gtna:shapeless/cable_source_acceptor')
     e.shapeless('ae2:cable_energy_acceptor',['ae2:cable_energy_acceptor']).id('gtna:shapeless/cable_acceptor')
 
