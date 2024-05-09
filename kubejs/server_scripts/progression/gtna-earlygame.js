@@ -8,13 +8,13 @@ ServerEvents.recipes(e => {
     e.remove({ id: 'craftingstation:crafting_station_slab' })
     e.remove({ id: 'minecraft:charcoal' })
     e.remove({id: 'farmersdelight:book_from_canvas'})
-    e.remove({id: 'leatherprocessing:bound_leather'})
-    e.remove({id: 'leatherprocessing:wet_leather'})
+    e.remove({id: 'kubejs:bound_leather'})
+    e.remove({id: 'kubejs:wet_leather'})
     e.remove({id: 'minecraft:bread'})
     e.remove({id: 'woodenhopper:wooden_hopper'})
-    e.replaceInput({ input: '#forge:leather' }, '#forge:leather', 'leatherprocessing:dried_leather')
+    e.replaceInput({ input: '#forge:leather' }, '#forge:leather', 'kubejs:tanned_leather')
     e.replaceInput({ input: 'minecraft:flint'}, 'minecraft:flint', 'notreepunching:flint_shard')
-    e.replaceInput({ input: 'minecraft:leather' }, 'minecraft:leather', 'leatherprocessing:dried_leather')
+    e.replaceInput({ input: 'minecraft:leather' }, 'minecraft:leather', 'kubejs:tanned_leather')
     e.replaceInput({ input: 'minecraft:milk_bucket' }, 'minecraft:milk_bucket', '#forge:milk')
     e.replaceInput({ input: 'minecraft:stick', output: '#forge:tools' }, 'minecraft:stick', 'kubejs:bound_stick')
     e.replaceInput({ input: 'minecraft:string' }, 'minecraft:string', '#forge:string')
@@ -61,21 +61,25 @@ ServerEvents.recipes(e => {
     })
     e.remove({ id: 'travelersbackpack:backpack_tank' })
     e.shapeless('travelersbackpack:backpack_tank',['create:fluid_tank']).id('gtna:shapeless/backpack_tank')
-    e.shaped('leatherprocessing:bound_leather', ['ABA', 'BCB', 'ABA'], {
+    e.shaped('kubejs:bound_leather', ['ABA', 'BCB', 'ABA'], {
         A: '#forge:string', 
         B: '#forge:leather',
-        C: 'farmersdelight:canvas'
+        C: '#forge:fabric'
     })
     e.blasting('notreepunching:plant_fiber', 'farmersdelight:straw')
     Color.DYE.forEach(color => {
         e.remove({output: 'comforts:sleeping_bag_' + color})
         e.remove({output: 'travelersbackpack:' + color + '_sleeping_bag'})
         e.shaped('comforts:sleeping_bag_' + color, ['CCC', 'BBB', 'AAA'], {
-            A: 'leatherprocessing:dried_leather', 
+            A: 'kubejs:tanned_leather', 
             B: '#chipped:' + color + '_wool',
             C: '#chipped:' + color + '_carpet',
         }).id('gtna:sleeping_bag_' +color)
         e.shapeless('comforts:sleeping_bag_' + color,['travelersbackpack:' + color + '_sleeping_bag']).id('gtna:shapeless/sleeping_bag_conversion_1_' + color)
         e.shapeless('travelersbackpack:' + color + '_sleeping_bag',['comforts:sleeping_bag_' + color]).id('gtna:shapeless/sleeping_bag_conversion_2_' + color)
     });
+    e.replaceInput({ input: 'explorers_companion:leather_hide' }, 'explorers_companion:leather_hide', 'kubejs:tanned_leather')
+    e.replaceInput({ input: 'explorers_companion:wool_fabric' }, 'explorers_companion:leather_hide', '#forge:fabric')
+    e.replaceInput({ input: 'minecraft:leather', id: '/minecraft:leather_(?:helmet|chestplate|leggings|boots)/' }, 'minecraft:leather', '#forge:plates/hardened_leather')
+
 })

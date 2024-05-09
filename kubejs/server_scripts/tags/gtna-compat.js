@@ -46,6 +46,7 @@ ServerEvents.tags('item', e => {
     e.add('forge:dusts/endstone', '#forge:dusts/end_stone')
 
     e.add('forge:dusts/ender_pearl', 'enderio:powdered_ender_pearl')
+    e.add('forge:dusts/soularium', 'enderio:soul_powder')
 
     //Stargate Journey
     const sgmats = ['naquadah', 'naquadah_alloy']
@@ -121,6 +122,9 @@ ServerEvents.tags('item', e => {
         e.add('ironchests:upgrades/' + tier, 'ironchests:' + tier + '_chest_upgrade')
     });
     e.add('ironchests:upgrades/flint', 'ironchests:blank_chest_upgrade')
+    
+    e.add('forge:fabric', 'eplorers_companion:wool_fabric')
+    e.add('forge:fabric', 'farmersdelight:canvas')
 
 })
 ServerEvents.tags('block', e => {

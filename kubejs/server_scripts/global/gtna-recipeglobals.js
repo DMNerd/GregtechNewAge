@@ -149,6 +149,12 @@ function hardenBarsRecipes(event, modid, material){
         A: '#forge:rods/' + material, 
         B: '#forge:tools/hammers'
     }).id('gtna:shaped/' + modid + '/'+ material +'_bars')
+    event.recipes.gtceu.assembler('gtna:assembler/bars_' + material )
+        .itemInputs('3x #forge:rods/' + material)
+        .itemOutputs('/' + modid + ':.*' + material + '.*_bars/')
+        .circuit(3)
+        .EUt(4)
+        .duration(300);
 }
 function hardenButtonRecipes(event, modid, material){
     event.remove({ output: '/' + modid + ':.*' + material + '.*_button/' })

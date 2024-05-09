@@ -6,7 +6,7 @@ ServerEvents.recipes(e => {
     e.remove({mod: 'moblassos'})
     e.remove({id: 'extendedcrafting:luminessence'})
     e.replaceInput({input: '#railways:internal/nuggets/zinc_nuggets' }, '#railways:internal/nuggets/zinc_nuggets', '#forge:nuggets/zinc')
-    e.replaceOutput({ input: 'leatherprocessing:dried_leather',  output: 'minecraft:book'}, 'leatherprocessing:dried_leather', '#forge:binding_material')
+    e.replaceOutput({ input: 'kubejs:tanned_leather',  output: 'minecraft:book'}, 'kubejs:tanned_leather', '#forge:binding_material')
     e.replaceOutput({ output: '#forge:nuggets/aluminum' }, '#forge:nuggets/aluminum', '#forge:nuggets/aluminium')
     removeVanillaMetalurgy(e, 'minecraft', 'netherite')
 
@@ -90,12 +90,12 @@ ServerEvents.recipes(e => {
     e.remove({id: 'toolbelt:pouch'})
     e.shaped('toolbelt:pouch', ['A A', 'B B', 'CBC'], {
         A: '#forge:bolts/brass', 
-        B: 'leatherprocessing:dried_leather',
+        B: 'kubejs:tanned_leather',
         C: '#forge:string'
     }).id('gtna:toolbelt/toolbelt_pouch')
     e.remove({id: 'toolbelt:belt'})
     e.shaped('toolbelt:belt', ['CBC', 'B B', 'DED'], {
-        B: 'leatherprocessing:dried_leather',
+        B: 'kubejs:hardened_leather_sheet',
         C: '#forge:string',
         D: 'toolbelt:pouch',
         E: '#forge:rings/gold'
@@ -103,7 +103,7 @@ ServerEvents.recipes(e => {
     e.remove({id: 'travelersbackpack:standard'})
     e.shaped('travelersbackpack:standard', ['BDB', 'CAC', 'FEF'], {
         A: 'ironchests:iron_chest', 
-        B: 'leatherprocessing:dried_leather',
+        B: 'kubejs:hardened_leather_sheet',
         C: 'create:fluid_tank',
         D: '#forge:plates/aluminium',
         E: '#travelersbackpack:sleeping_bags',
@@ -210,7 +210,7 @@ ServerEvents.recipes(e => {
     e.shaped("hangglider:glider_wing", ["hRL", "RLL", "LLL"], {
         h: "#forge:tools/hammers",
         R: "#forge:rods/steel",
-        L: "leatherprocessing:dried_leather",
+        L: "kubejs:tanned_leather",
     });
     e.remove({ id: "hangglider:glider_framework" });
     e.shaped("hangglider:glider_framework", [" R ", "RhR", "RRR"], {
